@@ -1,0 +1,127 @@
+/**
+ * ⚡ MASTER BRAND TOKENS (WORLD-CLASS POLISH)
+ * UP & GENIUS GOAT
+ * Royal Violet (#6E3FA0) → Vibrant Berry Magenta (#D45A9A)
+ * Paper Wash (#F7F6F4) • Ink (#26292C) • Obsidian (#141413)
+ * Superhuman Sub-100ms Velocity Architecture
+ */
+
+:root {
+  /* ==========================================================================
+     1. SIGNATURE ACCENT GRADIENTS (LOCKED & HARMONIZED)
+     ========================================================================== */
+  --accent-purple: #6E3FA0;            /* Royal Violet Anchor */
+  --accent-purple-deep: #552B82;       /* Shadow / Pressed State */
+  --accent-purple-light: #F0E8FA;      /* Subtle Light Tint */
+  --accent-purple-alpha-12: rgba(110, 63, 160, 0.12);
+  --accent-purple-alpha-24: rgba(110, 63, 160, 0.24);
+
+  --accent-magenta: #D45A9A;           /* Vibrant Berry Spark */
+  --accent-magenta-deep: #B53E7E;      /* Shadow / Pressed State */
+  --accent-magenta-light: #FDF0F7;     /* Subtle Light Tint */
+  --accent-magenta-alpha-12: rgba(212, 90, 154, 0.12);
+  --accent-magenta-alpha-24: rgba(212, 90, 154, 0.24);
+
+  /* Master Gradients */
+  --brand-gradient: linear-gradient(135deg, #6E3FA0 0%, #D45A9A 100%);
+  --brand-gradient-hover: linear-gradient(135deg, #5D338C 0%, #BF4885 100%);
+  --brand-gradient-radial: radial-gradient(circle at top left, #D45A9A 0%, #6E3FA0 100%);
+  --brand-gradient-glass: linear-gradient(135deg, rgba(110, 63, 160, 0.85) 0%, rgba(212, 90, 154, 0.85) 100%);
+  --brand-gradient-border: linear-gradient(135deg, rgba(110, 63, 160, 0.6) 0%, rgba(212, 90, 154, 0.6) 100%);
+
+  /* ==========================================================================
+     2. PAPER WASH LIGHT SYSTEM (EDITORIAL REFINEMENT)
+     ========================================================================== */
+  --paper-wash: #F7F6F4;               /* Heavy Cotton Alabaster Wash */
+  --paper-surface: #FFFFFF;            /* Pure Crisp Card Surface */
+  --paper-surface-elevated: #F0EDE8;   /* Hover / Sub-surface Card */
+  --paper-surface-subtle: #EAE7E1;     /* Inactive Tab / Inset */
+  
+  --paper-hairline: #E6E4E0;           /* Precision 1px Border */
+  --paper-hairline-strong: #D5D2CD;    /* Active 1px Border */
+
+  --ink-display: #26292C;              /* Northstar Metrics & Headlines */
+  --ink-soft: #5A5F66;                 /* High-readability Body Copy */
+  --ink-mute: #8A9098;                 /* Secondary Metadata & Timestamps */
+  --ink-caption: #A3A8B0;              /* Micro-telemetry labels */
+
+  /* ==========================================================================
+     3. OBSIDIAN VOID DARK SYSTEM (WARM BLACK LUXURY)
+     ========================================================================== */
+  --obsidian-base: #141413;            /* Warm Obsidian Void */
+  --obsidian-surface: #181622;         /* Elevated Surface Card */
+  --obsidian-elevated: #1F1C2E;        /* Highlighted Interactive Row */
+  --obsidian-subtle: #252238;          /* Inset Control Surface */
+  
+  --obsidian-border: rgba(255, 255, 255, 0.08);
+  --obsidian-border-highlight: rgba(212, 90, 154, 0.35);
+  --obsidian-border-glow: rgba(110, 63, 160, 0.6);
+
+  --text-zenith: #FCFAF7;              /* Crisp Luxe Off-White */
+  --text-silver: #DEDBD5;              /* Readable Body */
+  --text-dim: #8D8A86;                 /* Muted Captions */
+
+  /* ==========================================================================
+     4. SEMANTIC DATA COLOR SYSTEM
+     ========================================================================== */
+  --semantic-green: #1F7A4C;           /* Positive / Up / Profit */
+  --semantic-green-wash: rgba(31, 122, 76, 0.08);
+  --semantic-amber: #B45309;           /* Pending / Review / Caution */
+  --semantic-amber-wash: rgba(180, 83, 9, 0.08);
+  --semantic-red: #B42318;             /* Risk / Blocker / Delta Down */
+  --semantic-red-wash: rgba(180, 35, 24, 0.08);
+
+  /* ==========================================================================
+     5. TYPOGRAPHY ENGINE (TRIPARTITE MODEL + BILINGUAL HARMONY)
+     ========================================================================== */
+  --font-family-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-family-sans: "Plus Jakarta Sans", "Anuphan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+
+  /* Fluid Typography Scale */
+  --font-size-display: clamp(3rem, 6.5vw, 6.25rem);
+  --font-size-h1: clamp(2.4rem, 4.5vw, 4rem);
+  --font-size-h2: clamp(1.85rem, 3.2vw, 2.75rem);
+  --font-size-h3: clamp(1.35rem, 2.2vw, 1.85rem);
+  --font-size-body-lg: clamp(1.1rem, 1.4vw, 1.25rem);
+  --font-size-body: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.75rem;
+
+  /* ==========================================================================
+     6. PHYSICS, SHADOWS & LIGHTING
+     ========================================================================== */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Shadows */
+  --shadow-keycap-light: 0 1px 3px rgba(0, 0, 0, 0.08), inset 0 1px 0 #FFFFFF;
+  --shadow-keycap-dark: 0 2px 4px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  --shadow-cta-radiant: 0 12px 30px -4px rgba(110, 63, 160, 0.45), 0 0 20px rgba(212, 90, 154, 0.3);
+  --shadow-cta-hover: 0 18px 45px -5px rgba(110, 63, 160, 0.6), 0 0 30px rgba(212, 90, 154, 0.45);
+
+  --shadow-card-light: 0 20px 45px -10px rgba(0, 0, 0, 0.05), 0 0 0 1px var(--paper-hairline);
+  --shadow-card-dark: 0 25px 60px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--obsidian-border);
+
+  --shadow-modal-light: 0 35px 90px -15px rgba(0, 0, 0, 0.18), 0 0 40px rgba(110, 63, 160, 0.12);
+  --shadow-modal-dark: 0 40px 100px -15px rgba(0, 0, 0, 0.95), 0 0 50px rgba(110, 63, 160, 0.35);
+
+  /* Patterns */
+  --speedline-pattern-light: repeating-linear-gradient(
+    45deg,
+    rgba(110, 63, 160, 0.018) 0px,
+    rgba(110, 63, 160, 0.018) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+
+  --speedline-pattern-dark: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}

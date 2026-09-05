@@ -1,0 +1,28 @@
+/* Wisible & Wisible Sheets Design System Tokens */
+:root {
+  /* Brand CI Gradient — Electric Neon Sunset */
+  --wisible-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --wisible-violet: #8B5CF6;
+  --wisible-pink: #EC4899;
+  --wisible-orange: #F97316;
+
+  /* Paper & Surface Base */
+  --wisible-paper: #F7F6F4;
+  --wisible-surface: #FFFFFF;
+  --wisible-hairline: #E6E4E0;
+  --wisible-hairline-strong: #D5D2CD;
+
+  /* Ink Hierarchy */
+  --wisible-ink: #26292C;
+  --wisible-soft: #5A5F66;
+  --wisible-mute: #8A9098;
+
+  /* Semantics */
+  --wisible-semantic-green: #1F7A4C;
+  --wisible-semantic-amber: #B45309;
+  --wisible-semantic-red: #B42318;
+
+  /* Typography */
+  --font-wisible: 'Anuphan', 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}

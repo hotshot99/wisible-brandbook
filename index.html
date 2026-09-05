@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Superhuman Brand CI Manual | UP & Genius Goat by Wisible</title>
+  
+  <!-- Exact Superhuman Typography Setup (Editorial Serif + Clean Sans + Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  
+  <!-- Cloned Superhuman Tokens -->
+  <link rel="stylesheet" href="unified-tokens.css" />
+
+  <style>
+    /* ==========================================================================
+       SUPERHUMAN PIXEL-PERFECT LUXURY STYLING
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--color-bg-base);
+      color: var(--color-text-primary);
+      font-family: var(--font-family-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+
+    /* 45-degree Superhuman Speedlines Texture */
+    .bg-speedlines {
+      position: fixed;
+      inset: 0;
+      background-image: var(--sh-pattern-speedlines);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Sticky Navigation Header */
+    header.sh-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      background: rgba(20, 20, 19, 0.85);
+      border-bottom: 1px solid var(--color-border-sub);
+    }
+    [data-theme="light"] header.sh-header {
+      background: rgba(252, 250, 247, 0.9);
+    }
+
+    .nav-inner {
+      max-width: 1560px;
+      margin: 0 auto;
+      padding: 0.9rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .sh-logo-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: #1B1938;
+      border: 1px solid rgba(246, 170, 221, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 16px rgba(121, 45, 75, 0.35);
+    }
+
+    .sh-brand-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .endorsement-badge {
+      font-family: var(--font-family-mono);
+      font-size: 0.7rem;
+      color: var(--color-text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding-left: 0.25rem;
+    }
+
+    .sh-brand-pill {
+      font-family: var(--font-family-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background: rgba(246, 170, 221, 0.12);
+      border: 1px solid rgba(246, 170, 221, 0.3);
+      color: var(--mulberry-20);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .btn-header {
+      background: var(--_button-default-bg);
+      border: 1px solid var(--color-border-sub);
+      color: var(--neutral-0);
+      padding: 0.5rem 1.1rem;
+      border-radius: 9999px;
+      font-family: var(--font-family-sans);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .btn-header:hover {
+      background: var(--_button-hover-bg);
+      border-color: var(--color-border-highlight);
+      transform: translateY(-1px);
+    }
+
+    /* Keycaps */
+    .keycap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2px 7px;
+      font-family: var(--font-family-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      line-height: 1.2;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 5px;
+      color: var(--color-text-primary);
+      box-shadow: var(--sh-shadow-keycap);
+    }
+
+    /* Layout Wrapper */
+    .layout-wrapper {
+      max-width: 1560px;
+      margin: 0 auto;
+      display: flex;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Sidebar Navigation */
+    aside.sidebar-toc {
+      width: 290px;
+      position: sticky;
+      top: 65px;
+      height: calc(100vh - 65px);
+      overflow-y: auto;
+      padding: 2.25rem 1.75rem;
+      border-right: 1px solid var(--color-border-sub);
+      flex-shrink: 0;
+    }
+
+    .toc-title {
+      font-family: var(--font-family-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+      padding-left: 0.5rem;
+    }
+
+    .toc-menu {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .toc-item a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.55rem 0.85rem;
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+    }
+
+    .toc-item a:hover {
+      color: var(--color-text-primary);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .toc-item.active a {
+      color: var(--mulberry-20);
+      background: rgba(246, 170, 221, 0.08);
+      font-weight: 600;
+      border-left: 2px solid var(--mulberry-20);
+    }
+
+    .toc-num {
+      font-family: var(--font-family-mono);
+      font-size: 0.75rem;
+      opacity: 0.5;
+    }
+
+    /* Main Content */
+    main.main-body {
+      flex: 1;
+      padding: 3.5rem 4.5rem 10rem;
+      max-width: 1220px;
+    }
+
+    .brand-section {
+      margin-bottom: 6.5rem;
+      scroll-margin-top: 90px;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-family-mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
+      color: var(--mulberry-20);
+    }
+
+    .section-headline {
+      font-family: var(--font-family-serif);
+      font-size: clamp(2.6rem, 4.5vw, 4rem);
+      line-height: 1.08;
+      font-weight: 400;
+      margin-bottom: 1.35rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-headline em {
+      font-style: italic;
+    }
+
+    .section-subtext {
+      font-size: 1.15rem;
+      color: var(--color-text-muted);
+      max-width: 820px;
+      margin-bottom: 2.75rem;
+      line-height: 1.65;
+    }
+
+    /* Hero Banner */
+    .sh-hero-cover {
+      padding: 4.5rem 3.75rem;
+      border-radius: 28px;
+      margin-bottom: 4.5rem;
+      position: relative;
+      overflow: hidden;
+      background: var(--sh-gradient-hero);
+      border: 1px solid rgba(246, 170, 221, 0.3);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .meta-lbl {
+      font-family: var(--font-family-mono);
+      font-size: 0.72rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.4rem;
+    }
+
+    .meta-val {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    /* Cards */
+    .sh-card {
+      background: var(--sh-gradient-card);
+      border: 1px solid var(--color-border-sub);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--sh-shadow-card);
+      position: relative;
+    }
+
+    .card-header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--color-border-sub);
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+    }
+
+    /* Logo Lab Grid */
+    .logo-lab-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .logo-card {
+      background: #141413;
+      border: 1px solid var(--color-border-sub);
+      border-radius: 18px;
+      padding: 2.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .logo-card:hover {
+      border-color: var(--color-border-highlight);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    }
+
+    .logo-display-box {
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 120px;
+    }
+
+    .logo-tag {
+      font-family: var(--font-family-mono);
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--mulberry-20);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .logo-name {
+      font-family: var(--font-family-sans);
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .logo-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      line-height: 1.5;
+    }
+
+    /* Swatch Grid */
+    .swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .swatch-box {
+      background: #181622;
+      border: 1px solid var(--color-border-sub);
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .swatch-box:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-border-highlight);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .swatch-color-fill {
+      height: 120px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+
+    .swatch-pill-tag {
+      font-family: var(--font-family-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      backdrop-filter: blur(8px);
+    }
+
+    .swatch-content {
+      padding: 1.25rem;
+    }
+
+    .swatch-heading {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .swatch-subheading {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .swatch-meta-codes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      font-family: var(--font-family-mono);
+      font-size: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--color-border-sub);
+    }
+
+    .meta-code-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meta-code-item .lbl {
+      color: var(--color-text-muted);
+      font-size: 0.65rem;
+      text-transform: uppercase;
+    }
+
+    .meta-code-item .val {
+      font-weight: 600;
+    }
+
+    /* Modal / HUD */
+    .sh-cmd-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(16px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 1.5rem;
+    }
+    .sh-cmd-overlay.open { display: flex; }
+
+    .sh-cmd-modal {
+      width: 100%;
+      max-width: 660px;
+      background: #1B1938;
+      border-radius: 20px;
+      border: 1px solid rgba(246, 170, 221, 0.35);
+      box-shadow: var(--sh-shadow-modal);
+      overflow: hidden;
+      animation: popModal 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes popModal {
+      from { transform: scale(0.96) translateY(-8px); opacity: 0; }
+      to { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    .toast-pill {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #1B1938;
+      border: 1px solid rgba(246, 170, 221, 0.4);
+      color: #fff;
+      padding: 0.85rem 1.4rem;
+      border-radius: 12px;
+      font-family: var(--font-family-mono);
+      font-size: 0.85rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 2000;
+    }
+    .toast-pill.active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-speedlines"></div>
+
+  <!-- Header -->
+  <header class="sh-header">
+    <div class="nav-inner">
+      <a href="#section-overview" class="brand-group">
+        <div class="sh-logo-badge">
+          <!-- Wisible W Prism Mark -->
+          <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
+            <path d="M20 30L38 75L50 48L62 75L80 30" stroke="#F6AADD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M50 20L40 45H60L50 20Z" fill="#792D4B"/>
+          </svg>
+        </div>
+        <div class="sh-brand-title">
+          <span>UP</span>
+          <span style="opacity: 0.4;">×</span>
+          <span>GENIUS GOAT</span>
+          <span class="endorsement-badge">by Wisible</span>
+        </div>
+        <span class="sh-brand-pill">Superhuman CI</span>
+      </a>
+
+      <div class="header-actions">
+        <button class="btn-header" onclick="openCmdPalette()">
+          <span>Command Palette</span>
+          <span class="keycap">⌘K</span>
+        </button>
+        <button class="btn-header" onclick="window.print()" style="background: transparent;">
+          <span>🖨️ Export PDF</span>
+        </button>
+        <button class="btn-header" id="themeToggle" onclick="toggleTheme()" style="background: transparent; padding: 0.5rem 0.85rem;">
+          <span id="themeIcon">☀️</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout-wrapper">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar-toc">
+      <div class="toc-title">Brand Manual & System</div>
+      <ul class="toc-menu">
+        <li class="toc-item active"><a href="#section-overview"><span>01 / Brand Essence</span> <span class="toc-num">01</span></a></li>
+        <li class="toc-item"><a href="#section-logos"><span>02 / Logos & Lockups</span> <span class="toc-num">02</span></a></li>
+        <li class="toc-item"><a href="#section-colors"><span>03 / Superhuman Colors</span> <span class="toc-num">03</span></a></li>
+        <li class="toc-item"><a href="#section-typography"><span>04 / Typography Engine</span> <span class="toc-num">04</span></a></li>
+        <li class="toc-item"><a href="#section-components"><span>05 / UI & Command HUD</span> <span class="toc-num">05</span></a></li>
+        <li class="toc-item"><a href="#section-voice"><span>06 / Brand Voice & Copy</span> <span class="toc-num">06</span></a></li>
+        <li class="toc-item"><a href="#section-rules"><span>07 / Brand Governance</span> <span class="toc-num">07</span></a></li>
+      </ul>
+
+      <div class="toc-title">Extracted Resources</div>
+      <ul class="toc-menu">
+        <li class="toc-item"><a href="LOGO_DESIGN_SYSTEM.md" target="_blank"><span>LOGO_DESIGN_SYSTEM.md</span> <span>↗</span></a></li>
+        <li class="toc-item"><a href="unified-tokens.css" target="_blank"><span>unified-tokens.css</span> <span>↗</span></a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Body -->
+    <main class="main-body">
+      
+      <!-- 01. Overview -->
+      <section class="brand-section" id="section-overview">
+        <div class="sh-hero-cover">
+          <div class="section-eyebrow">
+            <span>⚡</span> 01 / Luxury Software Architecture
+          </div>
+          <h1 class="section-headline">
+            The Luxury of <em>Extreme Velocity.</em>
+          </h1>
+          <p class="section-subtext">
+            <strong>UP</strong> and <strong>Genius Goat</strong>, endorsed by <strong>Wisible</strong>, are built directly upon Superhuman's iconic visual identity: warm obsidian depths, vibrant mulberry jewel sparks, and high-fashion editorial typography.
+          </p>
+
+          <div class="hero-meta-grid">
+            <div>
+              <div class="meta-lbl">Parent Endorser</div>
+              <div class="meta-val" style="color: var(--mulberry-20);">Wisible</div>
+            </div>
+            <div>
+              <div class="meta-lbl">Product Engines</div>
+              <div class="meta-val">UP ↑ & Genius Goat 🐐</div>
+            </div>
+            <div>
+              <div class="meta-lbl">Master Keystroke</div>
+              <div class="meta-val"><span class="keycap">⌘K</span> Command HUD</div>
+            </div>
+            <div>
+              <div class="meta-lbl">Brand Color</div>
+              <div class="meta-val" style="color: #F6AADD;">Mulberry #792D4B</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02. Logo & Architecture Lab -->
+      <section class="brand-section" id="section-logos">
+        <div class="section-eyebrow">02 / Logo System & Endorsement Architecture</div>
+        <h2 class="section-headline">The Vector Marks & Lockups</h2>
+        <p class="section-subtext">
+          Precision geometric marks engineered with Superhuman's monoline vector aesthetics, 45° cuts, and refined "by Wisible" endorsement lockups.
+        </p>
+
+        <div class="logo-lab-grid">
+          <!-- 1. Wisible Parent Mark -->
+          <div class="logo-card">
+            <div class="logo-tag">MASTER PARENT BRAND</div>
+            <div class="logo-display-box">
+              <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                <rect width="100" height="100" rx="22" fill="#1B1938" stroke="rgba(246, 170, 221, 0.35)" stroke-width="1.5"/>
+                <!-- W Optical Prism -->
+                <path d="M22 34L40 76L50 52L60 76L78 34" stroke="url(#wGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="50" cy="24" r="5" fill="#F6AADD" filter="drop-shadow(0 0 8px #F6AADD)"/>
+                <defs>
+                  <linearGradient id="wGrad" x1="22" y1="24" x2="78" y2="76" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F6AADD"/>
+                    <stop offset="1" stop-color="#792D4B"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="logo-name">WISIBLE</div>
+            <div class="logo-desc">
+              The parent technology & venture studio. The optical prism represents foresight, clarity, and vision.
+            </div>
+          </div>
+
+          <!-- 2. UP by Wisible -->
+          <div class="logo-card">
+            <div class="logo-tag">VELOCITY PLATFORM</div>
+            <div class="logo-display-box">
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="none">
+                  <rect width="100" height="100" rx="22" fill="#1B1938" stroke="rgba(246, 170, 221, 0.35)" stroke-width="1.5"/>
+                  <!-- UP Vector Monogram -->
+                  <path d="M30 38V58C30 65 35 70 42 70C49 70 54 65 54 58V38" stroke="url(#upShGrad)" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M54 38H68C75 38 80 43 80 50C80 57 75 62 68 62H54V70" stroke="url(#upShGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Upward Vector Arrow -->
+                  <path d="M54 20L45 30H63L54 20Z" fill="#F6AADD" filter="drop-shadow(0 0 8px #F6AADD)"/>
+                  <defs>
+                    <linearGradient id="upShGrad" x1="30" y1="20" x2="80" y2="70" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#F6AADD"/>
+                      <stop offset="1" stop-color="#533192"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div style="font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--color-text-muted); letter-spacing: 0.15em;">
+                  UP <span style="opacity: 0.5;">•</span> BY WISIBLE
+                </div>
+              </div>
+            </div>
+            <div class="logo-name">UP by Wisible</div>
+            <div class="logo-desc">
+              The high-velocity operating platform. The upward vector arrow embodies continuous momentum and zero drag.
+            </div>
+          </div>
+
+          <!-- 3. Genius Goat by Wisible -->
+          <div class="logo-card">
+            <div class="logo-tag">COGNITIVE AI COPILOT</div>
+            <div class="logo-display-box">
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+                <svg width="90" height="90" viewBox="0 0 100 100" fill="none">
+                  <rect width="100" height="100" rx="22" fill="#1B1938" stroke="rgba(246, 170, 221, 0.35)" stroke-width="1.5"/>
+                  <!-- Goat Synaptic Horns -->
+                  <path d="M30 68L38 45L50 30L62 45L70 68L50 58L30 68Z" fill="url(#goatShGrad)"/>
+                  <path d="M50 30L50 58" stroke="#F6AADD" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M38 45L22 32L32 26L44 38" stroke="#F6AADD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M62 45L78 32L68 26L56 38" stroke="#F6AADD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="22" cy="32" r="3.5" fill="#F6AADD" filter="drop-shadow(0 0 6px #F6AADD)"/>
+                  <circle cx="78" cy="32" r="3.5" fill="#F6AADD" filter="drop-shadow(0 0 6px #F6AADD)"/>
+                  <defs>
+                    <linearGradient id="goatShGrad" x1="50" y1="26" x2="50" y2="68" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#F6AADD"/>
+                      <stop offset="0.6" stop-color="#792D4B"/>
+                      <stop offset="1" stop-color="#281647"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div style="font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--color-text-muted); letter-spacing: 0.15em;">
+                  GENIUS GOAT <span style="opacity: 0.5;">•</span> BY WISIBLE
+                </div>
+              </div>
+            </div>
+            <div class="logo-name">Genius Goat by Wisible</div>
+            <div class="logo-desc">
+              The high-IQ cognitive copilot. The synaptic ram horns represent sub-100ms multi-modal reasoning.
+            </div>
+          </div>
+        </div>
+
+        <!-- Master Ecosystem Lockup -->
+        <div class="sh-card" style="margin-top: 2rem; text-align: center; padding: 3rem 2rem;">
+          <div style="font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--mulberry-20); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem;">
+            UNIFIED MASTER ECOSYSTEM LOCKUP
+          </div>
+          <div style="font-family: var(--font-family-sans); font-size: clamp(1.8rem, 3.5vw, 2.75rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;">
+            UP <span style="color: var(--mulberry-20);">×</span> GENIUS GOAT
+          </div>
+          <div style="font-family: var(--font-family-mono); font-size: 0.95rem; color: var(--color-text-muted); letter-spacing: 0.2em; text-transform: uppercase;">
+            BY WISIBLE
+          </div>
+        </div>
+      </section>
+
+      <!-- 03. Color Architecture -->
+      <section class="brand-section" id="section-colors">
+        <div class="section-eyebrow">03 / Color Architecture & Production Tokens</div>
+        <h2 class="section-headline">The Superhuman Jewel Palette</h2>
+        <p class="section-subtext">
+          Extracted directly from Superhuman production CSS. Click any color swatch below to copy the exact HEX code and token name.
+        </p>
+
+        <div class="swatch-grid">
+          <!-- Obsidian Void -->
+          <div class="swatch-box" onclick="copyToken('#141413', '--neutral-100')">
+            <div class="swatch-color-fill" style="background: #141413;">
+              <span class="swatch-pill-tag">CANVAS BASE</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Obsidian Void</div>
+              <div class="swatch-subheading">Warm black canvas background</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#141413</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">20, 20, 19</span></div>
+                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">Black 6C</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--neutral-100</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Signature Mulberry -->
+          <div class="swatch-box" onclick="copyToken('#792D4B', '--mulberry-80')">
+            <div class="swatch-color-fill" style="background: #792D4B;">
+              <span class="swatch-pill-tag">PRIMARY BRAND</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Signature Mulberry</div>
+              <div class="swatch-subheading">Iconic Superhuman jewel tone</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#792D4B</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">121, 45, 75</span></div>
+                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">222 C</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--mulberry-80</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electric Magenta -->
+          <div class="swatch-box" onclick="copyToken('#F6AADD', '--mulberry-20')">
+            <div class="swatch-color-fill" style="background: #F6AADD;">
+              <span class="swatch-pill-tag" style="color:#000; background:#fff;">TAG SPARK</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Electric Magenta</div>
+              <div class="swatch-subheading">Active pill highlights & text accents</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#F6AADD</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">246, 170, 221</span></div>
+                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">2375 C</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--mulberry-20</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Royal Purple -->
+          <div class="swatch-box" onclick="copyToken('#533192', '--purple-80')">
+            <div class="swatch-color-fill" style="background: #533192;">
+              <span class="swatch-pill-tag">ROYAL PURPLE</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Royal Violet</div>
+              <div class="swatch-subheading">Secondary depth & gradients</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#533192</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">83, 49, 146</span></div>
+                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">2685 C</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--purple-80</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deep Navy Violet -->
+          <div class="swatch-box" onclick="copyToken('#1B1938', '--_button-default-bg')">
+            <div class="swatch-color-fill" style="background: #1B1938;">
+              <span class="swatch-pill-tag">CARD & BUTTON</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Deep Navy Violet</div>
+              <div class="swatch-subheading">Elevated button & card background</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#1B1938</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">27, 25, 56</span></div>
+                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">2765 C</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--_button-default-bg</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ice Blue -->
+          <div class="swatch-box" onclick="copyToken('#BBDFF7', '--blue-20')">
+            <div class="swatch-color-fill" style="background: #BBDFF7;">
+              <span class="swatch-pill-tag" style="color:#000; background:#fff;">ICE CYAN</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Ice Blue</div>
+              <div class="swatch-subheading">Speed indicators & charts</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#BBDFF7</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">187, 223, 247</span></div>
+                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">2905 C</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--blue-20</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04. Typography -->
+      <section class="brand-section" id="section-typography">
+        <div class="section-eyebrow">04 / Typographic Engine</div>
+        <h2 class="section-headline">The Tripartite Font Hierarchy</h2>
+        <p class="section-subtext">
+          Superhuman’s visual soul lies in the tension between high-fashion editorial serif and ultra-precise engineering monospace.
+        </p>
+
+        <div class="sh-card">
+          <!-- Voice 1 -->
+          <div style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border-sub);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--mulberry-20);">1. SUPER SERIF VF (EDITORIAL LUXURY VOICE)</span>
+              <span class="sh-brand-pill">Headlines & Quotes</span>
+            </div>
+            <div style="font-family: var(--font-family-serif); font-size: clamp(2.3rem, 3.8vw, 3.6rem); line-height: 1.1; margin: 1rem 0;">
+              "Fly through your workflows twice as fast."
+            </div>
+            <div style="font-size: 0.875rem; color: var(--color-text-muted);">
+              Used with tight letter-spacing (-0.02em) and expressive italic accents for high-fashion elegance.
+            </div>
+          </div>
+
+          <!-- Voice 2 -->
+          <div style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border-sub);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--neutral-20);">2. SUPER SANS VF (MODERN PRECISION VOICE)</span>
+              <span class="sh-brand-pill">UI Controls & Body</span>
+            </div>
+            <div style="font-family: var(--font-family-sans); font-size: 1.2rem; font-weight: 600; line-height: 1.5; margin: 1rem 0;">
+              Get a more productive experience built for high-performance teams. Move faster, stay focused, and collaborate effortlessly.
+            </div>
+          </div>
+
+          <!-- Voice 3 -->
+          <div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--blue-20);">3. SUPER SANS MONO VF (VELOCITY TELEMETRY VOICE)</span>
+              <span class="sh-brand-pill">Keycaps & Timestamps</span>
+            </div>
+            <div style="font-family: var(--font-family-mono); font-size: 0.95rem; color: var(--blue-20); line-height: 1.6; margin: 1rem 0;">
+              [ ⌘K ] COMMAND_PALETTE // LATENCY: 84ms // ZERO_DRAG // BY WISIBLE
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05. UI Components -->
+      <section class="brand-section" id="section-components">
+        <div class="section-eyebrow">05 / UI Components & Master Command HUD</div>
+        <h2 class="section-headline">Tactile Physical Keycaps & Palette</h2>
+        <p class="section-subtext">
+          Everything is keyboard-first. Press <kbd>⌘K</kbd> to launch the command palette or click below.
+        </p>
+
+        <div style="border: 1px solid var(--color-border-sub); border-radius: 18px; background: #141413; padding: 2.5rem; margin-bottom: 2.5rem;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--color-text-muted); text-transform: uppercase;">Interactive Keycap Dock</span>
+            <button class="btn-header" onclick="openCmdPalette()">
+              <span>Launch ⌘K Palette</span>
+              <span class="keycap">⌘K</span>
+            </button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div style="background: #1B1938; border: 1px solid rgba(246, 170, 221, 0.25); border-radius: 16px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-weight: 700;">Multi-Modal Synthesis</span>
+                <span class="keycap">Q</span>
+              </div>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">
+                Genius Goat synthesizes multi-page materials into 3 decision nodes.
+              </p>
+              <span class="sh-brand-pill">11ms LATENCY</span>
+            </div>
+
+            <div style="background: #1B1938; border: 1px solid rgba(246, 170, 221, 0.25); border-radius: 16px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-weight: 700;">Elevate Priority (+1 UP)</span>
+                <span class="keycap">↑</span>
+              </div>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">
+                UP clears bottlenecks and promotes tasks to top executive focus.
+              </p>
+              <span class="sh-brand-pill">+340% VELOCITY</span>
+            </div>
+
+            <div style="background: #1B1938; border: 1px solid rgba(246, 170, 221, 0.25); border-radius: 16px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span style="font-weight: 700;">Auto-Resolve Conflict</span>
+                <span class="keycap">Tab</span>
+              </div>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">
+                Autonomous reasoning sub-agents resolve logic tree conflicts in milliseconds.
+              </p>
+              <span class="sh-brand-pill">BY WISIBLE</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06. Brand Voice -->
+      <section class="brand-section" id="section-voice">
+        <div class="section-eyebrow">06 / Copywriting & Brand Voice</div>
+        <h2 class="section-headline">The Superhuman Voice & Tone</h2>
+        <p class="section-subtext">
+          Confident, punchy, velocity-obsessed, and elevated. Eliminate all fluff.
+        </p>
+
+        <div class="sh-card">
+          <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--color-border-sub);">
+                <th style="padding: 1rem; font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--color-text-muted);">MOMENT</th>
+                <th style="padding: 1rem; font-family: var(--font-family-mono); font-size: 0.8rem; color: #EF4444;">GENERIC SAAS VOICE</th>
+                <th style="padding: 1rem; font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--mulberry-20);">SUPERHUMAN VOICE</th>
+              </tr>
+            </thead>
+            <tbody style="font-size: 0.95rem;">
+              <tr style="border-bottom: 1px solid var(--color-border-sub);">
+                <td style="padding: 1.25rem 1rem; font-weight: 600;">Hero Headline</td>
+                <td style="padding: 1.25rem 1rem; color: var(--color-text-muted);">"Our software helps people be productive."</td>
+                <td style="padding: 1.25rem 1rem; color: #F6AADD; font-weight: 600;">"Fly through your workflows twice as fast."</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-sub);">
+                <td style="padding: 1.25rem 1rem; font-weight: 600;">Search Action</td>
+                <td style="padding: 1.25rem 1rem; color: var(--color-text-muted);">"Search for documents in the search bar."</td>
+                <td style="padding: 1.25rem 1rem; color: #F6AADD; font-weight: 600;">"Hit <span class='keycap'>⌘K</span> to do anything instantly."</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--color-border-sub);">
+                <td style="padding: 1.25rem 1rem; font-weight: 600;">Flow State</td>
+                <td style="padding: 1.25rem 1rem; color: var(--color-text-muted);">"All tasks complete."</td>
+                <td style="padding: 1.25rem 1rem; color: #F6AADD; font-weight: 600;">"Altitude reached. Enjoy your uninterrupted flow."</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 07. Do's and Don'ts -->
+      <section class="brand-section" id="section-rules">
+        <div class="section-eyebrow">07 / Brand Governance</div>
+        <h2 class="section-headline">Design Do's and Don'ts</h2>
+        <p class="section-subtext">
+          Rules for preserving the authentic luxury and speed of the Superhuman design language.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+          <div style="border-radius: 16px; padding: 1.75rem; border: 1px solid rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.03);">
+            <div style="color: #10B981; font-weight: 700; margin-bottom: 1rem; font-size: 1.05rem;">
+              <span>✓</span> ALWAYS DO
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.925rem; color: var(--color-text-muted);">
+              <li>• Always use warm Obsidian (<code style="color:#F6AADD">#141413</code>) as the canvas base.</li>
+              <li>• Always use Mulberry (<code style="color:#F6AADD">#792D4B</code>) & Electric Magenta (<code style="color:#F6AADD">#F6AADD</code>).</li>
+              <li>• Always include the "by Wisible" endorsement on master locks and footers.</li>
+              <li>• Always provide tactile keycaps (<span class="keycap">⌘K</span>, <span class="keycap">Q</span>, <span class="keycap">↑</span>) on all actions.</li>
+            </ul>
+          </div>
+
+          <div style="border-radius: 16px; padding: 1.75rem; border: 1px solid rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.03);">
+            <div style="color: #EF4444; font-weight: 700; margin-bottom: 1rem; font-size: 1.05rem;">
+              <span>✕</span> NEVER DO
+            </div>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.925rem; color: var(--color-text-muted);">
+              <li>• Never use generic corporate blues or cold gray borders.</li>
+              <li>• Never alter the 2X clear space ratio around the vector marks.</li>
+              <li>• Never clutter the screen with cartoon illustrations or heavy drop shadows.</li>
+              <li>• Never use generic corporate buzzwords.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Command Palette Modal -->
+  <div class="sh-cmd-overlay" id="cmdOverlay">
+    <div class="sh-cmd-modal" id="cmdModal">
+      <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--color-border-sub); display: flex; align-items: center; gap: 1rem;">
+        <span style="font-size: 1.25rem; color: #F6AADD;">⚡</span>
+        <input type="text" id="cmdSearchInput" placeholder="Type a command or ask Genius Goat by Wisible..." style="flex: 1; background: transparent; border: none; outline: none; color: #fff; font-family: var(--font-family-sans); font-size: 1.15rem;" />
+        <span class="keycap" onclick="closeCmdPalette()" style="cursor: pointer;">ESC</span>
+      </div>
+
+      <div id="cmdItemList" style="max-height: 380px; overflow-y: auto; padding: 0.75rem;">
+        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; background: rgba(255,255,255,0.08);" onclick="executeCmd('Synthesize documents with Genius Goat')">
+          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
+            <span>🐐</span>
+            <span>Synthesize document into 3 key decisions (Genius Goat)</span>
+          </div>
+          <span class="keycap">Q</span>
+        </div>
+
+        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;" onclick="executeCmd('Move priority UP')">
+          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
+            <span>🚀</span>
+            <span>Move priority UP (+1 Altitude)</span>
+          </div>
+          <span class="keycap">↑</span>
+        </div>
+
+        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;" onclick="executeCmd('Auto-resolve logic conflict')">
+          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
+            <span>🐐</span>
+            <span>Auto-Resolve logic tree conflict</span>
+          </div>
+          <span class="keycap">Tab</span>
+        </div>
+
+        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;" onclick="executeCmd('Launch automated velocity pipeline')">
+          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
+            <span>🚀</span>
+            <span>Launch automated velocity pipeline (UP)</span>
+          </div>
+          <span class="keycap">Shift+Enter</span>
+        </div>
+
+        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;" onclick="executeCmd('Wisible Studio Global Diagnostics')">
+          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
+            <span>⚡</span>
+            <span>Wisible Studio Global Telemetry Sync</span>
+          </div>
+          <span class="keycap">W</span>
+        </div>
+      </div>
+
+      <div style="padding: 0.75rem 1.5rem; background: rgba(0,0,0,0.3); border-top: 1px solid var(--color-border-sub); display: flex; justify-content: space-between; font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--color-text-muted);">
+        <div>Navigate with <span class="keycap">↑</span> <span class="keycap">↓</span></div>
+        <div>Execute <span class="keycap">Enter</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-pill" id="toastPill">Copied token to clipboard!</div>
+
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      document.getElementById('themeIcon').textContent = isDark ? '🌙' : '☀️';
+    }
+
+    // Token copy
+    function copyToken(val, tokenName) {
+      navigator.clipboard.writeText(val).then(() => {
+        showToast(`Copied ${val} (${tokenName}) to clipboard!`);
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastPill');
+      toast.textContent = msg;
+      toast.classList.add('active');
+      setTimeout(() => toast.classList.remove('active'), 2500);
+    }
+
+    // Command Palette Modal
+    const cmdOverlay = document.getElementById('cmdOverlay');
+    const cmdSearchInput = document.getElementById('cmdSearchInput');
+
+    function openCmdPalette() {
+      cmdOverlay.classList.add('open');
+      cmdSearchInput.value = '';
+      cmdSearchInput.focus();
+    }
+
+    function closeCmdPalette() {
+      cmdOverlay.classList.remove('open');
+    }
+
+    function executeCmd(title) {
+      showToast(`Executed: ${title}`);
+      closeCmdPalette();
+    }
+
+    // Global Key Listener
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        openCmdPalette();
+      } else if (e.key === 'Escape') {
+        closeCmdPalette();
+      }
+    });
+
+    cmdOverlay.addEventListener('click', (e) => {
+      if (e.target === cmdOverlay) closeCmdPalette();
+    });
+  </script>
+</body>
+</html>

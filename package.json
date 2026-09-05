@@ -1,0 +1,21 @@
+{
+  "name": "brandbook",
+  "version": "1.0.0",
+  "description": "Unified Brandbook & Design System Source of Truth for Wisible, Genius Goat, and UP Outcomes",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve . -p 3000",
+    "start": "npx -y serve . -p 3000",
+    "preview": "npx -y serve . -p 3000"
+  },
+  "keywords": [
+    "wisible",
+    "genius-goat",
+    "up-outcomes",
+    "brandbook",
+    "design-system",
+    "ci"
+  ],
+  "author": "Wisible Design Team",
+  "license": "UNLICENSED"
+}

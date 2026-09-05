@@ -1,0 +1,96 @@
+/* ==========================================================================
+   GENIUS GOAT DESIGN SYSTEM TOKENS
+   Inspired by Superhuman Velocity & Smith & Diction Brand Craft
+   ========================================================================== */
+
+:root {
+  /* Brand Typography Engine */
+  --goat-font-serif: "Instrument Serif", "Fraunces", Georgia, serif;
+  --goat-font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --goat-font-mono: "JetBrains Mono", "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Neutrals & Dark Canvas */
+  --goat-neutral-void: #08090C;
+  --goat-neutral-900: #10121A;
+  --goat-neutral-800: #181B26;
+  --goat-neutral-700: #232736;
+  --goat-neutral-600: #33384C;
+  --goat-neutral-500: #4B5563;
+  --goat-neutral-400: #64748B;
+  --goat-neutral-300: #94A3B8;
+  --goat-neutral-200: #CBD5E1;
+  --goat-neutral-100: #F1F5F9;
+  --goat-neutral-white: #FFFFFF;
+
+  /* Genius Gold & Volt Scale */
+  --goat-gold-100: #FFF9DB;
+  --goat-gold-300: #FFE066;
+  --goat-gold-500: #FFC72C; /* Primary Brand Gold */
+  --goat-gold-volt: #FFE600; /* Electric IQ Spark */
+  --goat-gold-700: #D99B00;
+  --goat-gold-900: #8C6200;
+  --goat-gold-glow: rgba(255, 199, 44, 0.18);
+
+  /* Synaptic Indigo Scale */
+  --goat-indigo-100: #EEF2FF;
+  --goat-indigo-300: #A5B4FC;
+  --goat-indigo-500: #6366F1;
+  --goat-indigo-600: #4F46E5; /* Primary Synaptic Accent */
+  --goat-indigo-800: #3730A3;
+  --goat-indigo-950: #1E1B4B;
+  --goat-indigo-glow: rgba(79, 70, 229, 0.22);
+
+  /* Lucid Mint (Sub-second execution) */
+  --goat-mint-300: #5EEAD4;
+  --goat-mint-500: #00F5D4;
+  --goat-mint-700: #0D9488;
+
+  /* Theme Mappings (Dark Default) */
+  --goat-bg-canvas: var(--goat-neutral-void);
+  --goat-bg-surface: var(--goat-neutral-900);
+  --goat-bg-elevated: var(--goat-neutral-800);
+  --goat-bg-glass: rgba(16, 18, 26, 0.75);
+  
+  --goat-border-subtle: rgba(255, 255, 255, 0.08);
+  --goat-border-highlight: rgba(255, 199, 44, 0.3);
+  --goat-border-focus: var(--goat-gold-500);
+
+  --goat-text-title: var(--goat-neutral-white);
+  --goat-text-body: var(--goat-neutral-200);
+  --goat-text-muted: var(--goat-neutral-400);
+  --goat-text-accent: var(--goat-gold-500);
+
+  /* Gradients */
+  --goat-gradient-synapse: linear-gradient(135deg, #FFC72C 0%, #FF8A00 45%, #4F46E5 100%);
+  --goat-gradient-card: linear-gradient(180deg, rgba(24, 27, 38, 0.8) 0%, rgba(16, 18, 26, 0.95) 100%);
+  --goat-gradient-border: linear-gradient(135deg, rgba(255, 199, 44, 0.4), rgba(79, 70, 229, 0.2) 60%, rgba(255, 255, 255, 0.05));
+  --goat-speedline-pattern: repeating-linear-gradient(45deg, rgba(255, 199, 44, 0.015) 0px, rgba(255, 199, 44, 0.015) 1px, transparent 1px, transparent 8px);
+
+  /* Shadows & Glows */
+  --goat-shadow-card: 0 10px 30px -5px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--goat-border-subtle);
+  --goat-shadow-modal: 0 25px 60px -15px rgba(0, 0, 0, 0.8), 0 0 30px var(--goat-gold-glow), 0 0 0 1px var(--goat-border-highlight);
+  --goat-glow-gold: 0 0 24px rgba(255, 199, 44, 0.35);
+
+  /* Radii */
+  --goat-radius-xs: 4px;
+  --goat-radius-sm: 8px;
+  --goat-radius-md: 12px;
+  --goat-radius-lg: 20px;
+  --goat-radius-full: 9999px;
+}
+
+/* Light Theme Override */
+[data-theme="light"] .genius-goat-theme {
+  --goat-bg-canvas: #FAF9F6;
+  --goat-bg-surface: #FFFFFF;
+  --goat-bg-elevated: #F1F0EA;
+  --goat-bg-glass: rgba(255, 255, 255, 0.85);
+
+  --goat-border-subtle: rgba(0, 0, 0, 0.08);
+  --goat-border-highlight: rgba(217, 155, 0, 0.4);
+
+  --goat-text-title: #0F172A;
+  --goat-text-body: #334155;
+  --goat-text-muted: #64748B;
+  --goat-text-accent: #B45309;
+}

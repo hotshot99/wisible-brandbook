@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 100 100" fill="none">
+  <rect width="100" height="100" rx="22" fill="#141413" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  <!-- Optical Prism W -->
+  <path d="M22 30L36 72L50 42L64 72L78 30" stroke="url(#bpWisibleGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <defs>
+    <linearGradient id="bpWisibleGrad" x1="22" y1="30" x2="78" y2="72" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6E3FA0"/>
+      <stop offset="1" stop-color="#D45A9A"/>
+    </linearGradient>
+  </defs>
+</svg>
