@@ -33,7 +33,10 @@ This project (`brandbook`) serves as the central **Source of Truth (SoT)** for a
 
 | Token Role | Hex / Value | Brand Scope | Operational Rule |
 |------------|-------------|-------------|------------------|
-| `--wisible-gradient` | `linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%)` | Wisible / Goat | Active CTAs, Logo Mark, Agentic Badges |
+| `--wisible-gradient` | `linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%)` | Wisible / Goat | **Logo Mark & Active Spark ONLY**: 3-Stop Jewel dynamism |
+| `--wisible-cta-primary` | `#9D174D` | Wisible Universal | **Locked Solid Matte Berry**: Primary Action Button across Web & App |
+| `--wisible-cta-hover` | `#831843` | Wisible Universal | Deepened Sub-100ms Hover State |
+| `--wisible-cta-active` | `#660F34` | Wisible Universal | Tactile Pressed State |
 | `--jewel-gradient` | `linear-gradient(135deg, #6E3FA0 0%, #D45A9A 100%)` | UP Outcomes / Superhuman | Primary Hero Action, Jewel Squircle |
 | `--paper-wash` | `#F7F6F4` | All Brands | 300gsm Cotton Stationery Page Wash |
 | `--paper-surface` | `#FFFFFF` | All Brands | Elevated Crisp Card Fill |
@@ -68,13 +71,13 @@ This project (`brandbook`) serves as the central **Source of Truth (SoT)** for a
 ## Operational Rules & Brand Governance
 
 1. **The Jewel Rule (≤5% Area Rule):** Brand gradients (`#8B5CF6→#EC4899→#F97316` or `#6E3FA0→#D45A9A`) must NEVER exceed 5% of the total viewport area. Gradient fill is strictly reserved for:
-   - Primary Hero CTA Button
-   - Vector Brandmark Glyphs
+   - Vector Brandmark Glyphs & App Icons
    - Active status spark dots / live beacons / rank badges
-2. **Ink Purity:** Headlines, display titles, and financial statistics MUST remain in pure `#26292C` solid ink. Never apply gradient fills to text or numbers.
-3. **Paper Wash Aesthetic:** Surfaces read as a paper document (`#F7F6F4` wash + `#FFFFFF` hairline card fill) rather than heavy dark dashboard cards.
-4. **Semantics on Numbers Only:** Apply green `#1F7A4C`, amber `#B45309`, red `#B42318` only to the delta number or status tag — never tint the entire background card.
-5. **No Eyebrow Kickers:** Avoid redundant "EYEBROW" text above main section headings.
+   - Secondary Button Hairline Gradient Outlines
+2. **Solid Primary CTA:** Primary Action Buttons on both Marketing Web and In-App CRM / Mobile App strictly use **Solid Matte Berry (`#9D174D`)** with white text `#FFFFFF` (8.5:1 AAA contrast). No gradient fills on primary button bodies.
+3. **Ink Purity:** Headlines, display titles, and financial statistics MUST remain in pure `#26292C` solid ink. Never apply gradient fills to text or numbers.
+4. **Paper Wash Aesthetic:** Surfaces read as a paper document (`#F7F6F4` wash + `#FFFFFF` hairline card fill) rather than heavy dark dashboard cards.
+5. **Semantics on Numbers Only:** Apply green `#1F7A4C`, amber `#B45309`, red `#B42318` only to the delta number or status tag — never tint the entire background card.
 6. **Keycap Association:** Primary actions feature physical keycap hints with sub-100ms tactile response.
 
 ---

@@ -1,28 +1,53 @@
 /* Wisible & Wisible Sheets Design System Tokens */
 :root {
-  /* Brand CI Gradient — Electric Neon Sunset */
+  /* ==========================================================================
+     1. BRAND CI GRADIENT (LOGO & ACTIVE SPARK ONLY)
+     ========================================================================== */
   --wisible-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
   --wisible-violet: #8B5CF6;
   --wisible-pink: #EC4899;
   --wisible-orange: #F97316;
 
-  /* Paper & Surface Base */
+  /* ==========================================================================
+     2. LOCKED SOLID CTA SYSTEM (MATTE BERRY ARCHITECTURE)
+     ========================================================================== */
+  --wisible-cta-primary: #9D174D;         /* Matte Berry (Primary Solid CTA for Web & App) */
+  --wisible-cta-hover: #831843;           /* Deeper Pressed Hover */
+  --wisible-cta-active: #660F34;          /* Sub-100ms Active State */
+  --wisible-cta-shadow: rgba(157, 23, 77, 0.32);
+  --wisible-cta-tint: rgba(157, 23, 77, 0.08);
+  --wisible-cta-border: rgba(157, 23, 77, 0.25);
+
+  /* Secondary Companion Button */
+  --wisible-cta-secondary-bg: #FFFFFF;
+  --wisible-cta-secondary-border: var(--wisible-hairline);
+
+  /* ==========================================================================
+     3. PAPER & SURFACE BASE (300gsm LUXURY)
+     ========================================================================== */
   --wisible-paper: #F7F6F4;
   --wisible-surface: #FFFFFF;
   --wisible-hairline: #E6E4E0;
   --wisible-hairline-strong: #D5D2CD;
 
-  /* Ink Hierarchy */
-  --wisible-ink: #26292C;
-  --wisible-soft: #5A5F66;
-  --wisible-mute: #8A9098;
+  /* ==========================================================================
+     4. INK HIERARCHY
+     ========================================================================== */
+  --wisible-ink: #26292C;                 /* 13.8:1 AAA Northstar Headlines */
+  --wisible-soft: #5A5F66;                /* Body copy */
+  --wisible-mute: #8A9098;                /* Metadata & Timestamps */
 
-  /* Semantics */
+  /* ==========================================================================
+     5. SEMANTICS
+     ========================================================================== */
   --wisible-semantic-green: #1F7A4C;
   --wisible-semantic-amber: #B45309;
   --wisible-semantic-red: #B42318;
 
-  /* Typography */
-  --font-wisible: 'Anuphan', 'Noto Sans Thai', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* ==========================================================================
+     6. TYPOGRAPHY
+     ========================================================================== */
+  --font-wisible: 'Anuphan', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
   --font-mono: 'JetBrains Mono', monospace;
 }

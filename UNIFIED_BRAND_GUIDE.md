@@ -1,83 +1,158 @@
-# ⚡ MASTER BRAND IDENTITY & CI MANUAL
-### UP & GENIUS GOAT
-*Architecture: Executive Luxury & Sub-100ms Velocity*
-*Color Engine: Royal Violet `#6E3FA0` → Vibrant Berry Magenta `#D45A9A` (Locked from `genius-goat/DESIGN.md`)*
+# ⚡ MASTER BRAND IDENTITY & DESIGN CI MANUAL
+### UNIFIED BRAND GUIDE: WISIBLE × UP × GENIUS GOAT
+*Architecture: Executive Luxury, High-IQ Autonomous AI & Sub-100ms Velocity*
+*Universal Primary CTA: Solid Matte Berry `#9D174D` (WCAG 8.5:1 AAA)*
 
 ---
 
-## 1. Executive Brand Essence & Positioning
+## 1. Brand Hierarchy & Global Positioning
 
-**UP** and **Genius Goat** create an entirely new software category: **"Executive Luxury Software"**.
+The entire product ecosystem operates under **ONE unified Brand CI, Design System, Token Engine, and Typographic Hierarchy**:
 
-Instead of treating productivity as cold utility or minimalist beige, the design language treats speed as an **aspirational craft, an elevated sensory experience, and a high-status productivity instrument**.
-
-### The 3 Core Axioms
-1. **The Sub-100ms Flow State**: Zero friction, zero drag, instantaneous physical feedback.
-2. **Paper & Ink Luxury**: The canvas is a heavy 300gsm cotton stationery wash (`#F7F6F4`) in Day Mode and Warm Obsidian (`#141413`) in Night Mode.
-3. **The Radiant Jewel Accent**: A controlled, high-voltage gradient (`#6E3FA0 → #D45A9A`) applied with strict restraint to primary conversion points and brand hallmarks.
-
----
-
-## 2. Master Color Engine & Specifications
-
-| Role | Token Name | HEX Value | RGB | Pantone | WCAG Contrast |
-|---|---|---|---|---|---|
-| **Signature Gradient Start** | `--accent-purple` | `#6E3FA0` | `110, 63, 160` | `2685 C` | 7.2:1 (AAA) |
-| **Signature Gradient End** | `--accent-magenta` | `#D45A9A` | `212, 90, 154` | `2375 C` | 4.8:1 (AA) |
-| **Light Page Wash** | `--paper-wash` | `#F7F6F4` | `247, 246, 244` | — | Background |
-| **Card Surface** | `--paper-surface` | `#FFFFFF` | `255, 255, 255` | — | Surface |
-| **Hairline Border (1px)** | `--paper-hairline` | `#E6E4E0` | `230, 228, 224` | — | Stroke |
-| **Ink Display (Headlines/KPIs)** | `--ink-display` | `#26292C` | `38, 41, 44` | `Black 7 C` | **13.8:1 (AAA)** |
-| **Ink Soft (Body)** | `--ink-soft` | `#5A5F66` | `90, 95, 102` | — | 7.6:1 (AAA) |
-| **Ink Mute (Captions)** | `--ink-mute` | `#8A9098` | `138, 144, 152` | — | 4.5:1 (AA) |
-| **Obsidian Void (Dark Base)** | `--obsidian-base` | `#141413` | `20, 20, 19` | `Black 6 C` | Dark Canvas |
+```
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                               MASTER BRAND ARCHITECTURE                                │
+│                                                                                        │
+│   🌐 UP (Global Market)         🇹🇭 WISIBLE (Thai & Regional)    🐐 GENIUS GOAT (AI Engine)
+│   ─────────────────────         ────────────────────────────    ──────────────────────────
+│   • Enterprise AI OS            • Thai-First Autonomous CRM     • High-IQ AI Copilot Engine
+│   • US / Europe / APAC          • Sheets Sync & LINE Deal Ops   • Synthesis & Morning Brief
+│                                                                                        │
+│   ══════════════════════════════════════════════════════════════════════════════════   │
+│   🔒 SHARED MASTER CI TOKENS:                                                          │
+│   • Universal Primary Solid CTA: Matte Berry (#9D174D)                                 │
+│   • Base Canvas: 300gsm Cotton Paper Wash (#F7F6F4) / Warm Obsidian (#141413)          │
+│   • Ink Hierarchy: Pure Ink (#26292C) • Soft (#5A5F66) • Mute (#8A9098)                │
+│   • Typography: Instrument Serif × Plus Jakarta Sans / Anuphan × JetBrains Mono        │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 3. The 3 Master CTA Button Styles
+## 2. Vector Logo & Wordmark Design System
 
-### 1. **Style 1: Radiant Core (Hero Primary)**
-- **Role**: The #1 highest-conversion action on any page.
-- **Fill**: Linear gradient 135° `#6E3FA0 → #D45A9A`.
-- **Specular Sweep**: 45° glass reflection sweep on hover (`transition: transform 0.65s ease`).
-- **Shadow**: `0 12px 30px -4px rgba(110, 63, 160, 0.45), 0 0 20px rgba(212, 90, 154, 0.3)`.
-- **Keycap**: Semi-translucent frosted keycap `<span class="keycap">Enter</span>` or `<span class="keycap">G</span>`.
+The system provides fully editable master vector definitions for **Wisible ✦**, **UP ↑**, and **Genius Goat 🐐**.
 
-### 2. **Style 2: Jewel Border (Elevated Pro)**
-- **Role**: Secondary high-impact actions (e.g., *"Launch Command HUD <kbd>⌘K</kbd>"*).
-- **Fill**: Crisp `#FFFFFF` surface with gradient border clipping.
-- **Shadow**: `0 10px 25px rgba(110, 63, 160, 0.15)`.
+### A. Wisible Master Logo & Wordmark (`wisible`)
 
-### 3. **Style 3: Ghost Velocity (Subtle)**
-- **Role**: Tertiary exploratory actions (e.g., *"Watch 60s Demo <kbd>D</kbd>"*).
-- **Fill**: Quiet `#F0EDE8` resting state with purple hover border.
+The Wisible identity consists of two harmonized geometric elements: the **Circular Icon Glyph** (triple-arch 'w') and the **Geometric Sans Wordmark** (`wisible`).
+
+```
+┌───────────────────────────────────────────────────────────────────────────┐
+│   [ (w) ]   w i s i b l e                                                │
+│   ───────   ─────────────                                                 │
+│    Icon     Continuous Geometric Wordmark                                 │
+│   (Jewel)   (Pure Ink #26292C / Pure White #FFFFFF)                       │
+└───────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Color & Context Variants:
+1. **Primary Full Jewel Lockup (Web / App Header)**:
+   - **Icon**: 3-Stop Jewel Gradient (`#8B5CF6 → #EC4899 → #F97316`)
+   - **Wordmark**: Solid Ink Display (`#26292C`) on Light Wash (`#F7F6F4`), or White (`#FFFFFF`) on Dark Obsidian (`#141413`).
+2. **Monochrome / Solid Executive Lockup (Invoices / Stamps / High Contrast)**:
+   - **Icon**: Solid Obsidian Circle (`#26292C` / `#141413`) with White 'w' cutout.
+   - **Wordmark**: Solid Obsidian (`#26292C`).
+3. **App Icon / Favicon (Glyph Only)**:
+   - 3-Stop Gradient Circle with crisp white 'w' glyph at optical center.
+
+#### Master Vector Files:
+- Master Illustrator Source: [`assets/logos/wisible_logo_MasterTemplate.ai`](assets/logos/wisible_logo_MasterTemplate.ai)
+- Master Full Lockup Vector: [`assets/logos/wisible_full_lockup.svg`](assets/logos/wisible_full_lockup.svg)
+- Production Glyph Vector: [`assets/logos/wisible_logo_crm.svg`](assets/logos/wisible_logo_crm.svg)
+
+### B. UP Master Logo & Wordmark (`UP ↑`)
+
+The UP identity shares the exact geometry, circular badge scale (168px), and 3-stop jewel palette as Wisible. It features the **Circular UP Monogram Badge** (interconnected U & P strokes with ascension arrow spark) paired with the **Bespoke Geometric Wordmark (`UP ↑`)** and monospace endorsement line (`ENTERPRISE VELOCITY OS // BY WISIBLE`).
+
+```
+┌───────────────────────────────────────────────────────────────────────────┐
+│   [ (UP↑) ]   U P  ↑                                                      │
+│   ─────────   ──────                                                      │
+│     Badge      Bespoke Geometric Wordmark + Jewel Ascension Arrow         │
+│    (Jewel)    (Pure Ink #26292C / Pure White #FFFFFF)                     │
+└───────────────────────────────────────────────────────────────────────────┘
+```
+
+#### Color & Context Variants:
+1. **Primary Full Jewel Lockup (Web / App Header)**:
+   - **Badge**: 3-Stop Jewel Gradient (`#8B5CF6 → #EC4899 → #F97316`)
+   - **Wordmark**: Solid Ink Display (`#26292C`) + Jewel Arrow (`↑`) on Light Surface, or Pure White (`#FFFFFF`) on Dark Obsidian (`#141413`).
+2. **Monochrome / Solid Executive Lockup (High Contrast / Legal)**:
+   - **Badge**: Solid Obsidian Circle (`#26292C`) with White cutout.
+   - **Wordmark & Arrow**: Solid Obsidian (`#26292C`).
+3. **Standalone Monogram / Favicon (`up_logo_monogram.svg`)**:
+   - 168×168 3-Stop Jewel Gradient circle with pure white U & P strokes and ascension spark.
+
+#### Master Vector Files:
+- Master Full Lockup Vector: [`assets/logos/up_full_lockup.svg`](assets/logos/up_full_lockup.svg)
+- Standalone Monogram Vector: [`assets/logos/up_logo_monogram.svg`](assets/logos/up_logo_monogram.svg)
+- Monochrome Solid Vector: [`assets/logos/up_logo_monochrome.svg`](assets/logos/up_logo_monochrome.svg)
+- Dark Void Inverted Vector: [`assets/logos/up_logo_dark.svg`](assets/logos/up_logo_dark.svg)
+- Genius Goat Standalone Vector: [`assets/logos/genius_goat.svg`](assets/logos/genius_goat.svg)
 
 ---
 
-## 4. Vector Glyph Geometry & Blueprint Rules
+## 3. Master Color Engine (Locked Production Tokens)
 
-### The UP Monogram (`UP ↑`)
-- **Coordinate Grid**: 100×100 unit Cartesian plane.
-- **Stroke Weight**: 7 units uniform stroke with rounded terminal joints (`stroke-linecap="round"`).
-- **Ascension Chevron**: Integrated at apex (coordinates `x: 54, y: 18` with `44,28` to `64,28` base).
-- **Clear Space (2X Rule)**: A minimum safe perimeter of 2X glyph height must remain unobstructed on all sides.
+| Role | Token Name | Hex Value | Scope | Usage & Purpose |
+|---|---|---|---|---|
+| **Universal Primary Solid CTA** | `--brand-cta-primary` | `#9D174D` | **Wisible & UP** | **Locked Solid Matte Berry**: Primary Action Button across Web Marketing, Web App CRM & Mobile App (8.5:1 AAA). |
+| **CTA Hover State** | `--brand-cta-hover` | `#831843` | All Brands | Deepened Sub-100ms Hover State. |
+| **Master Logo Jewel Gradient** | `--wisible-gradient` / `--brand-gradient` | `linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%)` | **Wisible, UP & Goat** | **Logo Mark & Active Spark ONLY** (Unified 3-Stop Jewel Spectrum). |
+| **Light Page Wash** | `--paper-wash` | `#F7F6F4` | All Brands | 300gsm Cotton Stationery Wash (Zero glare). |
+| **Card Surface** | `--paper-surface` | `#FFFFFF` | All Brands | Pure Crisp Elevated Card Fill. |
+| **Hairline Border (1px)** | `--paper-hairline` | `#E6E4E0` | All Brands | Precision 1px Split Border Divider. |
+| **Ink Display (Headlines/KPIs)** | `--ink-display` | `#26292C` | All Brands | Northstar Metrics & Display Headlines (**13.8:1 AAA**). |
+| **Ink Soft (Body)** | `--ink-soft` | `#5A5F66` | All Brands | High-readability Body Copy. |
+| **Ink Mute (Metadata)** | `--ink-mute` | `#8A9098` | All Brands | Secondary Captions, Timestamps, Keycaps. |
+| **Obsidian Base (Dark Canvas)** | `--obsidian-base` | `#141413` | All Brands | Warm Obsidian Black Dark Base. |
+| **Obsidian Surface** | `--obsidian-surface` | `#181622` | All Brands | Deep Navy-Violet Tinted Card Fill. |
 
 ---
 
-## 5. Typographic Engine (The Tripartite Model)
+## 3. The 3-Tier Button Hierarchy (Universal)
+
+Instead of using different colors across Web vs. App, the unified system uses **one solid primary color (`#9D174D`)** structured into 3 distinct hierarchy tiers:
+
+### 1. **Tier 1: Primary Action (Solid Matte Berry `#9D174D`)**
+- **Fill**: Solid `#9D174D` with crisp `#FFFFFF` white text.
+- **Shadow**: `0 8px 22px -4px rgba(157, 23, 77, 0.35)`.
+- **Usage**:
+  - **Marketing Web**: *"เริ่มต้นทดลองใช้ฟรี"* / *"Get Started with UP"* (<kbd>↵ Enter</kbd>).
+  - **Web App CRM**: *"+ New Deal"* / *"+ Create Pipeline"* (<kbd>N</kbd>).
+  - **Mobile App**: *"Approve & Send Contract"* (<kbd>↑</kbd>).
+
+### 2. **Tier 2: Secondary Action (Jewel Hairline Outline)**
+- **Fill**: `#FFFFFF` (Light) / `#181622` (Dark) with 1.5px gradient border stroke.
+- **Usage**: *"จองรอบ VIP Demo"* / *"Book Demo"*, *"Download Template"*, *"Filter Pipeline"*.
+
+### 3. **Tier 3: Tertiary / Ghost Action**
+- **Fill**: Transparent with subtle hover background and muted ink text.
+- **Usage**: *"Cancel"*, *"Dismiss"*, *"View Details"*.
+
+---
+
+## 4. Typographic Engine (The Quad-Voice Model)
 
 1. **`Instrument Serif` (Editorial Luxury Voice)**:
-   - Tracking: `-0.035em` on display sizes.
-   - Italic accents for key velocity claims (*"Twice as fast."*).
-2. **`Plus Jakarta Sans` × `Anuphan` (Precision UI & Bilingual Harmony)**:
-   - High optical legibility for data tables, split inboxes, and Thai/English UI text.
-3. **`JetBrains Mono` (Velocity Telemetry)**:
-   - Keycaps, latency tickers (`11ms LATENCY`), and system telemetry.
+   - *Role*: High-status hero headlines, manifesto claims, executive reports.
+   - *Tracking*: `-0.035em` for tight display impact. Expressive italics (*"The CRM that moves as fast as you think."*).
+2. **`Plus Jakarta Sans` × `Anuphan` (Precision UI & Bilingual Thai/English)**:
+   - *Role*: Clean geometric typography for split inboxes, deal data tables, Kanban boards, and modal forms.
+3. **`JetBrains Mono` (Hardware Keycaps & Telemetry)**:
+   - *Role*: Physical mechanical keycaps (<kbd>⌘K</kbd>, <kbd>Enter</kbd>, <kbd>N</kbd>, <kbd>G</kbd>, <kbd>↑</kbd>), latency tickers (`11ms LATENCY`), and system telemetry.
 
 ---
 
-## 6. Brand Governance (The Jewel Rule)
+## 5. Brand Governance & The Jewel Rule
 
-- **The Jewel Rule**: A jewel only sparkles if the room is quiet. Use the `#6E3FA0 → #D45A9A` gradient on **no more than 5% of the total viewport area** (CTA button, brandmark, active status dot).
-- **Ink Purity**: Never render large financial or KPI numbers in gradients. Always use solid `#26292C` ink for gravitational authority.
-- **Keyboard Pairing**: Every prominent button or triage row must display a corresponding physical keycap shortcut.
+1. **The Jewel Rule (≤5% Area Rule)**: 
+   - Master brand gradient (`#8B5CF6 → #EC4899 → #F97316`) is **strictly reserved for Vector Logos and Status Sparks**.
+   - Gradients must NEVER exceed 5% of the total viewport area.
+2. **Solid Primary Buttons**: 
+   - Buttons MUST use **Solid Matte Berry (`#9D174D`)** — never gradient fills on primary button bodies.
+3. **Ink Purity**: 
+   - Headlines, KPIs, financial metrics, and revenue numbers MUST remain in solid `#26292C` ink — **never gradient text**.
+4. **Physical Keycap Feedback**: 
+   - Every primary CTA and triage action must display a tactile keyboard shortcut hint with sub-100ms spring response (`cubic-bezier(0.16, 1, 0.3, 1)`).

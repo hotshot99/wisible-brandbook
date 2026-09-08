@@ -1,14 +1,15 @@
-# ⚡ PROJECT MEMORY: UP & GENIUS GOAT BRAND CI
+# ⚡ PROJECT MEMORY: UNIFIED BRAND CI (WISIBLE × UP × GENIUS GOAT)
 *Design Architecture: Executive Luxury & Sub-100ms Velocity*
-*Source of Truth: Aligned with Superhuman Velocity & `genius-goat/DESIGN.md`*
+*Single Source of Truth: ONE Unified Brandbook across Wisible & UP*
 
 ---
 
-## 1. Brand Hierarchy & Global Positioning
+## 1. Brand Hierarchy & Unified Ecosystem
 
-- **UP (`UP ↑`)**: Dedicated standalone brand for the **global enterprise market** (US / Europe / APAC). An ultra-fast operating system eliminating cognitive friction.
-- **Genius Goat (`Genius Goat 🐐`)**: High-IQ Cognitive AI Copilot engine for autonomous synthesis, deal momentum, and workflow acceleration.
-- **Unified Identity**: Both UP and Genius Goat share the **exact same master Brand CI, color tokens, typography hierarchy, and keycap micro-interactions**.
+- **UP (`UP ↑`)**: Global enterprise brand (US / Europe / APAC) — an ultra-fast operating system eliminating cognitive friction.
+- **Wisible (`Wisible ✦`)**: Thai-first autonomous revenue operations & AI CRM engine.
+- **Genius Goat (`Genius Goat 🐐`)**: High-IQ Cognitive AI Copilot engine for autonomous deal synthesis and velocity.
+- **Unified Identity**: **Wisible, UP, and Genius Goat share the exact same single master Brand CI, color tokens, typography hierarchy, button standards, and keycap micro-interactions.** There is only ONE brandbook.
 
 ---
 
@@ -16,10 +17,10 @@
 
 | Role | Token / Variable | HEX Value | Notes |
 |---|---|---|---|
-| **Signature Gradient Start** | `--accent-purple` | `#6E3FA0` | Royal Violet Anchor (Pantone 2685 C) |
-| **Signature Gradient End** | `--accent-magenta` | `#D45A9A` | Vibrant Berry Spark (Pantone 2375 C) |
-| **Master Gradient** | `--brand-gradient` | `linear-gradient(135deg, #6E3FA0 0%, #D45A9A 100%)` | For Primary CTA, Logos & Active Spark |
-| **Light Page Wash** | `--paper-wash` | `#F7F6F4` | 300gsm Cotton Stationery Wash (No glare) |
+| **Universal Primary Solid CTA** | `--brand-cta-primary` | `#9D174D` | **Locked Solid Matte Berry**: Primary CTA across Web, App & Mobile (8.5:1 AAA) |
+| **CTA Hover State** | `--brand-cta-hover` | `#831843` | Sub-100ms Deepened Hover |
+| **Master Logo Jewel Gradient** | `--wisible-gradient` / `--brand-gradient` | `linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%)` | Unified Logo Glyph & Active Spark ONLY (Wisible × UP × Goat) |
+| **Light Page Wash** | `--paper-wash` | `#F7F6F4` | 300gsm Cotton Stationery Wash (Zero glare) |
 | **Surface (Light)** | `--paper-surface` | `#FFFFFF` | Elevated crisp card fill |
 | **Hairline Border (1px)** | `--paper-hairline` | `#E6E4E0` | Precision 1px divider lines |
 | **Ink Display** | `--ink-display` | `#26292C` | Northstar display headlines & KPIs (13.8:1 AAA contrast) |
@@ -30,7 +31,7 @@
 
 ---
 
-## 3. Typographic Engine (The Tripartite Model)
+## 3. Typographic Engine (The Quad-Voice Model)
 
 1. **`Instrument Serif` (Editorial Luxury Voice)**:
    - Tracking: `-0.035em` for display headlines.
@@ -38,25 +39,23 @@
 2. **`Plus Jakarta Sans` × `Anuphan` (Precision UI & Bilingual Thai/English)**:
    - High-density readability for split inbox triage, data rows, and modal dialogs.
 3. **`JetBrains Mono` (Velocity Telemetry)**:
-   - Physical mechanical keycaps (<kbd>⌘K</kbd>, <kbd>Enter</kbd>, <kbd>G</kbd>, <kbd>Q</kbd>, <kbd>↑</kbd>), latency timers (`11ms LATENCY`), and system telemetry.
+   - Physical mechanical keycaps (<kbd>⌘K</kbd>, <kbd>Enter</kbd>, <kbd>N</kbd>, <kbd>G</kbd>, <kbd>↑</kbd>), latency timers (`11ms LATENCY`), and system telemetry.
 
 ---
 
 ## 4. The Jewel Rule & Governance
 
-1. **The Jewel Rule**: The `#6E3FA0 → #D45A9A` gradient must never exceed **5% of the total viewport area**. It is strictly reserved for:
-   - Primary Hero CTA Button.
-   - Vector Brandmark Glyphs.
-   - Active status spark dot.
-2. **Ink Purity**: Financial numbers and KPI metrics must remain in solid `#26292C` Ink — never colored gradients.
-3. **Tactile Keycaps**: Every primary action must provide a corresponding mechanical keycap shortcut hint with a sub-100ms visual spring response (`cubic-bezier(0.16, 1, 0.3, 1)`).
+1. **The Jewel Rule**: Gradients are strictly reserved for **Vector Logo Glyphs and Active Spark Dots** (never exceeding 5% of viewport).
+2. **Solid Primary CTA**: All primary action buttons across Web, Web App, and Mobile App strictly use **Solid Matte Berry (`#9D174D`)** with white text.
+3. **Ink Purity**: Financial numbers and KPI metrics must remain in solid `#26292C` Ink — never colored gradients.
+4. **Tactile Keycaps**: Every primary action must provide a corresponding mechanical keycap shortcut hint with a sub-100ms visual spring response (`cubic-bezier(0.16, 1, 0.3, 1)`).
 
 ---
 
 ## 5. Master Asset Files in Workspace
 
+- `UNIFIED_BRAND_GUIDE.md`: Single Master Brand Manual for Wisible & UP.
+- `brandbook.html`: Interactive Brand CI Manual with Vector Blueprint Lab, CTA Matrix & Live Testing.
+- `mockups-preview.html`: Full Ecosystem UI Mockup Suite (Landing Page, CRM Dashboard, Mobile App).
 - `unified-tokens.css`: Master CSS tokens for the entire design system.
-- `brandbook.html`: Interactive Brand CI Manual with Vector Blueprint Lab & CTA Matrix.
-- `up-landing.html`: Standalone UP Global Webpage with specular reflection CTA and live triage interface.
-- `UNIFIED_BRAND_GUIDE.md`: Executive brand manual.
 - `LOGO_DESIGN_SYSTEM.md`: Mathematical coordinate geometry for vector glyphs.

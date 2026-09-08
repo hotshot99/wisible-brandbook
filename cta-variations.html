@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Superhuman Luxury CTA Palette — Subdued & Mature</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="unified-tokens.css" />
+
+  <style>
+    :root {
+      --bg: #F7F5F2; --card: #FFFFFF; --border: #E6E4E0;
+      --ink: #26292C; --sub: #5A5F66; --mute: #8A9098;
+    }
+    [data-theme="dark"] {
+      --bg: #141413; --card: #181622; --border: rgba(255,255,255,0.1);
+      --ink: #FCFAF7; --sub: #DEDBD5; --mute: #8D8A86;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--ink);
+      font-family: 'Anuphan', 'Plus Jakarta Sans', sans-serif;
+      padding: 2.5rem 2rem; transition: background 0.3s, color 0.3s;
+    }
+    .wrap { max-width: 1240px; margin: 0 auto; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border);
+    }
+    .hdr-left { display: flex; align-items: center; gap: 1rem; }
+    .badge-sh {
+      background: #141413; color: #FCFAF7; padding: 6px 12px; border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700;
+      border: 1px solid rgba(255,255,255,0.15); letter-spacing: 0.05em;
+    }
+    .hdr-left h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; }
+    .hdr-left p { font-size: 0.88rem; color: var(--sub); }
+    .toggle {
+      background: var(--card); border: 1px solid var(--border); color: var(--ink);
+      padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 600; font-size: 0.8rem;
+      cursor: pointer; display: flex; align-items: center; gap: 0.4rem;
+    }
+
+    /* Comparison Bar */
+    .compare-bar {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      padding: 1rem 1.25rem; margin-bottom: 2rem;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+    }
+    .pill-bad {
+      background: rgba(225,29,72,0.1); color: #BE123C; padding: 4px 10px; border-radius: 6px;
+      font-size: 0.75rem; font-weight: 600; text-decoration: line-through;
+    }
+    .pill-good {
+      background: rgba(83,49,146,0.1); color: #533192; padding: 4px 10px; border-radius: 6px;
+      font-size: 0.75rem; font-weight: 700;
+    }
+
+    /* Top Recommendations */
+    .rec-banner {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.25rem; margin-bottom: 2.5rem;
+    }
+    .rec-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 1.5rem; position: relative; box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    }
+    .rec-badge {
+      position: absolute; top: -10px; left: 1.25rem;
+      color: #fff; font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem; font-weight: 700; padding: 3px 10px; border-radius: 9999px;
+      letter-spacing: 0.05em; text-transform: uppercase;
+    }
+
+    /* Grid */
+    .sec {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--mute);
+      margin-bottom: 1rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--border);
+    }
+    .sec em { font-style: normal; color: #533192; }
+
+    .grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem; margin-bottom: 2.5rem;
+    }
+
+    .c {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 1.25rem; display: flex; flex-direction: column;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.025);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .c:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.06); }
+    .c-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    .c-name { font-family:'JetBrains Mono',monospace; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.03em; }
+    .tag { font-size:0.62rem; font-weight:700; padding:2px 7px; border-radius:5px; white-space:nowrap; }
+    .tag-aaa { background:rgba(31,122,76,0.12); color:#1F7A4C; }
+    .tag-sh { background:rgba(121,45,75,0.12); color:#792D4B; font-weight:700; }
+
+    .stage {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.5rem; padding: 1.5rem 0.75rem; margin-bottom: 1rem;
+      background: var(--bg); border-radius: 10px; border: 1px dashed var(--border);
+    }
+
+    .desc { font-size: 0.82rem; color: var(--sub); line-height: 1.5; margin-bottom: 0.6rem; }
+    .meta { display:flex; align-items:center; gap:0.4rem; }
+    .swatch-sq { width:16px; height:16px; border-radius:4px; border:1px solid rgba(0,0,0,0.08); flex-shrink:0; }
+    .code { font-family:'JetBrains Mono',monospace; font-size:0.72rem; font-weight:600; background:rgba(0,0,0,0.04); padding:3px 8px; border-radius:5px; color:var(--ink); }
+
+    /* Button styles */
+    .b {
+      display:inline-flex; align-items:center; justify-content:center; gap:0.5rem;
+      padding:0.75rem 1.75rem; border-radius:10px;
+      font-family:'Anuphan',sans-serif; font-size:0.88rem; font-weight:600;
+      cursor:pointer; text-decoration:none; color:#FFFFFF;
+      border:1px solid rgba(255,255,255,0.14);
+      transition: all 0.2s ease;
+    }
+    .b:hover { transform:translateY(-2px); }
+    .b-sm { padding:0.5rem 1.2rem; font-size:0.8rem; }
+
+    /* Superhuman Specific Colors */
+    .b-sh-mulberry { background:#792D4B; box-shadow:0 8px 20px -4px rgba(121,45,75,0.35); }
+    .b-sh-mulberry:hover { background:#602639; box-shadow:0 12px 26px -4px rgba(121,45,75,0.5); }
+
+    .b-sh-purple80 { background:#533192; box-shadow:0 8px 20px -4px rgba(83,49,146,0.35); }
+    .b-sh-purple80:hover { background:#3F256F; box-shadow:0 12px 26px -4px rgba(83,49,146,0.5); }
+
+    .b-sh-purple90 { background:#3F256F; box-shadow:0 8px 20px -4px rgba(63,37,111,0.35); }
+    .b-sh-purple90:hover { background:#281647; box-shadow:0 12px 26px -4px rgba(63,37,111,0.5); }
+
+    .b-up-royal { background:#6E3FA0; box-shadow:0 8px 20px -4px rgba(110,63,160,0.35); }
+    .b-up-royal:hover { background:#5A2E8A; box-shadow:0 12px 26px -4px rgba(110,63,160,0.5); }
+
+    .b-sh-dusty { background:#8D3D62; box-shadow:0 8px 20px -4px rgba(141,61,98,0.35); }
+    .b-sh-dusty:hover { background:#792D4B; box-shadow:0 12px 26px -4px rgba(141,61,98,0.5); }
+
+    .b-sh-navy { background:#1B1938; box-shadow:0 8px 20px -4px rgba(27,25,56,0.35); }
+    .b-sh-navy:hover { background:#2D2A5C; box-shadow:0 12px 26px -4px rgba(45,42,92,0.5); }
+
+    .toast {
+      position:fixed; bottom:2rem; right:2rem;
+      background:#533192; color:#fff;
+      padding:0.7rem 1.4rem; border-radius:9999px;
+      font-size:0.85rem; font-weight:600;
+      box-shadow:0 12px 30px rgba(83,49,146,0.35);
+      transform:translateY(100px); opacity:0;
+      transition:all 0.25s ease; z-index:1000;
+    }
+    .toast.show { transform:translateY(0); opacity:1; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="hdr-left">
+      <div class="badge-sh">SUPERHUMAN CI</div>
+      <div>
+        <h1>Superhuman Luxury Solid CTA Palette</h1>
+        <p>Muted, matte, and executive-grade tones. Zero neon glare, low cognitive load.</p>
+      </div>
+    </div>
+    <button class="toggle" onclick="toggle()"><span id="te">🌙</span><span id="tl">Dark</span></button>
+  </header>
+
+  <div class="compare-bar">
+    <div>
+      <span style="font-size:0.82rem; color:var(--sub); margin-right:0.5rem;">Previous (Too saturated / แยงตา):</span>
+      <span class="pill-bad">#7E22CE Plum Neon</span>
+      <span class="pill-bad">#E11D48 Coral Red</span>
+    </div>
+    <div>
+      <span style="font-size:0.82rem; color:var(--sub); margin-right:0.5rem;">Superhuman Calibrated (สุขุม นุ่มลึก):</span>
+      <span class="pill-good">#792D4B Mulberry 80</span>
+      <span class="pill-good">#533192 Purple 80</span>
+      <span class="pill-good">#6E3FA0 Royal 2685C</span>
+    </div>
+  </div>
+
+  <!-- ===================== TOP 2 RECOMMENDATIONS ===================== -->
+  <div class="sec"><em>★</em> / Top Superhuman Recommendations (Calibrated)</div>
+  <div class="rec-banner">
+    
+    <div class="rec-card" style="border: 2px solid #792D4B;">
+      <span class="rec-badge" style="background:#792D4B;">Top Pick A • The Signature Mulberry</span>
+      <h3 style="font-size:1.15rem; margin-top:0.4rem; margin-bottom:0.3rem; color:#792D4B;">Superhuman Mulberry 80 (`#792D4B`)</h3>
+      <p style="font-size:0.82rem; color:var(--sub); margin-bottom:1rem;">โทนเบอร์รี่ไวน์แดงคลาสสิกของ Superhuman ไม่แปร๋น ไม่แยงตา นุ่มลึกแบบเครื่องหนังแบรนด์เนม และไม่ซ้ำกับ SaaS ทั่วไป</p>
+      <button class="b b-sh-mulberry" style="width:100%;" onclick="n('🍷 Mulberry 80 (#792D4B)')">เริ่มต้นใช้งานฟรี</button>
+    </div>
+
+    <div class="rec-card" style="border: 2px solid #533192;">
+      <span class="rec-badge" style="background:#533192;">Top Pick B • The Executive Purple</span>
+      <h3 style="font-size:1.15rem; margin-top:0.4rem; margin-bottom:0.3rem; color:#533192;">Superhuman Purple 80 (`#533192`)</h3>
+      <p style="font-size:0.82rem; color:var(--sub); margin-bottom:1rem;">โทนม่วงเข้มสุขุมระดับ Superhuman UI แท้ๆ Contrast 11.2:1 AAA สบายตา นิ่ง และให้ความรู้สึกเร็วแบบ Sub-100ms</p>
+      <button class="b b-sh-purple80" style="width:100%;" onclick="n('🔮 Purple 80 (#533192)')">เริ่มต้น Wisible</button>
+    </div>
+
+    <div class="rec-card" style="border: 2px solid #6E3FA0;">
+      <span class="rec-badge" style="background:#6E3FA0;">Top Pick C • UP Royal Violet</span>
+      <h3 style="font-size:1.15rem; margin-top:0.4rem; margin-bottom:0.3rem; color:#6E3FA0;">Pantone 2685 C (`#6E3FA0`)</h3>
+      <p style="font-size:0.82rem; color:var(--sub); margin-bottom:1rem;">ค่าสีหลักใน UP Brandbook ที่สมดุลระหว่างความสดใสและวินัยผู้บริหาร เป็นกลางและเข้ากับหน้าจอทุกแบบ</p>
+      <button class="b b-up-royal" style="width:100%;" onclick="n('🟣 Royal Violet (#6E3FA0)')">ทดลองใช้ฟรี</button>
+    </div>
+
+  </div>
+
+  <!-- ===================== FULL SUPERHUMAN SUITE ===================== -->
+  <div class="sec"><em>Full Spectrum</em> / Complete Superhuman Token Suite</div>
+  <div class="grid">
+
+    <div class="c" style="border:2px solid #792D4B;">
+      <div class="c-top">
+        <span class="c-name" style="color:#792D4B">Mulberry 80</span>
+        <div class="tags"><span class="tag tag-sh">★ SUPERHUMAN ICONIC</span><span class="tag tag-aaa">9.8 AAA</span></div>
+      </div>
+      <div class="stage">
+        <button class="b b-sh-mulberry" onclick="n('🍷 Mulberry 80')">เริ่มต้นใช้งาน</button>
+        <button class="b b-sh-mulberry b-sm" onclick="n('🍷')">ทดลองใช้ฟรี</button>
+      </div>
+      <div class="desc">The iconic Superhuman spark tone. Deep, matte, sophisticated berry wine. Zero neon fatigue.</div>
+      <div class="meta"><span class="swatch-sq" style="background:#792D4B"></span><span class="code">#792D4B</span></div>
+    </div>
+
+    <div class="c" style="border:2px solid #533192;">
+      <div class="c-top">
+        <span class="c-name" style="color:#533192">Purple 80</span>
+        <div class="tags"><span class="tag tag-sh">★ SUPERHUMAN CORE</span><span class="tag tag-aaa">11.2 AAA</span></div>
+      </div>
+      <div class="stage">
+        <button class="b b-sh-purple80" onclick="n('🔮 Purple 80')">เริ่มต้นใช้งาน</button>
+        <button class="b b-sh-purple80 b-sm" onclick="n('🔮')">ทดลองใช้ฟรี</button>
+      </div>
+      <div class="desc">Deep royal indigo-purple. Calm focus, massive AAA contrast, engineered for high velocity.</div>
+      <div class="meta"><span class="swatch-sq" style="background:#533192"></span><span class="code">#533192</span></div>
+    </div>
+
+    <div class="c">
+      <div class="c-top">
+        <span class="c-name" style="color:#6E3FA0">Royal Violet 2685C</span>
+        <div class="tags"><span class="tag tag-aaa">9.8 AAA</span></div>
+      </div>
+      <div class="stage">
+        <button class="b b-up-royal" onclick="n('🟣 Royal Violet')">เริ่มต้นใช้งาน</button>
+        <button class="b b-up-royal b-sm" onclick="n('🟣')">ทดลองใช้ฟรี</button>
+      </div>
+      <div class="desc">UP Master token. Sits right in the center of executive luxury and brand recognition.</div>
+      <div class="meta"><span class="swatch-sq" style="background:#6E3FA0"></span><span class="code">#6E3FA0</span></div>
+    </div>
+
+    <div class="c">
+      <div class="c-top">
+        <span class="c-name" style="color:#3F256F">Velvet Midnight 90</span>
+        <div class="tags"><span class="tag tag-aaa">14.1 AAA</span></div>
+      </div>
+      <div class="stage">
+        <button class="b b-sh-purple90" onclick="n('🌌 Velvet Midnight')">เริ่มต้นใช้งาน</button>
+        <button class="b b-sh-purple90 b-sm" onclick="n('🌌')">ทดลองใช้ฟรี</button>
+      </div>
+      <div class="desc">Ultra-deep purple-black (`--purple-90`). Maximum readability for power users working 8+ hours.</div>
+      <div class="meta"><span class="swatch-sq" style="background:#3F256F"></span><span class="code">#3F256F</span></div>
+    </div>
+
+    <div class="c">
+      <div class="c-top">
+        <span class="c-name" style="color:#8D3D62">Dusty Mulberry 60</span>
+        <div class="tags"><span class="tag tag-aaa">6.8 AAA</span></div>
+      </div>
+      <div class="stage">
+        <button class="b b-sh-dusty" onclick="n('🌸 Dusty Mulberry')">เริ่มต้นใช้งาน</button>
+        <button class="b b-sh-dusty b-sm" onclick="n('🌸')">ทดลองใช้ฟรี</button>
+      </div>
+      <div class="desc">Muted vintage rose-berry (`--mulberry-60`). Soft, warm, and inviting without neon glare.</div>
+      <div class="meta"><span class="swatch-sq" style="background:#8D3D62"></span><span class="code">#8D3D62</span></div>
+    </div>
+
+    <div class="c">
+      <div class="c-top">
+        <span class="c-name" style="color:#1B1938">Midnight In-App Navy</span>
+        <div class="tags"><span class="tag tag-aaa">17.2 AAA</span></div>
+      </div>
+      <div class="stage">
+        <button class="b b-sh-navy" onclick="n('🌑 Midnight Navy')">เริ่มต้นใช้งาน</button>
+        <button class="b b-sh-navy b-sm" onclick="n('🌑')">ทดลองใช้ฟรี</button>
+      </div>
+      <div class="desc">Superhuman exact default button bg (`--_button-default-bg: #1B1938`). Extreme stealth precision.</div>
+      <div class="meta"><span class="swatch-sq" style="background:#1B1938"></span><span class="code">#1B1938</span></div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="toast" id="t">Clicked</div>
+<script>
+  function toggle(){
+    const h=document.documentElement, x=h.getAttribute('data-theme')==='light'?'dark':'light';
+    h.setAttribute('data-theme',x);
+    document.getElementById('te').textContent=x==='light'?'🌙':'☀️';
+    document.getElementById('tl').textContent=x==='light'?'Dark':'Light';
+    n(`${x.toUpperCase()} mode`);
+  }
+  function n(s){const t=document.getElementById('t');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800);}
+</script>
+</body>
+</html>

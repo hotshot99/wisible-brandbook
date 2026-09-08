@@ -1,100 +1,34 @@
 /* ==========================================================================
-   UP DESIGN SYSTEM TOKENS
-   Inspired by Superhuman Velocity, Solar Horizon & Smith & Diction Craft
+   UP DESIGN SYSTEM TOKENS (UNIFIED WITH WISIBLE & GENIUS GOAT)
+   Single Source of Truth: ONE Unified Master Brand CI
    ========================================================================== */
 
 :root {
   /* Brand Typography Engine */
-  --up-font-serif: "Instrument Serif", "Fraunces", Georgia, serif;
-  --up-font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --up-font-mono: "JetBrains Mono", "Geist Mono", ui-monospace, SFMono-Regular, monospace;
+  --up-font-serif: "Instrument Serif", Georgia, serif;
+  --up-font-sans: "Plus Jakarta Sans", "Anuphan", -apple-system, BlinkMacSystemFont, sans-serif;
+  --up-font-mono: "JetBrains Mono", monospace;
 
-  /* Neutrals & Dark Canvas */
-  --up-neutral-void: #06070B;
-  --up-neutral-900: #0E111B;
-  --up-neutral-800: #161B2B;
-  --up-neutral-700: #22293F;
-  --up-neutral-600: #333D5B;
-  --up-neutral-500: #4B587E;
-  --up-neutral-400: #64748B;
-  --up-neutral-300: #94A3B8;
-  --up-neutral-200: #CBD5E1;
-  --up-neutral-100: #F1F5F9;
-  --up-neutral-white: #FFFFFF;
+  /* Universal Solid Primary CTA (Locked Matte Berry) */
+  --up-cta-primary: #9D174D;
+  --up-cta-hover: #831843;
+  --up-cta-active: #660F34;
+  --up-cta-shadow: rgba(157, 23, 77, 0.35);
 
-  /* Solar Coral & Flame Scale */
-  --up-coral-100: #FFE4E8;
-  --up-coral-300: #FFA1AF;
-  --up-coral-500: #FF3B5C; /* Primary Solar Spark */
-  --up-coral-600: #E61E42;
-  --up-coral-800: #9E0D27;
-  --up-coral-glow: rgba(255, 59, 92, 0.22);
+  /* Master Jewel Gradient (Logo & Spark Only - Unified 3-Stop Spectrum) */
+  --up-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
 
-  /* Sunrise Gold & Solar Orange */
-  --up-gold-100: #FFF3E0;
-  --up-gold-300: #FFCC80;
-  --up-gold-500: #FF9E2C; /* Momentum Gold */
-  --up-gold-700: #E67E00;
-
-  /* Stratosphere Purple */
-  --up-purple-300: #C084FC;
-  --up-purple-500: #9333EA;
-  --up-purple-600: #7928CA; /* Deep Stratosphere */
-  --up-purple-800: #581C87;
-  --up-purple-glow: rgba(121, 40, 202, 0.25);
-
-  /* Aero Cyan (Telemetry) */
-  --up-cyan-300: #7DD3FC;
-  --up-cyan-500: #00E5FF;
-  --up-cyan-700: #0284C7;
-
-  /* Theme Mappings (Dark Default) */
-  --up-bg-canvas: var(--up-neutral-void);
-  --up-bg-surface: var(--up-neutral-900);
-  --up-bg-elevated: var(--up-neutral-800);
-  --up-bg-glass: rgba(14, 17, 27, 0.8);
+  /* Neutrals & Surfaces (300gsm Paper & Obsidian Void) */
+  --up-paper-wash: #F7F6F4;
+  --up-paper-surface: #FFFFFF;
+  --up-paper-hairline: #E6E4E0;
   
-  --up-border-subtle: rgba(255, 255, 255, 0.08);
-  --up-border-highlight: rgba(255, 59, 92, 0.35);
-  --up-border-focus: var(--up-coral-500);
+  --up-obsidian-base: #141413;
+  --up-obsidian-surface: #181622;
+  --up-obsidian-border: rgba(255, 255, 255, 0.08);
 
-  --up-text-title: var(--up-neutral-white);
-  --up-text-body: var(--up-neutral-200);
-  --up-text-muted: var(--up-neutral-400);
-  --up-text-accent: var(--up-coral-500);
-
-  /* Gradients */
-  --up-gradient-ascend: linear-gradient(135deg, #FF3B5C 0%, #FF9E2C 50%, #7928CA 100%);
-  --up-gradient-thrust: linear-gradient(180deg, #FF3B5C 0%, #FF9E2C 60%, rgba(255, 158, 44, 0) 100%);
-  --up-gradient-card: linear-gradient(180deg, rgba(22, 27, 43, 0.85) 0%, rgba(14, 17, 27, 0.95) 100%);
-  --up-gradient-border: linear-gradient(135deg, rgba(255, 59, 92, 0.5), rgba(121, 40, 202, 0.3) 50%, rgba(255, 255, 255, 0.05));
-  --up-speedline-pattern: repeating-linear-gradient(45deg, rgba(255, 59, 92, 0.02) 0px, rgba(255, 59, 92, 0.02) 1px, transparent 1px, transparent 8px);
-
-  /* Shadows & Glows */
-  --up-shadow-card: 0 12px 32px -6px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--up-border-subtle);
-  --up-shadow-modal: 0 30px 70px -15px rgba(0, 0, 0, 0.85), 0 0 35px var(--up-coral-glow), 0 0 0 1px var(--up-border-highlight);
-  --up-glow-coral: 0 0 28px rgba(255, 59, 92, 0.4);
-
-  /* Radii */
-  --up-radius-xs: 4px;
-  --up-radius-sm: 8px;
-  --up-radius-md: 14px;
-  --up-radius-lg: 22px;
-  --up-radius-full: 9999px;
-}
-
-/* Light Theme Override */
-[data-theme="light"] .up-theme {
-  --up-bg-canvas: #F8FAFC;
-  --up-bg-surface: #FFFFFF;
-  --up-bg-elevated: #F1F5F9;
-  --up-bg-glass: rgba(255, 255, 255, 0.88);
-
-  --up-border-subtle: rgba(0, 0, 0, 0.07);
-  --up-border-highlight: rgba(230, 30, 66, 0.3);
-
-  --up-text-title: #0B0F19;
-  --up-text-body: #334155;
-  --up-text-muted: #64748B;
-  --up-text-accent: #E61E42;
+  /* Ink Hierarchy */
+  --up-ink-display: #26292C;
+  --up-ink-soft: #5A5F66;
+  --up-ink-mute: #8A9098;
 }

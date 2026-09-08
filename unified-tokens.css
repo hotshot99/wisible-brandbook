@@ -22,12 +22,23 @@
   --accent-magenta-alpha-12: rgba(212, 90, 154, 0.12);
   --accent-magenta-alpha-24: rgba(212, 90, 154, 0.24);
 
-  /* Master Gradients */
-  --brand-gradient: linear-gradient(135deg, #6E3FA0 0%, #D45A9A 100%);
-  --brand-gradient-hover: linear-gradient(135deg, #5D338C 0%, #BF4885 100%);
-  --brand-gradient-radial: radial-gradient(circle at top left, #D45A9A 0%, #6E3FA0 100%);
-  --brand-gradient-glass: linear-gradient(135deg, rgba(110, 63, 160, 0.85) 0%, rgba(212, 90, 154, 0.85) 100%);
-  --brand-gradient-border: linear-gradient(135deg, rgba(110, 63, 160, 0.6) 0%, rgba(212, 90, 154, 0.6) 100%);
+  /* Master Gradients (Unified Jewel Spectrum: Wisible × UP × Genius Goat) */
+  --wisible-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --up-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --brand-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --brand-gradient-radial: radial-gradient(circle at top left, #EC4899 0%, #8B5CF6 100%);
+  --brand-gradient-glass: linear-gradient(135deg, rgba(139, 92, 246, 0.85) 0%, rgba(236, 72, 153, 0.85) 50%, rgba(249, 115, 22, 0.85) 100%);
+  --brand-gradient-border: linear-gradient(135deg, rgba(139, 92, 246, 0.6) 0%, rgba(236, 72, 153, 0.6) 50%, rgba(249, 115, 22, 0.6) 100%);
+
+  /* ==========================================================================
+     LOCKED SOLID CTA SYSTEM (MATTE BERRY ARCHITECTURE)
+     ========================================================================== */
+  --cta-primary: #9D174D;              /* Matte Berry (Universal Solid CTA) */
+  --cta-primary-hover: #831843;        /* Deeper Pressed Hover */
+  --cta-primary-active: #660F34;       /* Tactile Active Press */
+  --cta-primary-shadow: rgba(157, 23, 77, 0.35);
+  --cta-primary-tint: rgba(157, 23, 77, 0.08);
+  --cta-primary-border: rgba(157, 23, 77, 0.25);
 
   /* ==========================================================================
      2. PAPER WASH LIGHT SYSTEM (EDITORIAL REFINEMENT)

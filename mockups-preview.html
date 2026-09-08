@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wisible Brand Showcase — Matte Berry (#9D174D) Full Ecosystem</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="unified-tokens.css" />
+
+  <style>
+    :root {
+      --bg: #F7F5F2; --card: #FFFFFF; --border: #E6E4E0;
+      --ink: #26292C; --sub: #5A5F66; --mute: #8A9098;
+      --berry: #9D174D;
+      --berry-hover: #831843;
+      --berry-active: #660F34;
+      --berry-shadow: rgba(157, 23, 77, 0.32);
+      --berry-tint: rgba(157, 23, 77, 0.08);
+      --berry-border: rgba(157, 23, 77, 0.25);
+    }
+    [data-theme="dark"] {
+      --bg: #141413; --card: #181622; --border: rgba(255,255,255,0.1);
+      --ink: #FCFAF7; --sub: #DEDBD5; --mute: #8D8A86;
+      --berry-shadow: rgba(157, 23, 77, 0.5);
+      --berry-tint: rgba(157, 23, 77, 0.18);
+      --berry-border: rgba(157, 23, 77, 0.45);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--ink);
+      font-family: 'Anuphan', 'Plus Jakarta Sans', sans-serif;
+      padding: 2rem 1.5rem; transition: background 0.3s, color 0.3s;
+    }
+    .container { max-width: 1400px; margin: 0 auto; }
+
+    /* Master Top Bar */
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 2rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border);
+    }
+    .hdr-left { display: flex; align-items: center; gap: 1rem; }
+    .brand-pill {
+      display: flex; align-items: center; gap: 0.5rem;
+      background: var(--card); border: 1px solid var(--border); padding: 0.4rem 0.8rem;
+      border-radius: 9999px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; font-weight: 700;
+    }
+    .sw-berry { width: 12px; height: 12px; border-radius: 50%; background: var(--berry); }
+    .hdr-left h1 { font-size: 1.45rem; font-weight: 700; }
+    .hdr-left p { font-size: 0.85rem; color: var(--sub); }
+    
+    .ctrl-group { display: flex; align-items: center; gap: 0.75rem; }
+    .btn-action {
+      background: var(--card); border: 1px solid var(--border); color: var(--ink);
+      padding: 0.5rem 1rem; border-radius: 9999px; font-weight: 600; font-size: 0.8rem;
+      cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: all 0.2s;
+    }
+    .btn-action:hover { border-color: var(--sub); }
+
+    /* Section Navigator Tabs */
+    .nav-tabs {
+      display: flex; gap: 0.5rem; margin-bottom: 2rem; overflow-x: auto; padding-bottom: 0.5rem;
+    }
+    .ntab {
+      padding: 0.55rem 1.1rem; border-radius: 9999px; font-size: 0.82rem; font-weight: 600;
+      background: var(--card); border: 1px solid var(--border); color: var(--sub);
+      cursor: pointer; white-space: nowrap; transition: all 0.2s;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .ntab:hover { color: var(--ink); border-color: var(--sub); }
+    .ntab.active {
+      background: var(--ink); color: var(--card); border-color: var(--ink);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+
+    /* Grid layout */
+    .showcase-section {
+      margin-bottom: 3.5rem;
+    }
+    .sec-header {
+      margin-bottom: 1.25rem; display: flex; justify-content: space-between; align-items: flex-end;
+    }
+    .sec-title {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; color: var(--berry);
+    }
+    .sec-sub { font-size: 0.85rem; color: var(--sub); }
+
+    /* Mockup Frames */
+    .frame {
+      background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+      overflow: hidden; box-shadow: 0 14px 40px rgba(0,0,0,0.05);
+    }
+    .frame-bar {
+      background: rgba(0,0,0,0.02); border-bottom: 1px solid var(--border);
+      padding: 0.75rem 1.25rem; display: flex; justify-content: space-between; align-items: center;
+    }
+    .dots { display: flex; gap: 6px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .d-red { background: #FF5F56; }
+    .d-yel { background: #FFBD2E; }
+    .d-grn { background: #27C93F; }
+    .frame-url { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--mute); }
+
+    /* Universal Buttons */
+    .btn-berry-primary {
+      background: var(--berry); color: #FFFFFF;
+      padding: 0.8rem 1.75rem; border-radius: 10px;
+      font-family: 'Anuphan', sans-serif; font-size: 0.92rem; font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.2);
+      cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      box-shadow: 0 8px 22px -4px var(--berry-shadow);
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .btn-berry-primary:hover {
+      background: var(--berry-hover); transform: translateY(-2px);
+      box-shadow: 0 12px 28px -4px var(--berry-shadow);
+    }
+    .btn-berry-primary:active {
+      background: var(--berry-active); transform: translateY(0);
+    }
+    .btn-berry-sm { padding: 0.45rem 1rem; font-size: 0.8rem; border-radius: 8px; }
+
+    .btn-jewel-secondary {
+      background: var(--card); color: var(--ink);
+      padding: 0.8rem 1.4rem; border-radius: 10px;
+      font-family: 'Anuphan', sans-serif; font-size: 0.92rem; font-weight: 600;
+      border: 1.5px solid transparent;
+      background-image: linear-gradient(var(--card), var(--card)), linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+      background-origin: border-box; background-clip: padding-box, border-box;
+      cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;
+      box-shadow: 0 4px 12px rgba(139,92,246,0.08);
+      transition: all 0.2s;
+    }
+    .btn-jewel-secondary:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(139,92,246,0.18); }
+
+    .kbd-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 700;
+      padding: 2px 6px; border-radius: 4px; background: rgba(255,255,255,0.22);
+      border: 1px solid rgba(255,255,255,0.3); color: #FFFFFF;
+    }
+
+    /* Logo Box with Gradient Jewel */
+    .logo-jewel {
+      width: 32px; height: 32px; border-radius: 9px;
+      background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+      display: flex; align-items: center; justify-content: center; color: #fff;
+      font-weight: 800; font-size: 0.85rem; box-shadow: 0 4px 12px rgba(236,72,153,0.25);
+    }
+
+    /* ===================================================
+       MOCKUP 1: MARKETING LANDING PAGE
+       =================================================== */
+    .lp-wrap { padding: 3rem 2.5rem; }
+    .lp-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem; }
+    .lp-menu { display: flex; gap: 1.75rem; font-size: 0.88rem; font-weight: 600; color: var(--sub); }
+    .lp-hero-box { text-align: center; max-width: 740px; margin: 0 auto; }
+    .lp-pill {
+      display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.9rem;
+      border-radius: 9999px; background: var(--berry-tint); color: var(--berry);
+      font-size: 0.78rem; font-weight: 700; border: 1px solid var(--berry-border); margin-bottom: 1.5rem;
+    }
+    .lp-h1 {
+      font-family: 'Instrument Serif', serif; font-size: 3.6rem; font-weight: 400; line-height: 1.05;
+      margin-bottom: 1.2rem; letter-spacing: -0.025em;
+    }
+    .lp-h1 em { font-style: italic; color: var(--berry); }
+    .lp-desc { font-size: 1.05rem; color: var(--sub); line-height: 1.6; margin-bottom: 2.25rem; }
+    .lp-btn-row { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-bottom: 3rem; }
+
+    .lp-metrics {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+      padding-top: 2.5rem; border-top: 1px solid var(--border); max-width: 680px; margin: 0 auto;
+    }
+    .metric-item { text-align: center; }
+    .m-val { font-family: 'JetBrains Mono', monospace; font-size: 1.6rem; font-weight: 700; color: var(--ink); margin-bottom: 0.2rem; }
+    .m-lbl { font-size: 0.78rem; color: var(--mute); }
+
+    /* ===================================================
+       MOCKUP 2: WEB APP PIPELINE & WORKSPACE
+       =================================================== */
+    .app-workspace {
+      display: grid; grid-template-columns: 220px 1fr; min-height: 520px;
+    }
+    .app-sidebar {
+      background: var(--bg); border-right: 1px solid var(--border); padding: 1.25rem 1rem;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .sb-section-title {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 700;
+      color: var(--mute); text-transform: uppercase; margin-bottom: 0.6rem; padding-left: 0.5rem;
+    }
+    .sb-link {
+      display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0.6rem;
+      border-radius: 8px; font-size: 0.82rem; font-weight: 600; color: var(--sub);
+      text-decoration: none; margin-bottom: 2px;
+    }
+    .sb-link.active { background: var(--card); color: var(--berry); font-weight: 700; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+    .sb-badge { margin-left: auto; font-family: 'JetBrains Mono'; font-size: 0.68rem; background: var(--berry-tint); color: var(--berry); padding: 1px 6px; border-radius: 9999px; }
+
+    .app-main { padding: 1.5rem; }
+    .app-top {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;
+    }
+    .search-input-box {
+      display: flex; align-items: center; gap: 0.5rem; background: var(--bg);
+      border: 1px solid var(--border); padding: 0.45rem 0.85rem; border-radius: 8px;
+      font-size: 0.8rem; color: var(--mute); min-width: 280px;
+    }
+    .kanban-board {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
+    }
+    .k-col {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 0.85rem;
+    }
+    .k-head {
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700;
+      margin-bottom: 0.75rem; color: var(--sub);
+    }
+    .k-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 0.85rem; margin-bottom: 0.65rem; box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      border-left: 3.5px solid var(--berry);
+    }
+    .kc-title { font-size: 0.85rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .kc-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--sub); }
+    .kc-val { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--ink); }
+    .kc-chip { background: var(--berry-tint); color: var(--berry); padding: 2px 6px; border-radius: 4px; font-weight: 700; font-size: 0.68rem; }
+
+    /* ===================================================
+       MOCKUP 3: MOBILE APPS (2 SCREENS)
+       =================================================== */
+    .mobile-duo {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 780px; margin: 0 auto;
+    }
+    @media (max-width: 768px) { .mobile-duo { grid-template-columns: 1fr; } }
+
+    .iphone-body {
+      width: 100%; max-width: 340px; border-radius: 40px; border: 7px solid #2B2927;
+      background: var(--card); box-shadow: 0 24px 60px rgba(0,0,0,0.22);
+      overflow: hidden; display: flex; flex-direction: column; height: 600px; margin: 0 auto;
+    }
+    .iphone-notch {
+      width: 110px; height: 20px; background: #2B2927; margin: 0 auto;
+      border-bottom-left-radius: 14px; border-bottom-right-radius: 14px;
+    }
+    .iphone-content { padding: 1.25rem 1rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    
+    .screen-header {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;
+    }
+    .deal-swipe-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: 14px;
+      padding: 1rem; margin-bottom: 1rem;
+    }
+    .ai-badge {
+      display: inline-flex; align-items: center; gap: 0.3rem; font-size: 0.68rem; font-weight: 700;
+      color: var(--berry); background: var(--berry-tint); padding: 2px 7px; border-radius: 9999px; margin-bottom: 0.5rem;
+    }
+    .phone-botbar {
+      display: flex; justify-content: space-around; padding-top: 0.75rem;
+      border-top: 1px solid var(--border); font-size: 0.7rem; color: var(--mute);
+    }
+    .phone-botbar .active { color: var(--berry); font-weight: 700; }
+
+    /* Modal Sheet in Screen 2 */
+    .sheet-card {
+      background: var(--bg); border: 1.5px dashed var(--berry-border); border-radius: 14px;
+      padding: 1rem; text-align: center; margin-bottom: 1rem;
+    }
+    .wave {
+      display: flex; justify-content: center; align-items: center; gap: 3px; height: 32px; margin: 0.5rem 0;
+    }
+    .wave-bar { width: 3px; background: var(--berry); border-radius: 3px; animation: pulse 1s infinite alternate; }
+    @keyframes pulse { from { height: 8px; } to { height: 28px; } }
+
+    /* Toast */
+    .toast {
+      position: fixed; bottom: 2rem; right: 2rem;
+      background: var(--berry); color: #fff;
+      padding: 0.75rem 1.5rem; border-radius: 9999px;
+      font-size: 0.85rem; font-weight: 600;
+      box-shadow: 0 12px 30px var(--berry-shadow);
+      transform: translateY(100px); opacity: 0;
+      transition: all 0.25s ease; z-index: 1000;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Master Top Navigation -->
+  <header>
+    <div class="hdr-left">
+      <div class="brand-pill">
+        <span class="sw-berry"></span>
+        <span>TOKEN: #9D174D (Matte Berry)</span>
+      </div>
+      <div>
+        <h1>Wisible Unified UI Mockup Suite</h1>
+        <p>100% Solid Matte Berry CTA across Web Marketing, Web App CRM &amp; Mobile App.</p>
+      </div>
+    </div>
+    
+    <div class="ctrl-group">
+      <button class="btn-action" onclick="toggleTheme()"><span id="te">🌙</span> <span id="tl">Dark Mode</span></button>
+    </div>
+  </header>
+
+  <!-- Quick Nav Tabs -->
+  <div class="nav-tabs">
+    <button class="ntab active" onclick="scrollToSec('sec-lp', this)">🌐 1. Marketing Landing Page</button>
+    <button class="ntab" onclick="scrollToSec('sec-app', this)">💻 2. Web App CRM Dashboard</button>
+    <button class="ntab" onclick="scrollToSec('sec-mobile', this)">📱 3. Mobile App (iOS / Android)</button>
+  </div>
+
+  <!-- =========================================================================
+       SECTION 1: MARKETING LANDING PAGE MOCKUP
+       ========================================================================= -->
+  <div class="showcase-section" id="sec-lp">
+    <div class="sec-header">
+      <div>
+        <div class="sec-title">Mockup 01 • Marketing Landing Page</div>
+        <div class="sec-sub">Conversion Hero Section with Gradient Logo + Matte Berry Primary CTA</div>
+      </div>
+      <span style="font-size:0.75rem; font-family:'JetBrains Mono'; color:var(--mute);">DESKTOP VIEWPORT (1440px)</span>
+    </div>
+
+    <div class="frame">
+      <div class="frame-bar">
+        <div class="dots">
+          <span class="dot d-red"></span>
+          <span class="dot d-yel"></span>
+          <span class="dot d-grn"></span>
+        </div>
+        <span class="frame-url">https://wisible.io</span>
+        <span></span>
+      </div>
+
+      <div class="lp-wrap">
+        
+        <!-- Navbar -->
+        <div class="lp-nav">
+          <div style="display:flex; align-items:center; gap:0.65rem;">
+            <svg viewBox="0 0 760 180" width="130" height="30" fill="none">
+              <circle cx="94" cy="90" r="84" fill="url(#lpLogoGrad)" />
+              <g transform="translate(-261, -394)">
+                <path fill="#FFFFFF" d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                <path fill="#FFFFFF" d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                <path fill="#FFFFFF" d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+              </g>
+              <g transform="translate(-242, -390)" fill="var(--ink)">
+                <path d="M 563.637 440.938 L 563.637 506.188 C 563.637 512.785 558.234 518.188 551.637 518.188 C 545.035 518.188 539.637 512.785 539.637 506.188 L 539.637 440.938 L 518.637 440.938 L 518.637 506.188 C 518.637 512.785 513.234 518.188 506.637 518.188 C 500.035 518.188 494.637 512.785 494.637 506.188 L 494.637 440.938 L 470.82 440.938 L 470.82 504.332 C 470.82 522.688 485.84 537.707 504.195 537.707 C 514.402 537.707 523.562 533.059 529.695 525.781 C 535.832 533.059 544.992 537.707 555.195 537.707 C 573.555 537.707 588.57 522.688 588.57 504.332 L 588.57 440.938 Z" />
+                <path d="M 605.914 440.949 L 629.242 440.949 L 629.242 534.82 L 605.914 534.82 Z" />
+                <path d="M 629.387 422.02 C 629.387 428.508 624.125 433.77 617.637 433.77 C 611.145 433.77 605.887 428.508 605.887 422.02 C 605.887 415.531 611.145 410.27 617.637 410.27 C 624.125 410.27 629.387 415.531 629.387 422.02 Z" />
+                <path d="M 700.414 466.586 C 698.359 463.891 695.535 461.551 691.945 459.562 C 688.352 457.57 684.438 456.578 680.207 456.578 C 676.48 456.578 673.086 457.348 670.004 458.887 C 666.926 460.426 665.387 462.992 665.387 466.586 C 665.387 470.176 667.086 472.715 670.484 474.188 C 673.883 475.664 678.859 477.172 685.402 478.711 C 688.863 479.48 692.359 480.508 695.891 481.789 C 699.418 483.07 702.629 484.77 705.512 486.887 C 708.398 489.004 710.738 491.637 712.535 494.777 C 714.332 497.926 715.23 501.742 715.23 506.23 C 715.23 511.879 714.176 516.656 712.059 520.566 C 709.938 524.48 707.113 527.66 703.59 530.094 C 700.059 532.531 695.953 534.297 691.27 535.391 C 686.586 536.477 681.746 537.023 676.742 537.023 C 669.555 537.023 662.562 535.707 655.762 533.078 C 648.961 530.449 643.316 526.695 638.828 521.82 L 654.031 507.578 C 656.598 510.918 659.93 513.672 664.039 515.852 C 668.145 518.035 672.699 519.121 677.703 519.121 C 679.367 519.121 681.07 518.934 682.805 518.547 C 684.535 518.164 686.141 517.555 687.613 516.719 C 689.09 515.887 690.273 514.766 691.176 513.352 C 692.07 511.941 692.52 510.211 692.52 508.156 C 692.52 504.305 690.758 501.547 687.23 499.879 C 683.699 498.211 678.406 496.543 671.352 494.875 C 667.887 494.105 664.52 493.113 661.246 491.891 C 657.977 490.672 655.059 489.07 652.492 487.082 C 649.926 485.094 647.871 482.625 646.332 479.672 C 644.793 476.723 644.023 473.062 644.023 468.703 C 644.023 463.57 645.082 459.145 647.199 455.422 C 649.316 451.699 652.105 448.656 655.57 446.277 C 659.035 443.91 662.945 442.141 667.309 440.988 C 671.672 439.836 676.164 439.254 680.781 439.254 C 687.453 439.254 693.965 440.41 700.316 442.719 C 706.668 445.027 711.699 448.562 715.426 453.305 Z" />
+                <path d="M 725.125 440.949 L 748.449 440.949 L 748.449 534.82 L 725.125 534.82 Z" />
+                <path d="M 748.625 422.02 C 748.625 428.508 743.363 433.77 736.875 433.77 C 730.387 433.77 725.125 428.508 725.125 422.02 C 725.125 415.531 730.387 410.27 736.875 410.27 C 743.363 410.27 748.625 415.531 748.625 422.02 Z" />
+                <path d="M 814.391 516.891 C 799.133 516.891 786.762 504.523 786.762 489.262 C 786.762 474.004 799.133 461.637 814.391 461.637 C 829.648 461.637 842.02 474.004 842.02 489.262 C 842.02 504.523 829.648 516.891 814.391 516.891 M 852.609 457.914 C 852.582 457.879 852.559 457.844 852.531 457.809 C 852.301 457.523 852.07 457.242 851.836 456.961 C 851.168 456.117 850.508 455.27 849.785 454.473 C 845.836 450.145 841.125 446.738 835.652 444.254 C 835.02 443.969 834.352 443.754 833.703 443.5 C 833.281 443.316 832.84 443.168 832.41 442.996 C 832.02 442.859 831.637 442.699 831.246 442.57 C 825.984 440.641 820.324 439.531 814.391 439.531 C 804.445 439.531 795.227 442.543 787.5 447.641 L 787.5 403.27 L 787.352 403.27 L 766.133 411.344 L 766.133 534.867 L 785.238 534.867 L 785.238 534.574 L 787.5 534.574 L 787.5 529.387 C 795.223 534.492 804.438 537.52 814.391 537.52 C 814.805 537.52 815.207 537.469 815.621 537.457 C 816.125 537.473 816.617 537.539 817.129 537.539 C 824.129 537.539 830.402 536.234 835.938 533.625 C 841.477 531.02 846.184 527.512 850.07 523.125 C 852.645 520.211 854.789 516.93 856.578 513.348 C 860.875 506.062 863.383 497.598 863.383 488.527 C 863.383 476.938 859.336 466.301 852.609 457.914 Z" />
+                <path d="M 873.016 412.148 L 873.016 534.82 L 896.34 534.82 L 896.34 403.27 Z" />
+                <path d="M 955.527 459.098 C 967.598 459.098 977.91 466.609 982.059 477.215 L 928.996 477.215 C 933.141 466.609 943.453 459.098 955.527 459.098 M 1004.38 494.031 C 1004.65 491.922 1004.8 489.773 1004.8 487.586 C 1004.8 460.367 982.742 438.305 955.527 438.305 C 928.309 438.305 906.246 460.367 906.246 487.586 C 906.246 514.805 928.309 536.867 955.527 536.867 C 976.98 536.867 995.227 523.148 1001.99 504.012 L 978.793 504.012 C 973.637 511.305 965.141 516.074 955.527 516.074 C 942 516.074 930.684 506.645 927.773 494 L 983.281 494 C 983.277 494.012 983.277 494.023 983.273 494.031 Z" />
+              </g>
+              <defs>
+                <linearGradient id="lpLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8B5CF6" />
+                  <stop offset="50%" stop-color="#EC4899" />
+                  <stop offset="100%" stop-color="#F97316" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          
+          <div class="lp-menu">
+            <span style="color:var(--ink);">Platform</span>
+            <span>AI Copilot</span>
+            <span>Customer Stories</span>
+            <span>Pricing</span>
+          </div>
+
+          <div style="display:flex; align-items:center; gap:0.85rem;">
+            <span style="font-size:0.85rem; font-weight:600; color:var(--sub); cursor:pointer;">Sign In</span>
+            <button class="btn-berry-primary btn-berry-sm" onclick="showToast('Clicked: Sign Up (Nav)')">ทดลองใช้ฟรี</button>
+          </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="lp-hero-box">
+          <div class="lp-pill">✦ Autonomous Deal Acceleration Engine</div>
+          
+          <h1 class="lp-h1">The CRM engineered for <em>sub-100ms</em> velocity.</h1>
+          
+          <p class="lp-desc">
+            Stop losing momentum to manual data entry. Wisible transforms your sales pipeline into an ultra-fast, high-IQ deal engine that closes enterprise revenue twice as fast.
+          </p>
+
+          <div class="lp-btn-row">
+            <button class="btn-berry-primary" onclick="showToast('Clicked: เริ่มต้นทดลองใช้ฟรี ↵')">
+              <span>เริ่มต้นทดลองใช้ฟรี</span>
+              <span class="kbd-tag">↵ Enter</span>
+            </button>
+            <button class="btn-jewel-secondary" onclick="showToast('Clicked: จองรอบ VIP Demo')">
+              <span>จองรอบ VIP Demo</span>
+            </button>
+          </div>
+
+          <!-- Proof Metrics -->
+          <div class="lp-metrics">
+            <div class="metric-item">
+              <div class="m-val">11 ms</div>
+              <div class="m-lbl">PIPELINE TRIAGE LATENCY</div>
+            </div>
+            <div class="metric-item">
+              <div class="m-val">9.2x</div>
+              <div class="m-lbl">DEAL VELOCITY ACCELERATION</div>
+            </div>
+            <div class="metric-item">
+              <div class="m-val">0 min</div>
+              <div class="m-lbl">MANUAL CRM DATA ENTRY</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       SECTION 2: WEB APP CRM DASHBOARD MOCKUP
+       ========================================================================= -->
+  <div class="showcase-section" id="sec-app">
+    <div class="sec-header">
+      <div>
+        <div class="sec-title">Mockup 02 • In-App Web Application (Dashboard)</div>
+        <div class="sec-sub">Pipeline Management &amp; Quick Command Workflow using Solid Matte Berry</div>
+      </div>
+      <span style="font-size:0.75rem; font-family:'JetBrains Mono'; color:var(--mute);">APP WORKSPACE (DASHBOARD v2.4)</span>
+    </div>
+
+    <div class="frame">
+      <div class="frame-bar">
+        <div class="dots">
+          <span class="dot d-red"></span>
+          <span class="dot d-yel"></span>
+          <span class="dot d-grn"></span>
+        </div>
+        <span class="frame-url">https://app.wisible.io/pipeline/enterprise</span>
+        <span style="font-family:'JetBrains Mono'; font-size:0.68rem; color:var(--mute);">LATENCY: 14ms</span>
+      </div>
+
+      <div class="app-workspace">
+        
+        <!-- Sidebar -->
+        <div class="app-sidebar">
+          <div>
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1.5rem; padding-left:0.3rem;">
+              <svg width="26" height="26" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="48" fill="url(#crmGradW)" />
+                <g transform="translate(18, 18) scale(0.64)">
+                  <path d="M72.6 83.718v-.152h.051V52.639a2.446 2.446 0 1 1 4.891 0v31.079A13.759 13.759 0 0 0 88.8 97.247V83.566h.044V54.773a13.758 13.758 0 1 0-27.517 0v42.474A13.759 13.759 0 0 0 72.6 83.718" transform="translate(-24.775 -16.49)" fill="#FFFFFF"/>
+                  <path d="M34.47 40.123v43.221A13.759 13.759 0 0 0 45.784 96.9V40.123z" transform="translate(-14.141 -16.131)" fill="#FFFFFF"/>
+                  <path d="M126.326 40.123h-11.314v56.765a13.759 13.759 0 0 0 11.314-13.549v-.3z" transform="translate(-46.027 -16.131)" fill="#FFFFFF"/>
+                </g>
+                <defs>
+                  <linearGradient id="crmGradW" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8B5CF6"/>
+                    <stop offset="0.5" stop-color="#EC4899"/>
+                    <stop offset="1" stop-color="#F97316"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span style="font-weight:700; font-size:0.95rem;">Wisible App</span>
+            </div>
+
+            <div class="sb-section-title">Core Workflows</div>
+            <a href="#" class="sb-link active">📊 Deals Pipeline <span class="sb-badge">12</span></a>
+            <a href="#" class="sb-link">⚡ AI Copilot Triage</a>
+            <a href="#" class="sb-link">🏢 Accounts &amp; Tax IDs</a>
+            <a href="#" class="sb-link">📈 Revenue Analytics</a>
+          </div>
+
+          <div style="padding-top:1rem; border-top:1px solid var(--border);">
+            <div style="font-size:0.75rem; font-weight:700;">Executive Team</div>
+            <div style="font-size:0.68rem; color:var(--mute);">Enterprise Plan</div>
+          </div>
+        </div>
+
+        <!-- Main Pipeline Area -->
+        <div class="app-main">
+          
+          <!-- App Topbar -->
+          <div class="app-top">
+            <div class="search-input-box">
+              <span>🔍</span>
+              <span>Search deals, tax IDs or type <kbd style="background:rgba(0,0,0,0.06); padding:1px 5px; border-radius:3px; font-family:'JetBrains Mono';">⌘K</kbd></span>
+            </div>
+
+            <div style="display:flex; gap:0.6rem;">
+              <button class="btn-action" style="font-size:0.78rem; padding:0.45rem 0.85rem;" onclick="showToast('Exporting Pipeline')">Export CSV</button>
+              <button class="btn-berry-primary btn-berry-sm" onclick="showToast('Opened: + New Deal Modal')">
+                <span>+ New Deal</span>
+                <span class="kbd-tag">N</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Kanban Pipeline Stages -->
+          <div class="kanban-board">
+            
+            <!-- Stage 1 -->
+            <div class="k-col">
+              <div class="k-head">
+                <span>QUALIFIED LEAD</span>
+                <span style="color:var(--berry);">฿ 3.14M (3)</span>
+              </div>
+
+              <div class="k-card">
+                <div class="kc-title">SCG Logistics Platform</div>
+                <div class="kc-meta">
+                  <span class="kc-val">฿ 1,250,000</span>
+                  <span class="kc-chip">92% Win</span>
+                </div>
+              </div>
+
+              <div class="k-card">
+                <div class="kc-title">Bangkok Airways Ticketing</div>
+                <div class="kc-meta">
+                  <span class="kc-val">฿ 890,000</span>
+                  <span class="kc-chip">85% Win</span>
+                </div>
+              </div>
+
+              <div class="k-card">
+                <div class="kc-title">Central Retail Automation</div>
+                <div class="kc-meta">
+                  <span class="kc-val">฿ 1,000,000</span>
+                  <span class="kc-chip">90% Win</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="k-col">
+              <div class="k-head">
+                <span>PROPOSAL SENT</span>
+                <span style="color:var(--berry);">฿ 5.80M (2)</span>
+              </div>
+
+              <div class="k-card" style="border-left-color:#831843;">
+                <div class="kc-title">PTT Digital AI Copilot</div>
+                <div class="kc-meta">
+                  <span class="kc-val">฿ 3,400,000</span>
+                  <span class="kc-chip">Executive Review</span>
+                </div>
+              </div>
+
+              <div class="k-card" style="border-left-color:#831843;">
+                <div class="kc-title">Siam Piwat Loyalty Cloud</div>
+                <div class="kc-meta">
+                  <span class="kc-val">฿ 2,400,000</span>
+                  <span class="kc-chip">Legal Gate</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="k-col">
+              <div class="k-head">
+                <span>CLOSING WON</span>
+                <span style="color:#1F7A4C;">฿ 8.50M (2)</span>
+              </div>
+
+              <div class="k-card" style="border-left-color:#1F7A4C;">
+                <div class="kc-title">KASIKORN Line OA Sync</div>
+                <div class="kc-meta">
+                  <span class="kc-val">฿ 4,500,000</span>
+                  <span style="color:#1F7A4C; font-weight:700; font-size:0.68rem;">✓ Contract Signed</span>
+                </div>
+              </div>
+
+              <div class="k-card" style="border-left-color:#1F7A4C;">
+                <div class="kc-title">CP All Autonomous Engine</div>
+                <div class="kc-meta">
+                  <span class="kc-val">฿ 4,000,000</span>
+                  <span style="color:#1F7A4C; font-weight:700; font-size:0.68rem;">✓ Won</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- =========================================================================
+       SECTION 3: MOBILE APPS (2 HIGH-RES SCREENS)
+       ========================================================================= -->
+  <div class="showcase-section" id="sec-mobile">
+    <div class="sec-header">
+      <div>
+        <div class="sec-title">Mockup 03 • Mobile Application Screens (iOS / Android)</div>
+        <div class="sec-sub">Executive Mobile Experience — Deal Approval &amp; Voice Lead Capture</div>
+      </div>
+      <span style="font-size:0.75rem; font-family:'JetBrains Mono'; color:var(--mute);">IPHONE 15 PRO RESOLUTION</span>
+    </div>
+
+    <div class="mobile-duo">
+      
+      <!-- Screen 1: Deal Approval Feed -->
+      <div class="iphone-body">
+        <div class="iphone-notch"></div>
+        
+        <div class="iphone-content">
+          <div>
+            <div class="screen-header">
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
+                  <circle cx="50" cy="50" r="48" fill="url(#mobGradW)" />
+                  <g transform="translate(18, 18) scale(0.64)">
+                    <path d="M72.6 83.718v-.152h.051V52.639a2.446 2.446 0 1 1 4.891 0v31.079A13.759 13.759 0 0 0 88.8 97.247V83.566h.044V54.773a13.758 13.758 0 1 0-27.517 0v42.474A13.759 13.759 0 0 0 72.6 83.718" transform="translate(-24.775 -16.49)" fill="#FFFFFF"/>
+                    <path d="M34.47 40.123v43.221A13.759 13.759 0 0 0 45.784 96.9V40.123z" transform="translate(-14.141 -16.131)" fill="#FFFFFF"/>
+                    <path d="M126.326 40.123h-11.314v56.765a13.759 13.759 0 0 0 11.314-13.549v-.3z" transform="translate(-46.027 -16.131)" fill="#FFFFFF"/>
+                  </g>
+                  <defs>
+                    <linearGradient id="mobGradW" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#8B5CF6"/>
+                      <stop offset="0.5" stop-color="#EC4899"/>
+                      <stop offset="1" stop-color="#F97316"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <span style="font-weight:700; font-size:0.85rem;">Wisible Mobile</span>
+              </div>
+              <span style="font-family:'JetBrains Mono'; font-size:0.72rem; color:var(--mute);">9:41</span>
+            </div>
+
+            <div style="font-size:1.15rem; font-weight:700; margin-bottom:0.25rem;">Deal Triage</div>
+            <div style="font-size:0.78rem; color:var(--sub); margin-bottom:1rem;">1 high-priority deal requires closing signature</div>
+
+            <div class="deal-swipe-card">
+              <div class="ai-badge">✦ AI SYNTHESIS: 98% WIN</div>
+              <div style="font-size:0.95rem; font-weight:700; margin-bottom:0.2rem;">Central Retail Corp</div>
+              <div style="font-family:'JetBrains Mono'; font-size:0.85rem; font-weight:700; color:var(--berry); margin-bottom:0.4rem;">฿ 2,100,000</div>
+              <p style="font-size:0.75rem; color:var(--sub); line-height:1.4;">Customer approved discount terms via LINE OA. Ready for digital contract execution.</p>
+            </div>
+          </div>
+
+          <div>
+            <button class="btn-berry-primary" style="width:100%; padding:0.85rem; border-radius:12px;" onclick="showToast('Signed & Executed Contract!')">
+              <span>Approve &amp; Send Contract</span>
+              <span>↑</span>
+            </button>
+
+            <div class="phone-botbar">
+              <span class="active">Deals</span>
+              <span>Copilot</span>
+              <span>Accounts</span>
+              <span>Settings</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screen 2: Quick Voice Lead Capture Sheet -->
+      <div class="iphone-body">
+        <div class="iphone-notch"></div>
+        
+        <div class="iphone-content">
+          <div>
+            <div class="screen-header">
+              <span style="font-size:0.78rem; font-weight:600; color:var(--sub);">Quick Action</span>
+              <span style="font-family:'JetBrains Mono'; font-size:0.72rem; color:var(--mute);">9:41</span>
+            </div>
+
+            <div style="font-size:1.15rem; font-weight:700; margin-bottom:0.25rem;">AI Voice Lead Ingest</div>
+            <div style="font-size:0.78rem; color:var(--sub); margin-bottom:1rem;">Autonomous Tax ID &amp; CRM extraction</div>
+
+            <div class="sheet-card">
+              <div style="font-size:0.78rem; font-weight:700; color:var(--berry);">LISTENING &amp; SYNTHESIZING...</div>
+              <div class="wave">
+                <span class="wave-bar" style="animation-delay:0.1s;"></span>
+                <span class="wave-bar" style="animation-delay:0.3s;"></span>
+                <span class="wave-bar" style="animation-delay:0.2s;"></span>
+                <span class="wave-bar" style="animation-delay:0.5s;"></span>
+                <span class="wave-bar" style="animation-delay:0.4s;"></span>
+              </div>
+              <div style="font-size:0.72rem; color:var(--sub);">"ปิดดีล SCG Logistics 1.25 ล้าน นัดเซ็นวันศุกร์นี้"</div>
+            </div>
+
+            <div style="background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:0.75rem; font-size:0.75rem;">
+              <div style="font-weight:700; margin-bottom:0.2rem;">🏢 SCG Logistics Management Co., Ltd.</div>
+              <div style="font-family:'JetBrains Mono'; color:var(--mute); font-size:0.68rem;">TAX ID: 0105536081234 (Verified DBD)</div>
+            </div>
+          </div>
+
+          <div>
+            <button class="btn-berry-primary" style="width:100%; padding:0.85rem; border-radius:12px;" onclick="showToast('Deal Saved to CRM Pipeline!')">
+              <span>Save &amp; Assign to Pipeline</span>
+              <span class="kbd-tag">✓</span>
+            </button>
+
+            <div class="phone-botbar">
+              <span>Deals</span>
+              <span class="active">Copilot</span>
+              <span>Accounts</span>
+              <span>Settings</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Interactive Toast Feedback -->
+<div class="toast" id="toast">Action Triggered</div>
+
+<script>
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2000);
+  }
+
+  function toggleTheme() {
+    const h = document.documentElement;
+    const isLight = h.getAttribute('data-theme') === 'light';
+    const next = isLight ? 'dark' : 'light';
+    h.setAttribute('data-theme', next);
+    document.getElementById('te').textContent = next === 'light' ? '🌙' : '☀️';
+    document.getElementById('tl').textContent = next === 'light' ? 'Dark Mode' : 'Light Mode';
+    showToast(`${next.toUpperCase()} Mode Activated`);
+  }
+
+  function scrollToSec(id, btn) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    document.querySelectorAll('.ntab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

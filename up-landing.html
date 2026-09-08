@@ -215,7 +215,7 @@
       box-shadow: var(--shadow-keycap-dark);
     }
 
-    /* MASTER CTA BUTTON WITH SPECULAR SWEEP */
+    /* MASTER CTA BUTTON (LOCKED SOLID MATTE BERRY STANDARD) */
     .btn-cta-primary {
       position: relative;
       display: inline-flex;
@@ -224,26 +224,94 @@
       gap: 0.75rem;
       padding: 0.9rem 2.35rem;
       border-radius: 9999px;
-      background: var(--brand-gradient);
+      background: #9D174D;
       color: #FFFFFF;
       font-family: var(--font-family-sans);
       font-size: 1rem;
       font-weight: 700;
       text-decoration: none;
       cursor: pointer;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      box-shadow: var(--shadow-cta-radiant);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 10px 28px -4px rgba(157, 23, 77, 0.4), 0 0 22px rgba(157, 23, 77, 0.25);
       overflow: hidden;
       transition: all 0.25s var(--ease-spring);
     }
     .btn-cta-primary:hover {
-      background: var(--brand-gradient-hover);
+      background: #831843;
       transform: translateY(-2px);
-      box-shadow: var(--shadow-cta-hover);
+      box-shadow: 0 14px 38px -4px rgba(157, 23, 77, 0.55), 0 0 30px rgba(157, 23, 77, 0.35);
     }
     .btn-cta-primary:active {
+      background: #660F34;
       transform: translateY(0);
     }
+
+    /* CTA Color Variants */
+    body[data-cta-style="gradient"] .btn-cta-primary {
+      background: var(--brand-gradient);
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.35);
+      box-shadow: var(--shadow-cta-radiant);
+    }
+    body[data-cta-style="gradient"] .btn-cta-primary:hover {
+      background: var(--brand-gradient-hover);
+      box-shadow: var(--shadow-cta-hover);
+    }
+
+    body[data-cta-style="violet"] .btn-cta-primary {
+      background: #5A2E8A;
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 28px -4px rgba(90, 46, 138, 0.45);
+    }
+    body[data-cta-style="violet"] .btn-cta-primary:hover {
+      background: #46216E;
+      box-shadow: 0 14px 35px -5px rgba(90, 46, 138, 0.6);
+    }
+
+    body[data-cta-style="navy"] .btn-cta-primary {
+      background: #0F172A;
+      color: #F8FAFC;
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 28px -4px rgba(15, 23, 42, 0.45);
+    }
+    body[data-cta-style="navy"] .btn-cta-primary:hover {
+      background: #1E293B;
+      box-shadow: 0 14px 35px -5px rgba(15, 23, 42, 0.65), 0 0 25px rgba(56, 189, 248, 0.25);
+    }
+
+    body[data-cta-style="emerald"] .btn-cta-primary {
+      background: #064E3B;
+      color: #ECFDF5;
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 10px 28px -4px rgba(6, 78, 59, 0.45);
+    }
+    body[data-cta-style="emerald"] .btn-cta-primary:hover {
+      background: #047857;
+      box-shadow: 0 14px 35px -5px rgba(6, 78, 59, 0.65), 0 0 25px rgba(52, 211, 153, 0.3);
+    }
+
+    body[data-cta-style="indigo"] .btn-cta-primary {
+      background: #4338CA;
+      color: #EEF2FF;
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 28px -4px rgba(67, 56, 202, 0.45);
+    }
+    body[data-cta-style="indigo"] .btn-cta-primary:hover {
+      background: #3730A3;
+      box-shadow: 0 14px 35px -5px rgba(67, 56, 202, 0.65);
+    }
+
+    body[data-cta-style="border"] .btn-cta-primary {
+      background: var(--theme-surface, #181622);
+      color: var(--theme-text-display, #FFFFFF);
+      border: 1.5px solid transparent;
+      background-image: linear-gradient(var(--theme-surface, #181622), var(--theme-surface, #181622)), var(--brand-gradient);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      box-shadow: 0 10px 25px rgba(110, 63, 160, 0.2);
+    }
+
     /* Specular Reflection Sweep */
     .btn-cta-primary::after {
       content: '';
@@ -267,9 +335,9 @@
     }
 
     .btn-cta-primary .keycap {
-      background: rgba(255, 255, 255, 0.22);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.45);
       color: #FFFFFF;
       box-shadow: none;
     }
@@ -790,6 +858,17 @@
       </ul>
 
       <div class="nav-cta-group">
+        <!-- CTA Style Selector -->
+        <select class="btn-theme-toggle" onchange="setCTAStyle(this.value)" style="cursor:pointer; background:var(--theme-surface); border:1px solid var(--theme-border); color:var(--theme-text-display); padding:0.4rem 0.6rem; border-radius:9999px; font-size:0.8rem; font-weight:600;">
+          <option value="obsidian">🖤 Solid Obsidian (Rec)</option>
+          <option value="violet">🟣 Solid Royal Violet</option>
+          <option value="navy">🌌 Midnight Navy</option>
+          <option value="emerald">🌲 Deep Emerald</option>
+          <option value="indigo">⚡ Electric Indigo</option>
+          <option value="border">💎 Jewel Border</option>
+          <option value="gradient">🌈 Legacy Gradient</option>
+        </select>
+
         <!-- Theme Toggle -->
         <button class="btn-theme-toggle" onclick="toggleTheme()">
           <span id="themeEmoji">🌙</span>
@@ -1077,6 +1156,11 @@
       document.getElementById('themeEmoji').textContent = next === 'light' ? '🌙' : '☀️';
       document.getElementById('themeLabel').textContent = next === 'light' ? 'Dark' : 'Light';
       showToast(`Switched to ${next.toUpperCase()} mode`);
+    }
+
+    function setCTAStyle(style) {
+      document.body.setAttribute('data-cta-style', style);
+      showToast(`CTA Style set to: ${style.toUpperCase()}`);
     }
 
     function showToast(msg) {

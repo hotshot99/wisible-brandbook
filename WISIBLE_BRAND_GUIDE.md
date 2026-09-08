@@ -1,36 +1,80 @@
 # Brand Guide — Wisible & Wisible Sheets
+*Design Architecture: Executive Luxury, Sub-100ms Velocity & Unified CTA Hierarchy*
 
 <!-- impeccable:design-schema 1 -->
 
 ## Brand Overview & Positioning
 
-**Wisible** is the leading Thai-first AI CRM & Revenue Operations platform.
+**Wisible** is the leading Thai-first AI CRM & Autonomous Revenue Operations platform.
 **Wisible Sheets** is the lightweight Google Sheets native revenue engine that turns spreadsheets into morning papers, deal health monitors, and automated LINE/Goat sync tools.
 
 - **Market Focus:** Thai B2B Sales, Executive Leadership, Revenue Teams, and Global Growth.
 - **Brand Voice:** Persuasive, authoritative, clear, sales-ops teammate voice (never generic "AI is thinking" jargon).
-- **Core Value Proposition:** *"The Google Sheet CRM that updates itself."* / *"Morning Brief report — not a overwhelming CRM sidebar."*
+- **Core Value Proposition:** *"The Google Sheet CRM that updates itself."* / *"Morning Brief report — not an overwhelming CRM sidebar."*
 
 ---
 
 ## Master Brand CI & Design System
 
-### 1. Palette Tokens
+### 0. Logo & Wordmark Geometry (Vector Standards)
 
-| Role | CSS Variable | Hex / Gradient | Usage & Rules |
-|------|--------------|----------------|---------------|
-| **Brand CI Gradient** | `--wisible-gradient` | `linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%)` | **Electric Neon Sunset**: Primary CTA, Logo Mark, Agentic AI badges |
-| **Primary Violet** | `--wisible-violet` | `#8B5CF6` | Primary Brand Accent |
-| **Electric Pink** | `--wisible-pink` | `#EC4899` | Energy Spark / Highlight |
-| **Sunset Orange** | `--wisible-orange` | `#F97316` | Action / Delta Tag |
-| **Page Wash** | `--wisible-paper` | `#F7F6F4` | 300gsm Cotton Stationery Wash |
+```
+┌───────────────────────────────────────────────────────────────────────────┐
+│   [ (w) ]   w i s i b l e                                                │
+│   ───────   ─────────────                                                 │
+│    Icon     Continuous Geometric Wordmark                                 │
+│   (Jewel)   (Pure Ink #26292C / Pure White #FFFFFF)                       │
+└───────────────────────────────────────────────────────────────────────────┘
+```
+
+1. **Primary Jewel Lockup (Web & Product Navigation)**:
+   - **Icon**: 3-Stop Gradient Circle (`#8B5CF6 → #EC4899 → #F97316`) with white triple-arch 'w' cutout.
+   - **Wordmark**: Continuous geometric lowercase `wisible` in solid `#26292C` Ink (Light mode) or `#FFFFFF` (Dark mode).
+2. **Monochrome Solid Lockup (Official Documents, Stamps & Print)**:
+   - **Icon**: Solid Obsidian Circle (`#26292C` / `#141413`).
+   - **Wordmark**: Solid Obsidian (`#26292C`).
+3. **Master Vector Assets**:
+   - Master Illustrator (`.ai`): [`assets/logos/wisible_logo_MasterTemplate.ai`](assets/logos/wisible_logo_MasterTemplate.ai)
+   - Master Full Lockup (`.svg`): [`assets/logos/wisible_full_lockup.svg`](assets/logos/wisible_full_lockup.svg)
+   - Production App Glyph (`.svg`): [`assets/logos/wisible_logo_crm.svg`](assets/logos/wisible_logo_crm.svg)
+
+---
+
+### 1. Palette Tokens & CTA Architecture
+
+| Role | CSS Variable | Hex / Value | Usage & Rules |
+|------|--------------|-------------|---------------|
+| **Brand CI Gradient** | `--wisible-gradient` | `linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%)` | **Logo Mark & Active Spark ONLY**: Reserved for top left brandmark and small status sparks. |
+| **Primary Solid CTA** | `--wisible-cta-primary` | `#9D174D` | **Matte Berry (Locked)**: Universal Primary Action Button across Web Marketing, Web App CRM & Mobile App. |
+| **CTA Hover State** | `--wisible-cta-hover` | `#831843` | Sub-100ms Deepened Hover State. |
+| **CTA Active Press** | `--wisible-cta-active` | `#660F34` | Tactile pressed feedback. |
+| **Primary Violet** | `--wisible-violet` | `#8B5CF6` | Logo Start Spectrum Anchor |
+| **Electric Pink** | `--wisible-pink` | `#EC4899` | Logo Mid Spectrum Anchor |
+| **Sunset Orange** | `--wisible-orange` | `#F97316` | Logo End Spectrum Anchor |
+| **Page Wash** | `--wisible-paper` | `#F7F6F4` | 300gsm Cotton Stationery Wash (No glare) |
 | **Card Surface** | `--wisible-surface` | `#FFFFFF` | Elevated Card Fill |
 | **Hairline Border** | `--wisible-hairline` | `#E6E4E0` | Precision 1px Split Border |
 | **Ink Display** | `--wisible-ink` | `#26292C` | Northstar Display & Headlines (13.8:1 AAA) |
 | **Ink Soft** | `--wisible-soft` | `#5A5F66` | Secondary Body Copy |
 | **Ink Mute** | `--wisible-mute` | `#8A9098` | Subtext, Timestamps, Captions |
 
-### 2. Semantic Status Tokens
+---
+
+### 2. The Jewel Rule & CTA Button Hierarchy
+
+1. **Logo vs. CTA Button Separation**:
+   - **The Logo**: Retains the 3-stop **Electric Neon Sunset Gradient (`#8B5CF6 → #EC4899 → #F97316`)** as the brand's jewel mark of AI dynamism and vitality.
+   - **The Primary CTA Button**: Strictly uses **Solid Matte Berry (`#9D174D`)** with crisp `#FFFFFF` white text (8.5:1 AAA contrast). No gradients on buttons.
+2. **Unified Ecosystem**:
+   - The same `#9D174D` Matte Berry is used across **Web Landing Pages** ("เริ่มต้นทดลองใช้ฟรี"), **Web App Dashboard** ("+ New Deal"), and **Mobile iOS/Android Apps** ("Approve Contract").
+3. **Button Hierarchy**:
+   - **Tier 1 (Primary)**: Solid `#9D174D` Matte Berry with subtle box shadow.
+   - **Tier 2 (Secondary)**: Jewel Hairline Gradient Outline on White Paper Card.
+   - **Tier 3 (Tertiary / Ghost)**: Muted text link / subtle hover container.
+
+---
+
+### 3. Semantic Status Tokens
 
 - **Up / Favorable:** `#1F7A4C` (Green)
 - **Warning / Review:** `#B45309` (Amber)
@@ -39,32 +83,21 @@
 
 ---
 
-## Typography Engine
+### 4. Typography Engine
 
-- **Primary Font Family:** `Anuphan` (Google Fonts: Thai + Latin)
-- **Fallback Stack:** `Noto Sans Thai`, `system-ui`, `sans-serif`
-- **Strict Guidelines:** No Lato, no IBM Plex, no Inter on Wisible marketing & product surfaces.
-- **Headlines:** Display weight (`700` / `600`), tight line height (`1.15`–`1.25`), pure `#26292C` ink — **never gradient text**.
-
----
-
-## Layout & Hierarchy Rules
-
-1. **Sticky Paper Nav:** Minimal header with brandmark + paid CTA ("ราคา").
-2. **Hero Section:** Ink headline + clear value proposition + primary Electric Neon Sunset CTA + paper report visual.
-3. **Leak Rows:** Stale sheet indicators, missed follow-ups, LINE chase alerts.
-4. **Three-step Mechanism:** Simple visual workflow.
-5. **Morning Brief & Chat Proof:** Real operational evidence.
-6. **Comparison Matrix:** Manual vs Wisible feature matrix.
-7. **Pricing Ladder:** Transparent pricing (Review entry, ongoing tiering).
+- **Primary Font Family:** `Anuphan` × `Plus Jakarta Sans` (High-density readability for Thai + Latin UI)
+- **Display Headlines:** `Instrument Serif` (Editorial luxury accent for hero claims)
+- **Telemetry & Keycaps:** `JetBrains Mono` (Latency timers, tabular data, keyboard shortcuts `<kbd>⌘K</kbd>`, `<kbd>↵</kbd>`)
+- **Headlines:** Display weight (`700` / `600`), pure `#26292C` ink — **never gradient text**.
 
 ---
 
-## Do's and Don'ts
+### 5. Do's and Don'ts
 
+- ✅ **DO** use solid `#9D174D` (Matte Berry) for all primary CTA buttons on Web, Web App, and Mobile App.
+- ✅ **DO** keep the 3-stop gradient strictly for the logo jewel glyph and active status spark.
 - ✅ **DO** keep headlines in pure `#26292C` solid ink.
 - ✅ **DO** use hairline `#E6E4E0` borders for card definitions.
-- ✅ **DO** reserve the Electric Neon Sunset gradient (`#8B5CF6→#EC4899→#F97316`) for active CTAs, brandmarks, and status pills.
-- ❌ **DON'T** use gradient text on text blocks or body copy.
-- ❌ **DON'T** use eyebrow/kicker labels above main report titles.
-- ❌ **DON'T** display raw third-party Google or LINE brand logos (use clean neutral labels).
+- ❌ **DON'T** use gradient buttons or neon glowing CTA fills (causes cognitive eye fatigue).
+- ❌ **DON'T** use generic SaaS blue or green for primary brand buttons.
+- ❌ **DON'T** use gradient text on paragraph blocks or headlines.

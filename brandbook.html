@@ -3,15 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brand CI Manual | UP & Genius Goat</title>
+  <title>Brand CI Manual | Wisible × UP × Genius Goat</title>
   
   <!-- Typographic Pairing: Instrument Serif + Plus Jakarta Sans + Anuphan + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Master Design Tokens -->
-  <link rel="stylesheet" href="unified-tokens.css" />
+  <!-- Master Design Tokens (Inlined for standalone portability) -->
+  <style>
+/**
+ * ⚡ MASTER BRAND TOKENS (WORLD-CLASS POLISH)
+ * UP & GENIUS GOAT
+ * Royal Violet (#6E3FA0) → Vibrant Berry Magenta (#D45A9A)
+ * Paper Wash (#F7F6F4) • Ink (#26292C) • Obsidian (#141413)
+ * Superhuman Sub-100ms Velocity Architecture
+ */
+
+:root {
+  /* ==========================================================================
+     1. SIGNATURE ACCENT GRADIENTS (LOCKED & HARMONIZED)
+     ========================================================================== */
+  --accent-purple: #6E3FA0;            /* Royal Violet Anchor */
+  --accent-purple-deep: #552B82;       /* Shadow / Pressed State */
+  --accent-purple-light: #F0E8FA;      /* Subtle Light Tint */
+  --accent-purple-alpha-12: rgba(110, 63, 160, 0.12);
+  --accent-purple-alpha-24: rgba(110, 63, 160, 0.24);
+
+  --accent-magenta: #D45A9A;           /* Vibrant Berry Spark */
+  --accent-magenta-deep: #B53E7E;      /* Shadow / Pressed State */
+  --accent-magenta-light: #FDF0F7;     /* Subtle Light Tint */
+  --accent-magenta-alpha-12: rgba(212, 90, 154, 0.12);
+  --accent-magenta-alpha-24: rgba(212, 90, 154, 0.24);
+
+  /* Master Gradients (Unified Jewel Spectrum: Wisible × UP × Genius Goat) */
+  --wisible-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --up-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --brand-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --brand-gradient-radial: radial-gradient(circle at top left, #EC4899 0%, #8B5CF6 100%);
+  --brand-gradient-glass: linear-gradient(135deg, rgba(139, 92, 246, 0.85) 0%, rgba(236, 72, 153, 0.85) 50%, rgba(249, 115, 22, 0.85) 100%);
+  --brand-gradient-border: linear-gradient(135deg, rgba(139, 92, 246, 0.6) 0%, rgba(236, 72, 153, 0.6) 50%, rgba(249, 115, 22, 0.6) 100%);
+
+  /* ==========================================================================
+     LOCKED SOLID CTA SYSTEM (MATTE BERRY ARCHITECTURE)
+     ========================================================================== */
+  --cta-primary: #9D174D;              /* Matte Berry (Universal Solid CTA) */
+  --cta-primary-hover: #831843;        /* Deeper Pressed Hover */
+  --cta-primary-active: #660F34;       /* Tactile Active Press */
+  --cta-primary-shadow: rgba(157, 23, 77, 0.35);
+  --cta-primary-tint: rgba(157, 23, 77, 0.08);
+  --cta-primary-border: rgba(157, 23, 77, 0.25);
+
+  /* ==========================================================================
+     2. PAPER WASH LIGHT SYSTEM (EDITORIAL REFINEMENT)
+     ========================================================================== */
+  --paper-wash: #F7F6F4;               /* Heavy Cotton Alabaster Wash */
+  --paper-surface: #FFFFFF;            /* Pure Crisp Card Surface */
+  --paper-surface-elevated: #F0EDE8;   /* Hover / Sub-surface Card */
+  --paper-surface-subtle: #EAE7E1;     /* Inactive Tab / Inset */
+  
+  --paper-hairline: #E6E4E0;           /* Precision 1px Border */
+  --paper-hairline-strong: #D5D2CD;    /* Active 1px Border */
+
+  --ink-display: #26292C;              /* Northstar Metrics & Headlines */
+  --ink-soft: #5A5F66;                 /* High-readability Body Copy */
+  --ink-mute: #8A9098;                 /* Secondary Metadata & Timestamps */
+  --ink-caption: #A3A8B0;              /* Micro-telemetry labels */
+
+  /* ==========================================================================
+     3. OBSIDIAN VOID DARK SYSTEM (WARM BLACK LUXURY)
+     ========================================================================== */
+  --obsidian-base: #141413;            /* Warm Obsidian Void */
+  --obsidian-surface: #181622;         /* Elevated Surface Card */
+  --obsidian-elevated: #1F1C2E;        /* Highlighted Interactive Row */
+  --obsidian-subtle: #252238;          /* Inset Control Surface */
+  
+  --obsidian-border: rgba(255, 255, 255, 0.08);
+  --obsidian-border-highlight: rgba(212, 90, 154, 0.35);
+  --obsidian-border-glow: rgba(110, 63, 160, 0.6);
+
+  --text-zenith: #FCFAF7;              /* Crisp Luxe Off-White */
+  --text-silver: #DEDBD5;              /* Readable Body */
+  --text-dim: #8D8A86;                 /* Muted Captions */
+
+  /* ==========================================================================
+     4. SEMANTIC DATA COLOR SYSTEM
+     ========================================================================== */
+  --semantic-green: #1F7A4C;           /* Positive / Up / Profit */
+  --semantic-green-wash: rgba(31, 122, 76, 0.08);
+  --semantic-amber: #B45309;           /* Pending / Review / Caution */
+  --semantic-amber-wash: rgba(180, 83, 9, 0.08);
+  --semantic-red: #B42318;             /* Risk / Blocker / Delta Down */
+  --semantic-red-wash: rgba(180, 35, 24, 0.08);
+
+  /* ==========================================================================
+     5. TYPOGRAPHY ENGINE (TRIPARTITE MODEL + BILINGUAL HARMONY)
+     ========================================================================== */
+  --font-family-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-family-sans: "Plus Jakarta Sans", "Anuphan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+
+  /* Fluid Typography Scale */
+  --font-size-display: clamp(3rem, 6.5vw, 6.25rem);
+  --font-size-h1: clamp(2.4rem, 4.5vw, 4rem);
+  --font-size-h2: clamp(1.85rem, 3.2vw, 2.75rem);
+  --font-size-h3: clamp(1.35rem, 2.2vw, 1.85rem);
+  --font-size-body-lg: clamp(1.1rem, 1.4vw, 1.25rem);
+  --font-size-body: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.75rem;
+
+  /* ==========================================================================
+     6. PHYSICS, SHADOWS & LIGHTING
+     ========================================================================== */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Shadows */
+  --shadow-keycap-light: 0 1px 3px rgba(0, 0, 0, 0.08), inset 0 1px 0 #FFFFFF;
+  --shadow-keycap-dark: 0 2px 4px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  --shadow-cta-radiant: 0 12px 30px -4px rgba(110, 63, 160, 0.45), 0 0 20px rgba(212, 90, 154, 0.3);
+  --shadow-cta-hover: 0 18px 45px -5px rgba(110, 63, 160, 0.6), 0 0 30px rgba(212, 90, 154, 0.45);
+
+  --shadow-card-light: 0 20px 45px -10px rgba(0, 0, 0, 0.05), 0 0 0 1px var(--paper-hairline);
+  --shadow-card-dark: 0 25px 60px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--obsidian-border);
+
+  --shadow-modal-light: 0 35px 90px -15px rgba(0, 0, 0, 0.18), 0 0 40px rgba(110, 63, 160, 0.12);
+  --shadow-modal-dark: 0 40px 100px -15px rgba(0, 0, 0, 0.95), 0 0 50px rgba(110, 63, 160, 0.35);
+
+  /* Patterns */
+  --speedline-pattern-light: repeating-linear-gradient(
+    45deg,
+    rgba(110, 63, 160, 0.018) 0px,
+    rgba(110, 63, 160, 0.018) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+
+  --speedline-pattern-dark: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}
+  </style>
 
   <style>
     /* ==========================================================================
@@ -145,6 +284,8 @@
       font-size: 0.72rem;
       font-weight: 700;
       line-height: 1.2;
+      white-space: nowrap;
+      flex-shrink: 0;
       background: #FFFFFF;
       border: 1px solid var(--theme-border);
       border-bottom: 2px solid var(--theme-border-strong);
@@ -243,15 +384,15 @@
     }
 
     .toc-item a:hover {
-      color: var(--accent-purple);
-      background: rgba(110, 63, 160, 0.06);
+      color: #9D174D;
+      background: rgba(157, 23, 77, 0.06);
     }
 
     .toc-item.active a {
-      color: var(--accent-purple);
-      background: rgba(110, 63, 160, 0.1);
+      color: #9D174D;
+      background: rgba(157, 23, 77, 0.1);
       font-weight: 700;
-      border-left: 2px solid var(--accent-purple);
+      border-left: 2px solid #9D174D;
     }
 
     /* Main Body */
@@ -276,10 +417,10 @@
       align-items: center;
       gap: 0.5rem;
       margin-bottom: 0.85rem;
-      color: var(--accent-purple);
+      color: #9D174D;
     }
     [data-theme="dark"] .section-eyebrow {
-      color: var(--accent-magenta);
+      color: #F472B6;
     }
 
     .section-headline {
@@ -325,6 +466,34 @@
       margin-bottom: 2.5rem;
     }
 
+    .brand-tab-bar {
+      display: inline-flex;
+      background: var(--theme-elevated);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--theme-border);
+      gap: 4px;
+    }
+    .brand-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--theme-text-body);
+      padding: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .brand-tab-btn:hover {
+      color: var(--theme-text-display);
+    }
+    .brand-tab-btn.active {
+      background: var(--brand-cta-primary);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(157, 23, 77, 0.25);
+    }
+
     .logo-controls-bar {
       display: flex;
       justify-content: space-between;
@@ -348,6 +517,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
+      white-space: nowrap;
       transition: all 0.15s ease;
     }
     .logo-btn-switch.active {
@@ -371,8 +541,8 @@
     .blueprint-grid-overlay {
       position: absolute;
       inset: 0;
-      background-image: linear-gradient(to right, rgba(110, 63, 160, 0.08) 1px, transparent 1px),
-                        linear-gradient(to bottom, rgba(110, 63, 160, 0.08) 1px, transparent 1px);
+      background-image: linear-gradient(to right, rgba(157, 23, 77, 0.08) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(157, 23, 77, 0.08) 1px, transparent 1px);
       background-size: 20px 20px;
       pointer-events: none;
       display: none;
@@ -398,8 +568,8 @@
     }
     .swatch-box:hover {
       transform: translateY(-4px);
-      border-color: var(--accent-purple);
-      box-shadow: 0 15px 35px rgba(110, 63, 160, 0.15);
+      border-color: #9D174D;
+      box-shadow: 0 15px 35px rgba(157, 23, 77, 0.15);
     }
 
     .swatch-color-fill {
@@ -472,116 +642,192 @@
       background: var(--theme-surface);
       border: 1px solid var(--theme-border);
       border-radius: 18px;
-      padding: 2.25rem 1.75rem;
+      padding: 2rem 1.6rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       box-shadow: var(--theme-card-shadow);
+      transition: all 0.2s var(--ease-spring);
     }
 
     .cta-preview-stage {
-      min-height: 90px;
+      min-height: 96px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       width: 100%;
     }
 
-    /* 1. Radiant Gradient CTA */
-    .btn-radiant-core {
+    /* Tier Label Header Row - Precision 1-Line Typography */
+    .tier-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      width: 100%;
+    }
+    .tier-label {
+      font-family: var(--font-family-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      color: var(--theme-text-muted);
+    }
+    .tier-label.active-berry {
+      color: #9D174D;
+    }
+    [data-theme="dark"] .tier-label.active-berry {
+      color: #F472B6;
+    }
+    .tier-badge {
+      font-family: var(--font-family-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--theme-text-muted);
+    }
+    [data-theme="dark"] .tier-badge {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--theme-text-muted);
+    }
+    .tier-badge.badge-berry {
+      background: rgba(157, 23, 77, 0.12);
+      color: #9D174D;
+    }
+    [data-theme="dark"] .tier-badge.badge-berry {
+      background: rgba(157, 23, 77, 0.25);
+      color: #F472B6;
+    }
+    .tier-badge.badge-hairline {
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--theme-text-display);
+    }
+    [data-theme="dark"] .tier-badge.badge-hairline {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    /* 00. LOCKED PRODUCTION STANDARD: Solid Matte Berry CTA */
+    .btn-matte-berry {
       position: relative;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.75rem;
-      padding: 0.85rem 2.2rem;
+      gap: 0.65rem;
+      padding: 0.75rem 1.6rem;
       border-radius: 9999px;
-      background: var(--brand-gradient);
+      background: #9D174D;
       color: #FFFFFF;
       font-family: var(--font-family-sans);
       font-size: 0.95rem;
       font-weight: 700;
+      line-height: 1;
       text-decoration: none;
       cursor: pointer;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      box-shadow: var(--shadow-cta-radiant);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 10px 28px -4px rgba(157, 23, 77, 0.4), 0 0 20px rgba(157, 23, 77, 0.25);
       overflow: hidden;
+      white-space: nowrap;
+      user-select: none;
       transition: all 0.25s var(--ease-spring);
     }
-    .btn-radiant-core:hover {
-      background: var(--brand-gradient-hover);
+    .btn-matte-berry:hover {
+      background: #831843;
       transform: translateY(-2px);
-      box-shadow: var(--shadow-cta-hover);
+      box-shadow: 0 14px 38px -4px rgba(157, 23, 77, 0.55), 0 0 28px rgba(157, 23, 77, 0.35);
     }
-    /* Specular Light Sweep */
-    .btn-radiant-core::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(
-        60deg,
-        transparent 35%,
-        rgba(255, 255, 255, 0.3) 50%,
-        transparent 65%
-      );
-      transform: translateX(-100%);
-      transition: transform 0.6s ease;
-      pointer-events: none;
-    }
-    .btn-radiant-core:hover::after {
-      transform: translateX(100%);
+    .btn-matte-berry:active {
+      background: #660F34;
+      transform: translateY(0);
     }
 
-    /* 2. Superhuman Jewel Border CTA */
-    .btn-jewel-border {
+    /* Tier 2: Clean Paper Hairline Secondary Button (1px Precision Border) */
+    .btn-secondary-hairline {
       position: relative;
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      padding: 0.85rem 2.2rem;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.75rem 1.6rem;
       border-radius: 9999px;
       background: var(--theme-surface);
       color: var(--theme-text-display);
       font-family: var(--font-family-sans);
       font-size: 0.95rem;
       font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
       cursor: pointer;
-      border: 1.5px solid transparent;
-      background-image: linear-gradient(var(--theme-surface), var(--theme-surface)), var(--brand-gradient);
-      background-origin: border-box;
-      background-clip: padding-box, border-box;
-      box-shadow: 0 10px 25px rgba(110, 63, 160, 0.15);
-      transition: all 0.25s var(--ease-spring);
+      border: 1px solid var(--theme-border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      white-space: nowrap;
+      user-select: none;
+      transition: all 0.2s var(--ease-spring);
     }
-    .btn-jewel-border:hover {
+    .btn-secondary-hairline:hover {
+      border-color: rgba(157, 23, 77, 0.45);
+      background: var(--theme-surface);
+      color: #9D174D;
       transform: translateY(-2px);
-      box-shadow: 0 15px 35px rgba(110, 63, 160, 0.3);
+      box-shadow: 0 6px 20px rgba(157, 23, 77, 0.12);
+    }
+    .btn-secondary-hairline:active {
+      transform: translateY(0);
     }
 
-    /* 3. Ghost Velocity Pill */
+    /* Tier 3: Ghost Velocity Button (Zero Border, Transparent) */
     .btn-ghost-velocity {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      padding: 0.85rem 1.8rem;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.75rem 1.6rem;
       border-radius: 9999px;
-      background: var(--theme-elevated);
-      border: 1px solid var(--theme-border);
-      color: var(--theme-text-display);
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--theme-text-muted);
+      font-family: var(--font-family-sans);
       font-size: 0.95rem;
-      font-weight: 600;
+      font-weight: 700;
+      line-height: 1;
       cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
       transition: all 0.2s ease;
     }
     .btn-ghost-velocity:hover {
-      background: var(--paper-surface);
-      border-color: var(--accent-purple);
+      background: rgba(0, 0, 0, 0.04);
+      color: var(--theme-text-display);
       transform: translateY(-1px);
+    }
+    [data-theme="dark"] .btn-ghost-velocity:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    /* Universal Compact / In-App Button Modifier */
+    .btn-sm {
+      font-size: 0.82rem !important;
+      padding: 0.55rem 1.25rem !important;
+      font-weight: 700 !important;
+    }
+
+    /* Keycap on Berry background */
+    .keycap-on-berry {
+      background: rgba(255, 255, 255, 0.2) !important;
+      border: 1px solid rgba(255, 255, 255, 0.35) !important;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5) !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important;
     }
 
     .toast-pill {
@@ -613,16 +859,17 @@
   <!-- Header -->
   <header class="sh-header">
     <div class="nav-inner">
-      <a href="#section-overview" class="brand-group">
-        <div class="sh-logo-badge">
-          <!-- UP Monogram Vector -->
-          <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
-            <path d="M30 38V58C30 65 35 70 42 70C49 70 54 65 54 58V38" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
-            <path d="M54 38H68C75 38 80 43 80 50C80 57 75 62 68 62H54V70" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M54 18L44 28H64L54 18Z" fill="#FFFFFF"/>
+      <a href="#" class="brand-group">
+        <div class="sh-logo-badge" style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);">
+          <svg width="20" height="20" viewBox="0 0 100 100" fill="none">
+            <path d="M72.6 83.718v-.152h.051V52.639a2.446 2.446 0 1 1 4.891 0v31.079A13.759 13.759 0 0 0 88.8 97.247V83.566h.044V54.773a13.758 13.758 0 1 0-27.517 0v42.474A13.759 13.759 0 0 0 72.6 83.718" transform="translate(-24.775 -16.49)" fill="#FFFFFF"/>
+            <path d="M34.47 40.123v43.221A13.759 13.759 0 0 0 45.784 96.9V40.123z" transform="translate(-14.141 -16.131)" fill="#FFFFFF"/>
+            <path d="M126.326 40.123h-11.314v56.765a13.759 13.759 0 0 0 11.314-13.549v-.3z" transform="translate(-46.027 -16.131)" fill="#FFFFFF"/>
           </svg>
         </div>
         <div class="sh-brand-title">
+          <span>WISIBLE</span>
+          <span style="opacity: 0.4;">×</span>
           <span>UP</span>
           <span style="opacity: 0.4;">×</span>
           <span>GENIUS GOAT</span>
@@ -630,8 +877,8 @@
       </a>
 
       <div style="display: flex; gap: 0.85rem; align-items: center;">
-        <a href="up-landing.html" class="btn-header">
-          <span>Live UP Landing Page</span>
+        <a href="mockups-preview.html" class="btn-header" style="background: #9D174D; border: 1px solid rgba(255,255,255,0.2);">
+          <span>Live Ecosystem UI</span>
           <span class="keycap" style="background: rgba(255,255,255,0.2); border: none; color:#fff;">Live ↗</span>
         </a>
         <button class="btn-header" id="themeToggle" onclick="toggleTheme()" style="background: var(--theme-surface); border: 1px solid var(--theme-border); color: var(--theme-text-display);">
@@ -647,7 +894,7 @@
       <div class="toc-title">Brand CI Manual</div>
       <ul class="toc-menu">
         <li class="toc-item active"><a href="#section-overview"><span>01 / Brand Ethos</span> <span class="keycap">01</span></a></li>
-        <li class="toc-item"><a href="#section-blueprint"><span>02 / Vector Blueprint Lab</span> <span class="keycap">02</span></a></li>
+        <li class="toc-item"><a href="#section-blueprint"><span>02 / Logo & Wordmark Lab</span> <span class="keycap">02</span></a></li>
         <li class="toc-item"><a href="#section-colors"><span>03 / Master Color Engine</span> <span class="keycap">03</span></a></li>
         <li class="toc-item"><a href="#section-cta"><span>04 / CTA Button Matrix</span> <span class="keycap">04</span></a></li>
         <li class="toc-item"><a href="#section-typography"><span>05 / Typography Engine</span> <span class="keycap">05</span></a></li>
@@ -655,9 +902,14 @@
         <li class="toc-item"><a href="#section-governance"><span>07 / Brand Governance</span> <span class="keycap">07</span></a></li>
       </ul>
 
-      <div class="toc-title">Workspace Files</div>
+      <div class="toc-title">Download Master Assets</div>
       <ul class="toc-menu">
-        <li class="toc-item"><a href="up-landing.html" target="_blank"><span>up-landing.html</span> <span>↗</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('wisible_full_lockup')"><span>Wisible Lockup (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('up_full_lockup')"><span>UP Lockup (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('up_logo_monogram')"><span>UP Monogram (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('genius_goat')"><span>Genius Goat (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/wisible_logo_MasterTemplate.ai" download="wisible_logo_MasterTemplate.ai"><span>Master Template (.AI)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="mockups-preview.html" target="_blank"><span>mockups-preview.html</span> <span>↗</span></a></li>
         <li class="toc-item"><a href="unified-tokens.css" target="_blank"><span>unified-tokens.css</span> <span>↗</span></a></li>
       </ul>
     </aside>
@@ -667,13 +919,26 @@
       
       <!-- 01. Brand Ethos -->
       <section class="brand-section" id="section-overview">
-        <div class="section-eyebrow">01 / Brand Architecture & Philosophy</div>
+        <div class="section-eyebrow">01 / Unified Brand Architecture &amp; Philosophy</div>
         <h1 class="section-headline">
-          The Luxury of <em>Extreme Velocity.</em>
+          The Luxury of <em>Autonomous Velocity.</em>
         </h1>
         <p class="section-subtext">
-          <strong>UP</strong> is the dedicated global operating system built for high-velocity operators. <strong>Genius Goat</strong> is the cognitive copilot. Together, they eliminate cognitive friction through sub-100ms keyboard navigation and the signature Royal Violet to Magenta jewel palette.
+          <strong>Wisible</strong> (Thai &amp; Regional Revenue Ops) and <strong>UP</strong> (Global Enterprise AI OS) share the <strong>EXACT SAME single Master Brand CI, color tokens, typography, and button standards</strong>. There are no separate color palettes between Wisible and UP.
         </p>
+
+        <!-- Unified Color Declaration Callout -->
+        <div class="sh-card" style="margin-bottom: 1.5rem; background: rgba(157, 23, 77, 0.04); border: 1.5px solid rgba(157, 23, 77, 0.3);">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #9D174D;"></span>
+            <span style="font-family: var(--font-family-mono); font-size: 0.8rem; font-weight: 700; color: #9D174D; letter-spacing: 0.1em; text-transform: uppercase;">
+              ✦ 100% UNIFIED COLOR SPECIFICATION (WISIBLE = UP)
+            </span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--theme-text-display); line-height: 1.5;">
+            <strong>Wisible and UP use the exact same color for everything:</strong> Single Primary Solid CTA (<strong>Matte Berry <code>#9D174D</code></strong>), Single Master Jewel Spectrum (<strong><code>#8B5CF6 → #EC4899 → #F97316</code></strong>), 300gsm Paper Wash (<strong><code>#F7F6F4</code></strong>), and Obsidian Dark Void (<strong><code>#141413</code></strong>).
+          </p>
+        </div>
 
         <div class="sh-card">
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
@@ -698,16 +963,156 @@
 
       <!-- 02. Vector Blueprint Lab -->
       <section class="brand-section" id="section-blueprint">
-        <div class="section-eyebrow">02 / Vector Geometry & Blueprint Lab</div>
-        <h2 class="section-headline">Mathematical Glyph Construction</h2>
+        <div class="section-eyebrow">02 / Official Logo &amp; Wordmark Lab</div>
+        <h2 class="section-headline">Unified Master Vector Identity (Wisible ✦ × UP ↑)</h2>
         <p class="section-subtext">
-          Engineered on a 100×100 coordinate grid with 45° angle cuts and golden-ratio stroke weight (7px stroke on 100px canvas).
+          Authentic geometric vector systems for both <strong>Wisible ✦</strong> and <strong>UP ↑</strong>. Built on precision mathematical SVG coordinate grids, both brands strictly share the identical 3-Stop Jewel Gradient (<code>#8B5CF6 → #EC4899 → #F97316</code>), Solid Ink (<code>#26292C</code>), and Dark Void Obsidian (<code>#141413</code>).
         </p>
+
+        <!-- Brand Showcase Switcher Tabs -->
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="brand-tab-bar">
+            <button class="brand-tab-btn active" id="tabWisibleShowcase" onclick="switchBrandShowcase('WISIBLE')">Wisible ✦ Master Identity</button>
+            <button class="brand-tab-btn" id="tabUPShowcase" onclick="switchBrandShowcase('UP')">UP ↑ Master Identity</button>
+          </div>
+          <div style="font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--theme-text-muted);">
+            Shared Master Tokens • 3-Stop Jewel + Ink Hierarchy
+          </div>
+        </div>
+
+        <!-- Master 3-Variant Grid Display: WISIBLE -->
+        <div id="showcaseWisible" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          
+          <!-- Variant 1: Primary Jewel (Light) -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #FFFFFF; border: 1px solid #E6E4E0;">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
+              <circle cx="94" cy="90" r="84" fill="url(#gridGrad1)" />
+              <g transform="translate(-261, -394)">
+                <path fill="#FFFFFF" d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                <path fill="#FFFFFF" d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                <path fill="#FFFFFF" d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+              </g>
+              <g transform="translate(-242, -390)" fill="#26292C">
+                <path d="M 563.637 440.938 L 563.637 506.188 C 563.637 512.785 558.234 518.188 551.637 518.188 C 545.035 518.188 539.637 512.785 539.637 506.188 L 539.637 440.938 L 518.637 440.938 L 518.637 506.188 C 518.637 512.785 513.234 518.188 506.637 518.188 C 500.035 518.188 494.637 512.785 494.637 506.188 L 494.637 440.938 L 470.82 440.938 L 470.82 504.332 C 470.82 522.688 485.84 537.707 504.195 537.707 C 514.402 537.707 523.562 533.059 529.695 525.781 C 535.832 533.059 544.992 537.707 555.195 537.707 C 573.555 537.707 588.57 522.688 588.57 504.332 L 588.57 440.938 Z" />
+                <path d="M 605.914 440.949 L 629.242 440.949 L 629.242 534.82 L 605.914 534.82 Z" />
+                <path d="M 629.387 422.02 C 629.387 428.508 624.125 433.77 617.637 433.77 C 611.145 433.77 605.887 428.508 605.887 422.02 C 605.887 415.531 611.145 410.27 617.637 410.27 C 624.125 410.27 629.387 415.531 629.387 422.02 Z" />
+                <path d="M 700.414 466.586 C 698.359 463.891 695.535 461.551 691.945 459.562 C 688.352 457.57 684.438 456.578 680.207 456.578 C 676.48 456.578 673.086 457.348 670.004 458.887 C 666.926 460.426 665.387 462.992 665.387 466.586 C 665.387 470.176 667.086 472.715 670.484 474.188 C 673.883 475.664 678.859 477.172 685.402 478.711 C 688.863 479.48 692.359 480.508 695.891 481.789 C 699.418 483.07 702.629 484.77 705.512 486.887 C 708.398 489.004 710.738 491.637 712.535 494.777 C 714.332 497.926 715.23 501.742 715.23 506.23 C 715.23 511.879 714.176 516.656 712.059 520.566 C 709.938 524.48 707.113 527.66 703.59 530.094 C 700.059 532.531 695.953 534.297 691.27 535.391 C 686.586 536.477 681.746 537.023 676.742 537.023 C 669.555 537.023 662.562 535.707 655.762 533.078 C 648.961 530.449 643.316 526.695 638.828 521.82 L 654.031 507.578 C 656.598 510.918 659.93 513.672 664.039 515.852 C 668.145 518.035 672.699 519.121 677.703 519.121 C 679.367 519.121 681.07 518.934 682.805 518.547 C 684.535 518.164 686.141 517.555 687.613 516.719 C 689.09 515.887 690.273 514.766 691.176 513.352 C 692.07 511.941 692.52 510.211 692.52 508.156 C 692.52 504.305 690.758 501.547 687.23 499.879 C 683.699 498.211 678.406 496.543 671.352 494.875 C 667.887 494.105 664.52 493.113 661.246 491.891 C 657.977 490.672 655.059 489.07 652.492 487.082 C 649.926 485.094 647.871 482.625 646.332 479.672 C 644.793 476.723 644.023 473.062 644.023 468.703 C 644.023 463.57 645.082 459.145 647.199 455.422 C 649.316 451.699 652.105 448.656 655.57 446.277 C 659.035 443.91 662.945 442.141 667.309 440.988 C 671.672 439.836 676.164 439.254 680.781 439.254 C 687.453 439.254 693.965 440.41 700.316 442.719 C 706.668 445.027 711.699 448.562 715.426 453.305 Z" />
+                <path d="M 725.125 440.949 L 748.449 440.949 L 748.449 534.82 L 725.125 534.82 Z" />
+                <path d="M 748.625 422.02 C 748.625 428.508 743.363 433.77 736.875 433.77 C 730.387 433.77 725.125 428.508 725.125 422.02 C 725.125 415.531 730.387 410.27 736.875 410.27 C 743.363 410.27 748.625 415.531 748.625 422.02 Z" />
+                <path d="M 814.391 516.891 C 799.133 516.891 786.762 504.523 786.762 489.262 C 786.762 474.004 799.133 461.637 814.391 461.637 C 829.648 461.637 842.02 474.004 842.02 489.262 C 842.02 504.523 829.648 516.891 814.391 516.891 M 852.609 457.914 C 852.582 457.879 852.559 457.844 852.531 457.809 C 852.301 457.523 852.07 457.242 851.836 456.961 C 851.168 456.117 850.508 455.27 849.785 454.473 C 845.836 450.145 841.125 446.738 835.652 444.254 C 835.02 443.969 834.352 443.754 833.703 443.5 C 833.281 443.316 832.84 443.168 832.41 442.996 C 832.02 442.859 831.637 442.699 831.246 442.57 C 825.984 440.641 820.324 439.531 814.391 439.531 C 804.445 439.531 795.227 442.543 787.5 447.641 L 787.5 403.27 L 787.352 403.27 L 766.133 411.344 L 766.133 534.867 L 785.238 534.867 L 785.238 534.574 L 787.5 534.574 L 787.5 529.387 C 795.223 534.492 804.438 537.52 814.391 537.52 C 814.805 537.52 815.207 537.469 815.621 537.457 C 816.125 537.473 816.617 537.539 817.129 537.539 C 824.129 537.539 830.402 536.234 835.938 533.625 C 841.477 531.02 846.184 527.512 850.07 523.125 C 852.645 520.211 854.789 516.93 856.578 513.348 C 860.875 506.062 863.383 497.598 863.383 488.527 C 863.383 476.938 859.336 466.301 852.609 457.914 Z" />
+                <path d="M 873.016 412.148 L 873.016 534.82 L 896.34 534.82 L 896.34 403.27 Z" />
+                <path d="M 955.527 459.098 C 967.598 459.098 977.91 466.609 982.059 477.215 L 928.996 477.215 C 933.141 466.609 943.453 459.098 955.527 459.098 M 1004.38 494.031 C 1004.65 491.922 1004.8 489.773 1004.8 487.586 C 1004.8 460.367 982.742 438.305 955.527 438.305 C 928.309 438.305 906.246 460.367 906.246 487.586 C 906.246 514.805 928.309 536.867 955.527 536.867 C 976.98 536.867 995.227 523.148 1001.99 504.012 L 978.793 504.012 C 973.637 511.305 965.141 516.074 955.527 516.074 C 942 516.074 930.684 506.645 927.773 494 L 983.281 494 C 983.277 494.012 983.277 494.023 983.273 494.031 Z" />
+              </g>
+              <defs>
+                <linearGradient id="gridGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8B5CF6" />
+                  <stop offset="50%" stop-color="#EC4899" />
+                  <stop offset="100%" stop-color="#F97316" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #8A9098; margin-top: 1rem; text-align: center;">
+              <strong>03. DARK VOID INVERTED</strong><br>Obsidian Surface • 3-Stop Jewel + White Wordmark
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Master 3-Variant Grid Display: UP -->
+        <div id="showcaseUP" style="display: none; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          
+          <!-- Variant 1: Primary Jewel (Light) -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #FFFFFF; border: 1px solid #E6E4E0;">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
+              <defs>
+                <linearGradient id="upGridGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8B5CF6" />
+                  <stop offset="50%" stop-color="#EC4899" />
+                  <stop offset="100%" stop-color="#F97316" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(10, 6)">
+                <circle cx="84" cy="84" r="84" fill="url(#upGridGrad1)" />
+                <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                  <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                </g>
+              </g>
+              <g fill="#26292C">
+                <path d="M 230 42 H 256 V 98 C 256 112 268 120 285 120 C 302 120 314 112 314 98 V 42 H 340 V 98 C 340 126 317 142 285 142 C 253 142 230 126 230 98 Z" />
+                <path d="M 370 42 H 430 C 455 42 472 56 472 77 C 472 98 455 112 430 112 H 396 V 142 H 370 Z M 396 64 V 90 H 428 C 441 90 446 84 446 77 C 446 70 441 64 428 64 Z" />
+                <path d="M 510 58 L 526 42 L 542 58 L 533 58 L 533 118 L 519 118 L 519 58 Z" fill="url(#upGridGrad1)" />
+              </g>
+              <text x="232" y="164" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" letter-spacing="0.22em" fill="#8A9098">ENTERPRISE VELOCITY OS // BY WISIBLE</text>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #5A5F66; margin-top: 1rem; text-align: center;">
+              <strong>01. PRIMARY JEWEL LOCKUP</strong><br>Light Surface • 3-Stop Jewel + Ink Display
+            </div>
+          </div>
+
+          <!-- Variant 2: Monochrome Solid -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #FFFFFF; border: 1px solid #E6E4E0;">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
+              <g transform="translate(10, 6)">
+                <circle cx="84" cy="84" r="84" fill="#26292C" />
+                <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                  <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                </g>
+              </g>
+              <g fill="#26292C">
+                <path d="M 230 42 H 256 V 98 C 256 112 268 120 285 120 C 302 120 314 112 314 98 V 42 H 340 V 98 C 340 126 317 142 285 142 C 253 142 230 126 230 98 Z" />
+                <path d="M 370 42 H 430 C 455 42 472 56 472 77 C 472 98 455 112 430 112 H 396 V 142 H 370 Z M 396 64 V 90 H 428 C 441 90 446 84 446 77 C 446 70 441 64 428 64 Z" />
+                <path d="M 510 58 L 526 42 L 542 58 L 533 58 L 533 118 L 519 118 L 519 58 Z" fill="#26292C" />
+              </g>
+              <text x="232" y="164" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" letter-spacing="0.22em" fill="#5A5F66">ENTERPRISE VELOCITY OS // BY WISIBLE</text>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #5A5F66; margin-top: 1rem; text-align: center;">
+              <strong>02. MONOCHROME SOLID</strong><br>White Paper • Solid Obsidian (#26292C) Lockup
+            </div>
+          </div>
+
+          <!-- Variant 3: Dark Mode Inverted -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #141413; border: 1px solid rgba(255,255,255,0.1);">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
+              <defs>
+                <linearGradient id="upGridGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8B5CF6" />
+                  <stop offset="50%" stop-color="#EC4899" />
+                  <stop offset="100%" stop-color="#F97316" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(10, 6)">
+                <circle cx="84" cy="84" r="84" fill="url(#upGridGrad3)" />
+                <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                  <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                </g>
+              </g>
+              <g fill="#FFFFFF">
+                <path d="M 230 42 H 256 V 98 C 256 112 268 120 285 120 C 302 120 314 112 314 98 V 42 H 340 V 98 C 340 126 317 142 285 142 C 253 142 230 126 230 98 Z" />
+                <path d="M 370 42 H 430 C 455 42 472 56 472 77 C 472 98 455 112 430 112 H 396 V 142 H 370 Z M 396 64 V 90 H 428 C 441 90 446 84 446 77 C 446 70 441 64 428 64 Z" />
+                <path d="M 510 58 L 526 42 L 542 58 L 533 58 L 533 118 L 519 118 L 519 58 Z" fill="url(#upGridGrad3)" />
+              </g>
+              <text x="232" y="164" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" letter-spacing="0.22em" fill="#8A9098">ENTERPRISE VELOCITY OS // BY WISIBLE</text>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #8A9098; margin-top: 1rem; text-align: center;">
+              <strong>03. DARK VOID INVERTED</strong><br>Obsidian Surface • 3-Stop Jewel + White Wordmark
+            </div>
+          </div>
+
+        </div>
 
         <div class="logo-lab-container">
           <div class="logo-controls-bar">
-            <div style="display: flex; gap: 0.5rem;">
-              <button class="logo-btn-switch active" id="btnMarkUP" onclick="switchBlueprintMark('UP')">UP ↑ Monogram</button>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="logo-btn-switch active" id="btnMarkWisibleLockup" onclick="switchBlueprintMark('WISIBLE_LOCKUP')">Wisible ✦ Lockup</button>
+              <button class="logo-btn-switch" id="btnMarkWisible" onclick="switchBlueprintMark('WISIBLE')">Wisible ✦ Glyph</button>
+              <button class="logo-btn-switch" id="btnMarkUPLockup" onclick="switchBlueprintMark('UP_LOCKUP')">UP ↑ Lockup</button>
+              <button class="logo-btn-switch" id="btnMarkUP" onclick="switchBlueprintMark('UP')">UP ↑ Monogram</button>
               <button class="logo-btn-switch" id="btnMarkGoat" onclick="switchBlueprintMark('GOAT')">Genius Goat 🐐</button>
             </div>
 
@@ -724,25 +1129,114 @@
           <div class="blueprint-stage">
             <div class="blueprint-grid-overlay" id="gridOverlay"></div>
             
-            <!-- UP SVG Blueprint -->
-            <div id="blueprintUP" style="display: flex; flex-direction: column; align-items: center; gap: 1.25rem;">
-              <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
-                <rect width="100" height="100" rx="22" fill="url(#bpUpGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
-                <!-- U Stroke -->
-                <path d="M30 38V58C30 65 35 70 42 70C49 70 54 65 54 58V38" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
-                <!-- P Stroke -->
-                <path d="M54 38H68C75 38 80 43 80 50C80 57 75 62 68 62H54V70" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                <!-- Ascension Chevron -->
-                <path d="M54 18L44 28H64L54 18Z" fill="#FFFFFF"/>
+            <!-- Wisible Full Lockup (Icon + Wordmark) -->
+            <div id="blueprintWisibleLockup" style="display: flex; flex-direction: column; align-items: center; gap: 1.25rem; width: 100%; max-width: 680px;">
+              <svg viewBox="0 0 760 180" width="100%" height="100%" fill="none" style="max-height: 140px;">
                 <defs>
-                  <linearGradient id="bpUpGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#6E3FA0"/>
-                    <stop offset="1" stop-color="#D45A9A"/>
+                  <linearGradient id="wisibleLogoGradLockup" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B5CF6" />
+                    <stop offset="50%" stop-color="#EC4899" />
+                    <stop offset="100%" stop-color="#F97316" />
+                  </linearGradient>
+                </defs>
+                <!-- Circle Base -->
+                <circle cx="94" cy="90" r="84" fill="url(#wisibleLogoGradLockup)" />
+                <!-- Icon Glyph (w) -->
+                <g transform="translate(-261, -394)">
+                  <path fill="#FFFFFF" d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                  <path fill="#FFFFFF" d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                  <path fill="#FFFFFF" d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                </g>
+                <!-- Wordmark \"wisible\" -->
+                <g transform="translate(-242, -390)" fill="var(--theme-text-display)">
+                  <path d="M 563.637 440.938 L 563.637 506.188 C 563.637 512.785 558.234 518.188 551.637 518.188 C 545.035 518.188 539.637 512.785 539.637 506.188 L 539.637 440.938 L 518.637 440.938 L 518.637 506.188 C 518.637 512.785 513.234 518.188 506.637 518.188 C 500.035 518.188 494.637 512.785 494.637 506.188 L 494.637 440.938 L 470.82 440.938 L 470.82 504.332 C 470.82 522.688 485.84 537.707 504.195 537.707 C 514.402 537.707 523.562 533.059 529.695 525.781 C 535.832 533.059 544.992 537.707 555.195 537.707 C 573.555 537.707 588.57 522.688 588.57 504.332 L 588.57 440.938 Z" />
+                  <path d="M 605.914 440.949 L 629.242 440.949 L 629.242 534.82 L 605.914 534.82 Z" />
+                  <path d="M 629.387 422.02 C 629.387 428.508 624.125 433.77 617.637 433.77 C 611.145 433.77 605.887 428.508 605.887 422.02 C 605.887 415.531 611.145 410.27 617.637 410.27 C 624.125 410.27 629.387 415.531 629.387 422.02 Z" />
+                  <path d="M 700.414 466.586 C 698.359 463.891 695.535 461.551 691.945 459.562 C 688.352 457.57 684.438 456.578 680.207 456.578 C 676.48 456.578 673.086 457.348 670.004 458.887 C 666.926 460.426 665.387 462.992 665.387 466.586 C 665.387 470.176 667.086 472.715 670.484 474.188 C 673.883 475.664 678.859 477.172 685.402 478.711 C 688.863 479.48 692.359 480.508 695.891 481.789 C 699.418 483.07 702.629 484.77 705.512 486.887 C 708.398 489.004 710.738 491.637 712.535 494.777 C 714.332 497.926 715.23 501.742 715.23 506.23 C 715.23 511.879 714.176 516.656 712.059 520.566 C 709.938 524.48 707.113 527.66 703.59 530.094 C 700.059 532.531 695.953 534.297 691.27 535.391 C 686.586 536.477 681.746 537.023 676.742 537.023 C 669.555 537.023 662.562 535.707 655.762 533.078 C 648.961 530.449 643.316 526.695 638.828 521.82 L 654.031 507.578 C 656.598 510.918 659.93 513.672 664.039 515.852 C 668.145 518.035 672.699 519.121 677.703 519.121 C 679.367 519.121 681.07 518.934 682.805 518.547 C 684.535 518.164 686.141 517.555 687.613 516.719 C 689.09 515.887 690.273 514.766 691.176 513.352 C 692.07 511.941 692.52 510.211 692.52 508.156 C 692.52 504.305 690.758 501.547 687.23 499.879 C 683.699 498.211 678.406 496.543 671.352 494.875 C 667.887 494.105 664.52 493.113 661.246 491.891 C 657.977 490.672 655.059 489.07 652.492 487.082 C 649.926 485.094 647.871 482.625 646.332 479.672 C 644.793 476.723 644.023 473.062 644.023 468.703 C 644.023 463.57 645.082 459.145 647.199 455.422 C 649.316 451.699 652.105 448.656 655.57 446.277 C 659.035 443.91 662.945 442.141 667.309 440.988 C 671.672 439.836 676.164 439.254 680.781 439.254 C 687.453 439.254 693.965 440.41 700.316 442.719 C 706.668 445.027 711.699 448.562 715.426 453.305 Z" />
+                  <path d="M 725.125 440.949 L 748.449 440.949 L 748.449 534.82 L 725.125 534.82 Z" />
+                  <path d="M 748.625 422.02 C 748.625 428.508 743.363 433.77 736.875 433.77 C 730.387 433.77 725.125 428.508 725.125 422.02 C 725.125 415.531 730.387 410.27 736.875 410.27 C 743.363 410.27 748.625 415.531 748.625 422.02 Z" />
+                  <path d="M 814.391 516.891 C 799.133 516.891 786.762 504.523 786.762 489.262 C 786.762 474.004 799.133 461.637 814.391 461.637 C 829.648 461.637 842.02 474.004 842.02 489.262 C 842.02 504.523 829.648 516.891 814.391 516.891 M 852.609 457.914 C 852.582 457.879 852.559 457.844 852.531 457.809 C 852.301 457.523 852.07 457.242 851.836 456.961 C 851.168 456.117 850.508 455.27 849.785 454.473 C 845.836 450.145 841.125 446.738 835.652 444.254 C 835.02 443.969 834.352 443.754 833.703 443.5 C 833.281 443.316 832.84 443.168 832.41 442.996 C 832.02 442.859 831.637 442.699 831.246 442.57 C 825.984 440.641 820.324 439.531 814.391 439.531 C 804.445 439.531 795.227 442.543 787.5 447.641 L 787.5 403.27 L 787.352 403.27 L 766.133 411.344 L 766.133 534.867 L 785.238 534.867 L 785.238 534.574 L 787.5 534.574 L 787.5 529.387 C 795.223 534.492 804.438 537.52 814.391 537.52 C 814.805 537.52 815.207 537.469 815.621 537.457 C 816.125 537.473 816.617 537.539 817.129 537.539 C 824.129 537.539 830.402 536.234 835.938 533.625 C 841.477 531.02 846.184 527.512 850.07 523.125 C 852.645 520.211 854.789 516.93 856.578 513.348 C 860.875 506.062 863.383 497.598 863.383 488.527 C 863.383 476.938 859.336 466.301 852.609 457.914 Z" />
+                  <path d="M 873.016 412.148 L 873.016 534.82 L 896.34 534.82 L 896.34 403.27 Z" />
+                  <path d="M 955.527 459.098 C 967.598 459.098 977.91 466.609 982.059 477.215 L 928.996 477.215 C 933.141 466.609 943.453 459.098 955.527 459.098 M 1004.38 494.031 C 1004.65 491.922 1004.8 489.773 1004.8 487.586 C 1004.8 460.367 982.742 438.305 955.527 438.305 C 928.309 438.305 906.246 460.367 906.246 487.586 C 906.246 514.805 928.309 536.867 955.527 536.867 C 976.98 536.867 995.227 523.148 1001.99 504.012 L 978.793 504.012 C 973.637 511.305 965.141 516.074 955.527 516.074 C 942 516.074 930.684 506.645 927.773 494 L 983.281 494 C 983.277 494.012 983.277 494.023 983.273 494.031 Z" />
+                </g>
+              </svg>
+              <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
+                WISIBLE ✦ // FULL LOCKUP (CIRCULAR GLYPH + OFFICIAL GEOMETRIC WORDMARK)
+              </div>
+            </div>
+
+            <!-- Wisible Icon Glyph Blueprint -->
+            <div id="blueprintWisible" style="display: none; flex-direction: column; align-items: center; gap: 1.25rem;">
+              <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="48" fill="url(#bpWisibleGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <!-- Exact Production Wisible Glyph Paths -->
+                <g transform="translate(18, 18) scale(0.64)">
+                  <path d="M72.6 83.718v-.152h.051V52.639a2.446 2.446 0 1 1 4.891 0v31.079A13.759 13.759 0 0 0 88.8 97.247V83.566h.044V54.773a13.758 13.758 0 1 0-27.517 0v42.474A13.759 13.759 0 0 0 72.6 83.718" transform="translate(-24.775 -16.49)" fill="#FFFFFF"/>
+                  <path d="M34.47 40.123v43.221A13.759 13.759 0 0 0 45.784 96.9V40.123z" transform="translate(-14.141 -16.131)" fill="#FFFFFF"/>
+                  <path d="M126.326 40.123h-11.314v56.765a13.759 13.759 0 0 0 11.314-13.549v-.3z" transform="translate(-46.027 -16.131)" fill="#FFFFFF"/>
+                </g>
+                <defs>
+                  <linearGradient id="bpWisibleGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8B5CF6"/>
+                    <stop offset="0.5" stop-color="#EC4899"/>
+                    <stop offset="1" stop-color="#F97316"/>
                   </linearGradient>
                 </defs>
               </svg>
               <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
-                UP ↑ // 100×100 COORD GRID // GOLDEN RATIO BEVEL
+                WISIBLE ✦ // 3-STOP ELECTRIC SUNSET (#8B5CF6 → #EC4899 → #F97316) // OFFICIAL MASTER VECTOR
+              </div>
+            </div>
+
+            <!-- UP Full Lockup Blueprint -->
+            <div id="blueprintUPLockup" style="display: none; flex-direction: column; align-items: center; gap: 1.25rem; width: 100%; max-width: 680px;">
+              <svg viewBox="0 0 760 180" width="100%" height="100%" fill="none" style="max-height: 140px;">
+                <defs>
+                  <linearGradient id="upBpLockupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B5CF6" />
+                    <stop offset="50%" stop-color="#EC4899" />
+                    <stop offset="100%" stop-color="#F97316" />
+                  </linearGradient>
+                </defs>
+                <g transform="translate(10, 6)">
+                  <circle cx="84" cy="84" r="84" fill="url(#upBpLockupGrad)" />
+                  <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                    <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                  </g>
+                </g>
+                <g fill="var(--theme-text-display)">
+                  <path d="M 230 42 H 256 V 98 C 256 112 268 120 285 120 C 302 120 314 112 314 98 V 42 H 340 V 98 C 340 126 317 142 285 142 C 253 142 230 126 230 98 Z" />
+                  <path d="M 370 42 H 430 C 455 42 472 56 472 77 C 472 98 455 112 430 112 H 396 V 142 H 370 Z M 396 64 V 90 H 428 C 441 90 446 84 446 77 C 446 70 441 64 428 64 Z" />
+                  <path d="M 510 58 L 526 42 L 542 58 L 533 58 L 533 118 L 519 118 L 519 58 Z" fill="url(#upBpLockupGrad)" />
+                </g>
+                <text x="232" y="164" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" letter-spacing="0.22em" fill="var(--theme-text-muted)">ENTERPRISE VELOCITY OS // BY WISIBLE</text>
+              </svg>
+              <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
+                UP ↑ // FULL LOCKUP (CIRCULAR JEWEL BADGE + GEOMETRIC UP + ASCENSION SPARK)
+              </div>
+            </div>
+
+            <!-- UP SVG Blueprint (Circular Monogram Glyph) -->
+            <div id="blueprintUP" style="display: none; flex-direction: column; align-items: center; gap: 1.25rem;">
+              <svg width="180" height="180" viewBox="0 0 168 168" fill="none">
+                <circle cx="84" cy="84" r="82" fill="url(#bpUpGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                  <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                </g>
+                <defs>
+                  <linearGradient id="bpUpGrad" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8B5CF6"/>
+                    <stop offset="0.5" stop-color="#EC4899"/>
+                    <stop offset="1" stop-color="#F97316"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
+                UP ↑ // 168×168 CIRCULAR GLYPH // 3-STOP JEWEL (#8B5CF6 → #EC4899 → #F97316)
               </div>
             </div>
 
@@ -752,13 +1246,14 @@
                 <rect width="100" height="100" rx="22" fill="url(#bpGoatGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
                 <!-- Ram Synaptic Facet -->
                 <path d="M30 68L38 45L50 30L62 45L70 68L50 58L30 68Z" fill="#FFFFFF" fill-opacity="0.95"/>
-                <path d="M50 30L50 58" stroke="#6E3FA0" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M50 30L50 58" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round"/>
                 <path d="M38 45L22 32L32 26L44 38" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M62 45L78 32L68 26L56 38" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                 <defs>
                   <linearGradient id="bpGoatGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#6E3FA0"/>
-                    <stop offset="1" stop-color="#D45A9A"/>
+                    <stop stop-color="#8B5CF6"/>
+                    <stop offset="0.5" stop-color="#EC4899"/>
+                    <stop offset="1" stop-color="#F97316"/>
                   </linearGradient>
                 </defs>
               </svg>
@@ -773,26 +1268,43 @@
 
       <!-- 03. Master Color Engine -->
       <section class="brand-section" id="section-colors">
-        <div class="section-eyebrow">03 / Master Color Engine</div>
-        <h2 class="section-headline">The Locked Color Architecture</h2>
+        <div class="section-eyebrow">03 / Unified Master Color Engine (Wisible × UP)</div>
+        <h2 class="section-headline">Single Master Color Architecture</h2>
         <p class="section-subtext">
-          Extracted and locked from <code>genius-goat/DESIGN.md</code>. Click any swatch below to copy token values.
+          <strong>Wisible and UP use the exact same colors for everything.</strong> Click any swatch below to copy CSS token values directly into your clipboard.
         </p>
 
         <div class="swatch-grid">
-          <!-- Signature Accent -->
-          <div class="swatch-box" onclick="copyToken('linear-gradient(135deg, #6E3FA0, #D45A9A)', '--brand-gradient')">
-            <div class="swatch-color-fill" style="background: linear-gradient(135deg, #6E3FA0 0%, #D45A9A 100%);">
-              <span class="swatch-pill-tag">SIGNATURE ACCENT</span>
+          <!-- 01. Master 3-Stop Gradient (Unified Logo Jewel) -->
+          <div class="swatch-box" onclick="copyToken('linear-gradient(135deg, #8B5CF6, #EC4899, #F97316)', '--brand-gradient')">
+            <div class="swatch-color-fill" style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);">
+              <span class="swatch-pill-tag">UNIFIED LOGO JEWEL (WISIBLE × UP × GOAT)</span>
             </div>
             <div class="swatch-content">
-              <div class="swatch-heading">Royal Violet → Magenta</div>
-              <div class="swatch-subheading">Primary CTA, logos, and active highlights</div>
+              <div class="swatch-heading">Master Electric Sunset</div>
+              <div class="swatch-subheading">Unified logo glyph, UP monogram, app icon & active spark</div>
               <div class="swatch-meta-codes">
-                <div class="meta-code-item"><span class="lbl">HEX A</span><span class="val">#6E3FA0</span></div>
-                <div class="meta-code-item"><span class="lbl">HEX B</span><span class="val">#D45A9A</span></div>
-                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">2685C / 2375C</span></div>
+                <div class="meta-code-item"><span class="lbl">STOP 1</span><span class="val">#8B5CF6</span></div>
+                <div class="meta-code-item"><span class="lbl">STOP 2</span><span class="val">#EC4899</span></div>
+                <div class="meta-code-item"><span class="lbl">STOP 3</span><span class="val">#F97316</span></div>
                 <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--brand-gradient</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02. Locked Primary Solid CTA: Matte Berry -->
+          <div class="swatch-box" style="border: 2px solid #9D174D;" onclick="copyToken('#9D174D', '--brand-cta-primary')">
+            <div class="swatch-color-fill" style="background: #9D174D;">
+              <span class="swatch-pill-tag" style="background:#fff; color:#9D174D; font-weight:800;">LOCKED SOLID CTA (WISIBLE = UP)</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Matte Berry (#9D174D)</div>
+              <div class="swatch-subheading">Universal Primary CTA across Wisible & UP (Web, App & Mobile)</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#9D174D</span></div>
+                <div class="meta-code-item"><span class="lbl">HOVER</span><span class="val">#831843</span></div>
+                <div class="meta-code-item"><span class="lbl">CONTRAST</span><span class="val">8.5:1 (AAA)</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--brand-cta-primary</span></div>
               </div>
             </div>
           </div>
@@ -847,65 +1359,105 @@
               </div>
             </div>
           </div>
+
+          <!-- Obsidian Base (Dark Void Canvas) -->
+          <div class="swatch-box" onclick="copyToken('#141413', '--obsidian-base')">
+            <div class="swatch-color-fill" style="background: #141413; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <span class="swatch-pill-tag" style="background:rgba(255,255,255,0.15); color:#fff;">DARK VOID CANVAS</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Obsidian Base</div>
+              <div class="swatch-subheading">Warm OLED black canvas (zero eye glare)</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#141413</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">20, 20, 19</span></div>
+                <div class="meta-code-item"><span class="lbl">ROLE</span><span class="val">Night Canvas</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--obsidian-base</span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- 04. CTA Button Matrix -->
       <section class="brand-section" id="section-cta">
-        <div class="section-eyebrow">04 / CTA Button Matrix & Polish</div>
-        <h2 class="section-headline">The 3 Luxury CTA Styles</h2>
+        <div class="section-eyebrow">04 / Locked 3-Tier CTA Button Hierarchy</div>
+        <h2 class="section-headline">Production Button Architecture</h2>
         <p class="section-subtext">
-          Interactive button implementations designed for maximum conversion rate and optical prestige.
+          Strictly locked across Wisible and UP. No gradients on primary button bodies. All primary actions execute with Solid Matte Berry (<code>#9D174D</code>).
         </p>
 
         <div class="cta-matrix-grid">
-          <!-- Style 1 -->
-          <div class="cta-card">
-            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: var(--accent-purple); text-transform: uppercase; margin-bottom: 1rem;">
-              STYLE 1: RADIANT CORE (HERO PRIMARY)
+          
+          <!-- Tier 1: Primary Action (Solid Matte Berry) -->
+          <div class="cta-card" style="border: 2px solid #9D174D; box-shadow: 0 10px 30px rgba(157,23,77,0.15);">
+            <div class="tier-label-row">
+              <span class="tier-label active-berry">
+                TIER 1: PRIMARY ACTION
+              </span>
+              <span class="tier-badge badge-berry">SOLID BERRY • 8.5:1</span>
             </div>
-            <div class="cta-preview-stage">
-              <button class="btn-radiant-core" onclick="showToast('⚡ Radiant CTA Activated')">
-                <span>Get Started with UP</span>
-                <span class="keycap" style="background: rgba(255,255,255,0.22); border: 1px solid rgba(255,255,255,0.4); color: #fff;">Enter</span>
+            <div class="cta-preview-stage" style="flex-direction: column; gap: 0.85rem;">
+              <button class="btn-matte-berry" onclick="showToast('🍷 Primary Action: Get Started Activated')">
+                <span>เริ่มต้นทดลองใช้ฟรี</span>
+                <span class="keycap keycap-on-berry">↵ Enter</span>
+              </button>
+              <button class="btn-matte-berry btn-sm" onclick="showToast('🍷 Primary Action: + New Deal Activated')">
+                <span>+ New Deal</span>
+                <span class="keycap keycap-on-berry">N</span>
               </button>
             </div>
-            <div style="font-size: 0.85rem; color: var(--theme-text-muted);">
-              Full gradient with 45° specular sweep. Use for the #1 highest-conversion action on the page.
+            <div style="font-size: 0.85rem; color: var(--theme-text-muted); line-height: 1.45;">
+              <strong>Solid Matte Berry (<code>#9D174D</code>)</strong>. Universal primary CTA on Web, CRM Web App, and Mobile. High-status luxury finish with zero eye fatigue.
             </div>
           </div>
 
-          <!-- Style 2 -->
-          <div class="cta-card">
-            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: var(--accent-purple); text-transform: uppercase; margin-bottom: 1rem;">
-              STYLE 2: JEWEL BORDER (ELEVATED PRO)
+          <!-- Tier 2: Secondary Action (Clean 1px Hairline Border) -->
+          <div class="cta-card" style="border: 1px solid var(--theme-border);">
+            <div class="tier-label-row">
+              <span class="tier-label">
+                TIER 2: SECONDARY ACTION
+              </span>
+              <span class="tier-badge badge-hairline">1PX HAIRLINE</span>
             </div>
-            <div class="cta-preview-stage">
-              <button class="btn-jewel-border" onclick="showToast('💎 Jewel Border CTA Activated')">
-                <span>Launch Command HUD</span>
+            <div class="cta-preview-stage" style="flex-direction: column; gap: 0.85rem;">
+              <button class="btn-secondary-hairline" onclick="showToast('📋 Secondary Action: Book VIP Demo Activated')">
+                <span>จองรอบ VIP Demo</span>
+                <span class="keycap">D</span>
+              </button>
+              <button class="btn-secondary-hairline btn-sm" onclick="showToast('📋 Secondary Action: Launch Command HUD Activated')">
+                <span>Command Palette</span>
                 <span class="keycap">⌘K</span>
               </button>
             </div>
-            <div style="font-size: 0.85rem; color: var(--theme-text-muted);">
-              Crisp white surface with gradient border clipping. Ideal for secondary power actions.
+            <div style="font-size: 0.85rem; color: var(--theme-text-muted); line-height: 1.45;">
+              Crisp 1px precision hairline border (<code>#E6E4E0</code>) on white paper surface. Hover state subtly highlights with Matte Berry tint (<code>rgba(157, 23, 77, 0.45)</code>).
             </div>
           </div>
 
-          <!-- Style 3 -->
-          <div class="cta-card">
-            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: var(--accent-purple); text-transform: uppercase; margin-bottom: 1rem;">
-              STYLE 3: GHOST VELOCITY (SUBTLE)
+          <!-- Tier 3: Tertiary / Ghost Action (Zero Border) -->
+          <div class="cta-card" style="border: 1px dashed var(--theme-border);">
+            <div class="tier-label-row">
+              <span class="tier-label">
+                TIER 3: GHOST ACTION
+              </span>
+              <span class="tier-badge">ZERO BORDER</span>
             </div>
-            <div class="cta-preview-stage">
-              <button class="btn-ghost-velocity" onclick="showToast('🚀 Ghost Velocity Activated')">
-                <span>Watch 60s Demo</span>
-                <span class="keycap">D</span>
+            <div class="cta-preview-stage" style="flex-direction: column; gap: 0.85rem;">
+              <button class="btn-ghost-velocity" onclick="showToast('Ghost action: Cancel')">
+                <span>ยกเลิก (Cancel)</span>
+                <span class="keycap">Esc</span>
+              </button>
+              <button class="btn-ghost-velocity btn-sm" onclick="showToast('Ghost action: Deal History')">
+                <span>View Deal History</span>
+                <span class="keycap">H</span>
               </button>
             </div>
-            <div style="font-size: 0.85rem; color: var(--theme-text-muted);">
-              Low-friction resting state with purple hover border. Ideal for exploratory actions.
+            <div style="font-size: 0.85rem; color: var(--theme-text-muted); line-height: 1.45;">
+              100% borderless transparent button with subtle hover wash. Reserved for cancel, dismiss, and low-priority auxiliary triggers.
             </div>
           </div>
+
         </div>
       </section>
 
@@ -918,7 +1470,7 @@
           <!-- Voice 1 -->
           <div style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--theme-border);">
             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--accent-purple); font-weight:700;">1. INSTRUMENT SERIF (EDITORIAL LUXURY)</span>
+              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: #9D174D; font-weight:700;">1. INSTRUMENT SERIF (EDITORIAL LUXURY)</span>
               <span class="keycap">Display</span>
             </div>
             <div style="font-family: var(--font-family-serif); font-size: clamp(2.3rem, 4vw, 3.75rem); line-height: 1.08; margin: 1rem 0;">
@@ -943,10 +1495,10 @@
           <!-- Voice 3 -->
           <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--accent-purple); font-weight:700;">3. JETBRAINS MONO (VELOCITY TELEMETRY)</span>
+              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: #9D174D; font-weight:700;">3. JETBRAINS MONO (VELOCITY TELEMETRY)</span>
               <span class="keycap">Hardware</span>
             </div>
-            <div style="font-family: var(--font-family-mono); font-size: 0.95rem; color: var(--accent-purple); line-height: 1.6; margin: 1rem 0;">
+            <div style="font-family: var(--font-family-mono); font-size: 0.95rem; color: var(--theme-text-display); line-height: 1.6; margin: 1rem 0;">
               [ ⌘K ] COMMAND_HUD // LATENCY: 11ms // ZERO_DRAG // STATUS: OPERATE
             </div>
           </div>
@@ -985,8 +1537,10 @@
               <span>✓</span> ALWAYS DO
             </div>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem; color: var(--theme-text-body);">
-              <li>• Apply the #6E3FA0 → #D45A9A gradient strictly to the Primary CTA & Brandmark.</li>
-              <li>• Keep page wash on #F7F6F4 (Day) or #141413 (Obsidian).</li>
+              <li>• <strong>100% Color Identity:</strong> Wisible and UP share the exact same color tokens across all platforms.</li>
+              <li>• Use <strong>Solid Matte Berry (<code>#9D174D</code>)</strong> as the universal primary CTA button on Web, App & Mobile.</li>
+              <li>• Apply the 3-stop Master Gradient (<code>#8B5CF6 → #EC4899 → #F97316</code>) strictly to Logo Glyphs & Active Sparks (≤5% area).</li>
+              <li>• Keep page wash on #F7F6F4 (Day) or #141413 (Obsidian Void).</li>
               <li>• Render large financial and northstar metrics in pure Ink (#26292C).</li>
               <li>• Pair all key actions with physical keycap hints (<span class="keycap">⌘K</span>, <span class="keycap">G</span>, <span class="keycap">Enter</span>).</li>
             </ul>
@@ -997,10 +1551,12 @@
               <span>✕</span> NEVER DO
             </div>
             <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem; color: var(--theme-text-body);">
+              <li>• Never create separate or divergent color palettes between Wisible and UP.</li>
+              <li>• Never apply gradient fills to primary CTA button bodies (Solid #9D174D only).</li>
               <li>• Never apply gradient fills to full cards, tables, or background panels.</li>
               <li>• Never use generic corporate blue (#0066FF) or cold gray (#E2E8F0).</li>
-              <li>• Never distort the 45° angle cuts on the UP monogram.</li>
-              <li>• Never compromise the 2X clear space perimeter around the vector marks.</li>
+              <li>• Never distort the 45° angle cuts on vector monograms.</li>
+              <li>• Never compromise the 1X clear space perimeter around the vector marks.</li>
             </ul>
           </div>
         </div>
@@ -1035,10 +1591,27 @@
       setTimeout(() => toast.classList.remove('active'), 2500);
     }
 
+    // Brand Showcase Switcher (Wisible vs UP)
+    function switchBrandShowcase(brand) {
+      document.getElementById('tabWisibleShowcase').classList.toggle('active', brand === 'WISIBLE');
+      document.getElementById('tabUPShowcase').classList.toggle('active', brand === 'UP');
+      document.getElementById('showcaseWisible').style.display = brand === 'WISIBLE' ? 'grid' : 'none';
+      document.getElementById('showcaseUP').style.display = brand === 'UP' ? 'grid' : 'none';
+    }
+
     // Blueprint Stage Switches
+    let currentMark = 'WISIBLE_LOCKUP';
     function switchBlueprintMark(mark) {
+      currentMark = mark;
+      document.getElementById('btnMarkWisibleLockup').classList.toggle('active', mark === 'WISIBLE_LOCKUP');
+      document.getElementById('btnMarkWisible').classList.toggle('active', mark === 'WISIBLE');
+      document.getElementById('btnMarkUPLockup').classList.toggle('active', mark === 'UP_LOCKUP');
       document.getElementById('btnMarkUP').classList.toggle('active', mark === 'UP');
       document.getElementById('btnMarkGoat').classList.toggle('active', mark === 'GOAT');
+      
+      document.getElementById('blueprintWisibleLockup').style.display = mark === 'WISIBLE_LOCKUP' ? 'flex' : 'none';
+      document.getElementById('blueprintWisible').style.display = mark === 'WISIBLE' ? 'flex' : 'none';
+      document.getElementById('blueprintUPLockup').style.display = mark === 'UP_LOCKUP' ? 'flex' : 'none';
       document.getElementById('blueprintUP').style.display = mark === 'UP' ? 'flex' : 'none';
       document.getElementById('blueprintGoat').style.display = mark === 'GOAT' ? 'flex' : 'none';
     }
@@ -1053,8 +1626,75 @@
       showToast(`⚡ Keycap Pressed: [ ${key} ] (11ms Response)`);
     }
 
+    function downloadSVGElement(svgElement, filename) {
+      if (!svgElement) return;
+      const clone = svgElement.cloneNode(true);
+      clone.removeAttribute('style');
+      if (!clone.getAttribute('xmlns')) {
+        clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+      }
+      const serializer = new XMLSerializer();
+      let source = serializer.serializeToString(clone);
+      const blob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      showToast(`⬇ Master Vector SVG downloaded (${filename})`);
+    }
+
+    function downloadDirectSVG(key) {
+      const map = {
+        'wisible_full_lockup': { id: 'blueprintWisibleLockup', name: 'wisible_full_lockup.svg' },
+        'up_full_lockup': { id: 'blueprintUPLockup', name: 'up_full_lockup.svg' },
+        'up_logo_monogram': { id: 'blueprintUP', name: 'up_logo_monogram.svg' },
+        'genius_goat': { id: 'blueprintGoat', name: 'genius_goat.svg' }
+      };
+      const item = map[key];
+      if (item) {
+        const container = document.getElementById(item.id);
+        const svg = container ? container.querySelector('svg') : null;
+        if (svg) {
+          downloadSVGElement(svg, item.name);
+          return;
+        }
+      }
+      // Fallback
+      const a = document.createElement('a');
+      a.href = 'assets/logos/' + key + '.svg';
+      a.download = key + '.svg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast(`⬇ Master Vector SVG downloaded (${key}.svg)`);
+    }
+
     function downloadCurrentSVG() {
-      showToast('⬇ Master Vector SVG downloaded');
+      const markElementMap = {
+        'WISIBLE_LOCKUP': { id: 'blueprintWisibleLockup', name: 'wisible_full_lockup.svg' },
+        'WISIBLE': { id: 'blueprintWisible', name: 'wisible_icon_glyph.svg' },
+        'UP_LOCKUP': { id: 'blueprintUPLockup', name: 'up_full_lockup.svg' },
+        'UP': { id: 'blueprintUP', name: 'up_logo_monogram.svg' },
+        'GOAT': { id: 'blueprintGoat', name: 'genius_goat.svg' }
+      };
+      const item = markElementMap[currentMark] || markElementMap['WISIBLE_LOCKUP'];
+      const container = document.getElementById(item.id);
+      const svg = container ? container.querySelector('svg') : null;
+      if (svg) {
+        downloadSVGElement(svg, item.name);
+      } else {
+        const a = document.createElement('a');
+        a.href = 'assets/logos/' + item.name;
+        a.download = item.name;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast(`⬇ Master Vector SVG downloaded (${item.name})`);
+      }
     }
 
     // Global Key Listener
@@ -1066,6 +1706,26 @@
         showToast('⚡ [G] Jump to Get Started');
       }
     });
+
+    // Active TOC Scrollspy
+    const sections = document.querySelectorAll('.brand-section');
+    const navItems = document.querySelectorAll('.sidebar-toc .toc-item a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navItems.forEach(link => {
+            const parent = link.parentElement;
+            if (link.getAttribute('href') === `#${id}`) {
+              parent.classList.add('active');
+            } else if (link.getAttribute('href').startsWith('#')) {
+              parent.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
   </script>
 </body>
 </html>

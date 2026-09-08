@@ -1,79 +1,254 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Superhuman Brand CI Manual | UP & Genius Goat by Wisible</title>
+  <title>Brand CI Manual | Wisible × UP × Genius Goat</title>
   
-  <!-- Exact Superhuman Typography Setup (Editorial Serif + Clean Sans + Mono) -->
+  <!-- Typographic Pairing: Instrument Serif + Plus Jakarta Sans + Anuphan + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Cloned Superhuman Tokens -->
-  <link rel="stylesheet" href="unified-tokens.css" />
+  <!-- Master Design Tokens (Inlined for standalone portability) -->
+  <style>
+/**
+ * ⚡ MASTER BRAND TOKENS (WORLD-CLASS POLISH)
+ * UP & GENIUS GOAT
+ * Royal Violet (#6E3FA0) → Vibrant Berry Magenta (#D45A9A)
+ * Paper Wash (#F7F6F4) • Ink (#26292C) • Obsidian (#141413)
+ * Superhuman Sub-100ms Velocity Architecture
+ */
+
+:root {
+  /* ==========================================================================
+     1. SIGNATURE ACCENT GRADIENTS (LOCKED & HARMONIZED)
+     ========================================================================== */
+  --accent-purple: #6E3FA0;            /* Royal Violet Anchor */
+  --accent-purple-deep: #552B82;       /* Shadow / Pressed State */
+  --accent-purple-light: #F0E8FA;      /* Subtle Light Tint */
+  --accent-purple-alpha-12: rgba(110, 63, 160, 0.12);
+  --accent-purple-alpha-24: rgba(110, 63, 160, 0.24);
+
+  --accent-magenta: #D45A9A;           /* Vibrant Berry Spark */
+  --accent-magenta-deep: #B53E7E;      /* Shadow / Pressed State */
+  --accent-magenta-light: #FDF0F7;     /* Subtle Light Tint */
+  --accent-magenta-alpha-12: rgba(212, 90, 154, 0.12);
+  --accent-magenta-alpha-24: rgba(212, 90, 154, 0.24);
+
+  /* Master Gradients (Unified Jewel Spectrum: Wisible × UP × Genius Goat) */
+  --wisible-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --up-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --brand-gradient: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);
+  --brand-gradient-radial: radial-gradient(circle at top left, #EC4899 0%, #8B5CF6 100%);
+  --brand-gradient-glass: linear-gradient(135deg, rgba(139, 92, 246, 0.85) 0%, rgba(236, 72, 153, 0.85) 50%, rgba(249, 115, 22, 0.85) 100%);
+  --brand-gradient-border: linear-gradient(135deg, rgba(139, 92, 246, 0.6) 0%, rgba(236, 72, 153, 0.6) 50%, rgba(249, 115, 22, 0.6) 100%);
+
+  /* ==========================================================================
+     LOCKED SOLID CTA SYSTEM (MATTE BERRY ARCHITECTURE)
+     ========================================================================== */
+  --cta-primary: #9D174D;              /* Matte Berry (Universal Solid CTA) */
+  --cta-primary-hover: #831843;        /* Deeper Pressed Hover */
+  --cta-primary-active: #660F34;       /* Tactile Active Press */
+  --cta-primary-shadow: rgba(157, 23, 77, 0.35);
+  --cta-primary-tint: rgba(157, 23, 77, 0.08);
+  --cta-primary-border: rgba(157, 23, 77, 0.25);
+
+  /* ==========================================================================
+     2. PAPER WASH LIGHT SYSTEM (EDITORIAL REFINEMENT)
+     ========================================================================== */
+  --paper-wash: #F7F6F4;               /* Heavy Cotton Alabaster Wash */
+  --paper-surface: #FFFFFF;            /* Pure Crisp Card Surface */
+  --paper-surface-elevated: #F0EDE8;   /* Hover / Sub-surface Card */
+  --paper-surface-subtle: #EAE7E1;     /* Inactive Tab / Inset */
+  
+  --paper-hairline: #E6E4E0;           /* Precision 1px Border */
+  --paper-hairline-strong: #D5D2CD;    /* Active 1px Border */
+
+  --ink-display: #26292C;              /* Northstar Metrics & Headlines */
+  --ink-soft: #5A5F66;                 /* High-readability Body Copy */
+  --ink-mute: #8A9098;                 /* Secondary Metadata & Timestamps */
+  --ink-caption: #A3A8B0;              /* Micro-telemetry labels */
+
+  /* ==========================================================================
+     3. OBSIDIAN VOID DARK SYSTEM (WARM BLACK LUXURY)
+     ========================================================================== */
+  --obsidian-base: #141413;            /* Warm Obsidian Void */
+  --obsidian-surface: #181622;         /* Elevated Surface Card */
+  --obsidian-elevated: #1F1C2E;        /* Highlighted Interactive Row */
+  --obsidian-subtle: #252238;          /* Inset Control Surface */
+  
+  --obsidian-border: rgba(255, 255, 255, 0.08);
+  --obsidian-border-highlight: rgba(212, 90, 154, 0.35);
+  --obsidian-border-glow: rgba(110, 63, 160, 0.6);
+
+  --text-zenith: #FCFAF7;              /* Crisp Luxe Off-White */
+  --text-silver: #DEDBD5;              /* Readable Body */
+  --text-dim: #8D8A86;                 /* Muted Captions */
+
+  /* ==========================================================================
+     4. SEMANTIC DATA COLOR SYSTEM
+     ========================================================================== */
+  --semantic-green: #1F7A4C;           /* Positive / Up / Profit */
+  --semantic-green-wash: rgba(31, 122, 76, 0.08);
+  --semantic-amber: #B45309;           /* Pending / Review / Caution */
+  --semantic-amber-wash: rgba(180, 83, 9, 0.08);
+  --semantic-red: #B42318;             /* Risk / Blocker / Delta Down */
+  --semantic-red-wash: rgba(180, 35, 24, 0.08);
+
+  /* ==========================================================================
+     5. TYPOGRAPHY ENGINE (TRIPARTITE MODEL + BILINGUAL HARMONY)
+     ========================================================================== */
+  --font-family-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-family-sans: "Plus Jakarta Sans", "Anuphan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+
+  /* Fluid Typography Scale */
+  --font-size-display: clamp(3rem, 6.5vw, 6.25rem);
+  --font-size-h1: clamp(2.4rem, 4.5vw, 4rem);
+  --font-size-h2: clamp(1.85rem, 3.2vw, 2.75rem);
+  --font-size-h3: clamp(1.35rem, 2.2vw, 1.85rem);
+  --font-size-body-lg: clamp(1.1rem, 1.4vw, 1.25rem);
+  --font-size-body: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-xs: 0.75rem;
+
+  /* ==========================================================================
+     6. PHYSICS, SHADOWS & LIGHTING
+     ========================================================================== */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Shadows */
+  --shadow-keycap-light: 0 1px 3px rgba(0, 0, 0, 0.08), inset 0 1px 0 #FFFFFF;
+  --shadow-keycap-dark: 0 2px 4px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  --shadow-cta-radiant: 0 12px 30px -4px rgba(110, 63, 160, 0.45), 0 0 20px rgba(212, 90, 154, 0.3);
+  --shadow-cta-hover: 0 18px 45px -5px rgba(110, 63, 160, 0.6), 0 0 30px rgba(212, 90, 154, 0.45);
+
+  --shadow-card-light: 0 20px 45px -10px rgba(0, 0, 0, 0.05), 0 0 0 1px var(--paper-hairline);
+  --shadow-card-dark: 0 25px 60px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--obsidian-border);
+
+  --shadow-modal-light: 0 35px 90px -15px rgba(0, 0, 0, 0.18), 0 0 40px rgba(110, 63, 160, 0.12);
+  --shadow-modal-dark: 0 40px 100px -15px rgba(0, 0, 0, 0.95), 0 0 50px rgba(110, 63, 160, 0.35);
+
+  /* Patterns */
+  --speedline-pattern-light: repeating-linear-gradient(
+    45deg,
+    rgba(110, 63, 160, 0.018) 0px,
+    rgba(110, 63, 160, 0.018) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+
+  --speedline-pattern-dark: repeating-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}
+  </style>
 
   <style>
     /* ==========================================================================
-       SUPERHUMAN PIXEL-PERFECT LUXURY STYLING
+       WORLD-CLASS BRAND MANUAL STYLING
        ========================================================================== */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --theme-bg: var(--paper-wash);
+      --theme-surface: var(--paper-surface);
+      --theme-elevated: var(--paper-surface-elevated);
+      --theme-border: var(--paper-hairline);
+      --theme-border-strong: var(--paper-hairline-strong);
+      --theme-text-display: var(--ink-display);
+      --theme-text-body: var(--ink-soft);
+      --theme-text-muted: var(--ink-mute);
+      --theme-card-shadow: var(--shadow-card-light);
+      --theme-speedlines: var(--speedline-pattern-light);
     }
 
-    html {
-      scroll-behavior: smooth;
+    [data-theme="dark"] {
+      --theme-bg: var(--obsidian-base);
+      --theme-surface: var(--obsidian-surface);
+      --theme-elevated: var(--obsidian-elevated);
+      --theme-border: var(--obsidian-border);
+      --theme-border-strong: var(--obsidian-border-highlight);
+      --theme-text-display: var(--text-zenith);
+      --theme-text-body: var(--text-silver);
+      --theme-text-muted: var(--text-dim);
+      --theme-card-shadow: var(--shadow-card-dark);
+      --theme-speedlines: var(--speedline-pattern-dark);
     }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
     body {
-      background-color: var(--color-bg-base);
-      color: var(--color-text-primary);
+      background-color: var(--theme-bg);
+      color: var(--theme-text-display);
       font-family: var(--font-family-sans);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      transition: background-color 0.3s var(--ease-spring), color 0.3s var(--ease-spring);
       overflow-x: hidden;
     }
 
-    /* 45-degree Superhuman Speedlines Texture */
+    /* 45-degree Speedlines */
     .bg-speedlines {
       position: fixed;
       inset: 0;
-      background-image: var(--sh-pattern-speedlines);
+      background-image: var(--theme-speedlines);
       pointer-events: none;
       z-index: 0;
     }
 
-    /* Sticky Navigation Header */
+    /* Ambient Lighting */
+    .ambient-glow {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 550px;
+      background: radial-gradient(circle, rgba(110, 63, 160, 0.12) 0%, rgba(212, 90, 154, 0.08) 45%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(60px);
+    }
+    [data-theme="dark"] .ambient-glow {
+      background: radial-gradient(circle, rgba(110, 63, 160, 0.3) 0%, rgba(212, 90, 154, 0.18) 45%, transparent 70%);
+    }
+
+    /* Sticky Navigation */
     header.sh-header {
       position: sticky;
       top: 0;
       z-index: 100;
       backdrop-filter: blur(24px) saturate(180%);
       -webkit-backdrop-filter: blur(24px) saturate(180%);
-      background: rgba(20, 20, 19, 0.85);
-      border-bottom: 1px solid var(--color-border-sub);
+      background: rgba(247, 246, 244, 0.88);
+      border-bottom: 1px solid var(--theme-border);
+      transition: background 0.3s ease;
     }
-    [data-theme="light"] header.sh-header {
-      background: rgba(252, 250, 247, 0.9);
+    [data-theme="dark"] header.sh-header {
+      background: rgba(20, 20, 19, 0.85);
     }
 
     .nav-inner {
       max-width: 1560px;
       margin: 0 auto;
-      padding: 0.9rem 2.5rem;
+      padding: 0.95rem 2.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1.5rem;
     }
 
     .brand-group {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.85rem;
       text-decoration: none;
       color: inherit;
     }
@@ -82,74 +257,24 @@
       width: 36px;
       height: 36px;
       border-radius: 9px;
-      background: #1B1938;
-      border: 1px solid rgba(246, 170, 221, 0.35);
+      background: var(--brand-gradient);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 0 16px rgba(121, 45, 75, 0.35);
+      box-shadow: 0 4px 14px rgba(110, 63, 160, 0.35);
+      transition: transform 0.2s ease;
+    }
+    .brand-group:hover .sh-logo-badge {
+      transform: translateY(-2px);
     }
 
     .sh-brand-title {
       font-size: 1.15rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
     }
 
-    .endorsement-badge {
-      font-family: var(--font-family-mono);
-      font-size: 0.7rem;
-      color: var(--color-text-muted);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding-left: 0.25rem;
-    }
-
-    .sh-brand-pill {
-      font-family: var(--font-family-mono);
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 0.2rem 0.65rem;
-      border-radius: 9999px;
-      background: rgba(246, 170, 221, 0.12);
-      border: 1px solid rgba(246, 170, 221, 0.3);
-      color: var(--mulberry-20);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-    }
-
-    .btn-header {
-      background: var(--_button-default-bg);
-      border: 1px solid var(--color-border-sub);
-      color: var(--neutral-0);
-      padding: 0.5rem 1.1rem;
-      border-radius: 9999px;
-      font-family: var(--font-family-sans);
-      font-size: 0.85rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
-    .btn-header:hover {
-      background: var(--_button-hover-bg);
-      border-color: var(--color-border-highlight);
-      transform: translateY(-1px);
-    }
-
-    /* Keycaps */
+    /* Keycaps (Tactile Mechanical 3D) */
     .keycap {
       display: inline-flex;
       align-items: center;
@@ -157,14 +282,52 @@
       padding: 2px 7px;
       font-family: var(--font-family-mono);
       font-size: 0.72rem;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.2;
+      white-space: nowrap;
+      flex-shrink: 0;
+      background: #FFFFFF;
+      border: 1px solid var(--theme-border);
+      border-bottom: 2px solid var(--theme-border-strong);
+      border-radius: 5px;
+      color: var(--theme-text-display);
+      box-shadow: var(--shadow-keycap-light);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.1s var(--ease-spring);
+    }
+    .keycap:active {
+      transform: translateY(1px);
+      border-bottom-width: 1px;
+    }
+    [data-theme="dark"] .keycap {
       background: rgba(255, 255, 255, 0.08);
       border: 1px solid rgba(255, 255, 255, 0.18);
-      border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-      border-radius: 5px;
-      color: var(--color-text-primary);
-      box-shadow: var(--sh-shadow-keycap);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.32);
+      color: #FFFFFF;
+      box-shadow: var(--shadow-keycap-dark);
+    }
+
+    /* Buttons */
+    .btn-header {
+      background: var(--brand-gradient);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      padding: 0.5rem 1.15rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 4px 14px rgba(110, 63, 160, 0.3);
+      text-decoration: none;
+      transition: all 0.2s var(--ease-spring);
+    }
+    .btn-header:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(110, 63, 160, 0.45);
     }
 
     /* Layout Wrapper */
@@ -184,7 +347,7 @@
       height: calc(100vh - 65px);
       overflow-y: auto;
       padding: 2.25rem 1.75rem;
-      border-right: 1px solid var(--color-border-sub);
+      border-right: 1px solid var(--theme-border);
       flex-shrink: 0;
     }
 
@@ -192,7 +355,7 @@
       font-family: var(--font-family-mono);
       font-size: 0.7rem;
       font-weight: 700;
-      color: var(--color-text-muted);
+      color: var(--theme-text-muted);
       letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 0.85rem;
@@ -212,7 +375,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 0.55rem 0.85rem;
-      color: var(--color-text-muted);
+      color: var(--theme-text-body);
       text-decoration: none;
       font-size: 0.875rem;
       font-weight: 500;
@@ -221,24 +384,18 @@
     }
 
     .toc-item a:hover {
-      color: var(--color-text-primary);
-      background: rgba(255, 255, 255, 0.04);
+      color: #9D174D;
+      background: rgba(157, 23, 77, 0.06);
     }
 
     .toc-item.active a {
-      color: var(--mulberry-20);
-      background: rgba(246, 170, 221, 0.08);
-      font-weight: 600;
-      border-left: 2px solid var(--mulberry-20);
+      color: #9D174D;
+      background: rgba(157, 23, 77, 0.1);
+      font-weight: 700;
+      border-left: 2px solid #9D174D;
     }
 
-    .toc-num {
-      font-family: var(--font-family-mono);
-      font-size: 0.75rem;
-      opacity: 0.5;
-    }
-
-    /* Main Content */
+    /* Main Body */
     main.main-body {
       flex: 1;
       padding: 3.5rem 4.5rem 10rem;
@@ -253,23 +410,26 @@
     .section-eyebrow {
       font-family: var(--font-family-mono);
       font-size: 0.8rem;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
       margin-bottom: 0.85rem;
-      color: var(--mulberry-20);
+      color: #9D174D;
+    }
+    [data-theme="dark"] .section-eyebrow {
+      color: #F472B6;
     }
 
     .section-headline {
       font-family: var(--font-family-serif);
-      font-size: clamp(2.6rem, 4.5vw, 4rem);
+      font-size: var(--font-size-h1);
       line-height: 1.08;
       font-weight: 400;
       margin-bottom: 1.35rem;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
 
     .section-headline em {
@@ -278,130 +438,118 @@
 
     .section-subtext {
       font-size: 1.15rem;
-      color: var(--color-text-muted);
+      color: var(--theme-text-body);
       max-width: 820px;
       margin-bottom: 2.75rem;
       line-height: 1.65;
     }
 
-    /* Hero Banner */
-    .sh-hero-cover {
-      padding: 4.5rem 3.75rem;
-      border-radius: 28px;
-      margin-bottom: 4.5rem;
-      position: relative;
-      overflow: hidden;
-      background: var(--sh-gradient-hero);
-      border: 1px solid rgba(246, 170, 221, 0.3);
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero-meta-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-      padding-top: 2.25rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .meta-lbl {
-      font-family: var(--font-family-mono);
-      font-size: 0.72rem;
-      color: var(--color-text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.4rem;
-    }
-
-    .meta-val {
-      font-weight: 700;
-      font-size: 1.05rem;
-    }
-
     /* Cards */
     .sh-card {
-      background: var(--sh-gradient-card);
-      border: 1px solid var(--color-border-sub);
+      background: var(--theme-surface);
+      border: 1px solid var(--theme-border);
       border-radius: 20px;
       padding: 2.5rem;
       margin-bottom: 2rem;
-      box-shadow: var(--sh-shadow-card);
+      box-shadow: var(--theme-card-shadow);
       position: relative;
+      transition: all 0.25s var(--ease-spring);
     }
 
-    .card-header-bar {
+    /* LOGO CONSTRUCTION LAB */
+    .logo-lab-container {
+      background: var(--theme-surface);
+      border: 1px solid var(--theme-border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: var(--theme-card-shadow);
+      margin-bottom: 2.5rem;
+    }
+
+    .brand-tab-bar {
+      display: inline-flex;
+      background: var(--theme-elevated);
+      padding: 4px;
+      border-radius: 10px;
+      border: 1px solid var(--theme-border);
+      gap: 4px;
+    }
+    .brand-tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--theme-text-body);
+      padding: 0.5rem 1.25rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .brand-tab-btn:hover {
+      color: var(--theme-text-display);
+    }
+    .brand-tab-btn.active {
+      background: var(--brand-cta-primary);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(157, 23, 77, 0.25);
+    }
+
+    .logo-controls-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--color-border-sub);
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--theme-border);
+      margin-bottom: 2rem;
     }
 
-    .card-title {
-      font-size: 1.35rem;
-      font-weight: 700;
-    }
-
-    /* Logo Lab Grid */
-    .logo-lab-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .logo-card {
-      background: #141413;
-      border: 1px solid var(--color-border-sub);
-      border-radius: 18px;
-      padding: 2.5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      transition: all 0.25s ease;
-      position: relative;
-    }
-    .logo-card:hover {
-      border-color: var(--color-border-highlight);
-      transform: translateY(-3px);
-      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    }
-
-    .logo-display-box {
-      margin-bottom: 1.75rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 120px;
-    }
-
-    .logo-tag {
-      font-family: var(--font-family-mono);
-      font-size: 0.7rem;
+    .logo-btn-switch {
+      background: var(--theme-elevated);
+      border: 1px solid var(--theme-border);
+      color: var(--theme-text-display);
+      padding: 0.45rem 0.95rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
       font-weight: 600;
-      color: var(--mulberry-20);
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .logo-btn-switch.active {
+      background: var(--brand-gradient);
+      color: #fff;
+      border-color: transparent;
     }
 
-    .logo-name {
-      font-family: var(--font-family-sans);
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 0.35rem;
+    .blueprint-stage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3.5rem 2rem;
+      background: var(--theme-elevated);
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .logo-desc {
-      font-size: 0.85rem;
-      color: var(--color-text-muted);
-      line-height: 1.5;
+    /* Construction Grid Overlay */
+    .blueprint-grid-overlay {
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(to right, rgba(157, 23, 77, 0.08) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(157, 23, 77, 0.08) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+      display: none;
     }
+    .blueprint-grid-overlay.show { display: block; }
 
-    /* Swatch Grid */
+    /* Swatches */
     .swatch-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -410,18 +558,18 @@
     }
 
     .swatch-box {
-      background: #181622;
-      border: 1px solid var(--color-border-sub);
+      background: var(--theme-surface);
+      border: 1px solid var(--theme-border);
       border-radius: 16px;
       overflow: hidden;
       cursor: pointer;
-      transition: all 0.2s ease;
+      box-shadow: var(--theme-card-shadow);
+      transition: all 0.2s var(--ease-spring);
     }
-
     .swatch-box:hover {
       transform: translateY(-4px);
-      border-color: var(--color-border-highlight);
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      border-color: #9D174D;
+      box-shadow: 0 15px 35px rgba(157, 23, 77, 0.15);
     }
 
     .swatch-color-fill {
@@ -441,7 +589,6 @@
       border-radius: 4px;
       background: rgba(0, 0, 0, 0.65);
       color: #fff;
-      backdrop-filter: blur(8px);
     }
 
     .swatch-content {
@@ -456,7 +603,7 @@
 
     .swatch-subheading {
       font-size: 0.8rem;
-      color: var(--color-text-muted);
+      color: var(--theme-text-muted);
       margin-bottom: 0.85rem;
     }
 
@@ -467,69 +614,236 @@
       font-family: var(--font-family-mono);
       font-size: 0.75rem;
       padding-top: 0.75rem;
-      border-top: 1px solid var(--color-border-sub);
+      border-top: 1px solid var(--theme-border);
     }
 
     .meta-code-item {
       display: flex;
       flex-direction: column;
     }
-
     .meta-code-item .lbl {
-      color: var(--color-text-muted);
+      color: var(--theme-text-muted);
       font-size: 0.65rem;
       text-transform: uppercase;
     }
-
     .meta-code-item .val {
       font-weight: 600;
     }
 
-    /* Modal / HUD */
-    .sh-cmd-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(16px);
-      display: none;
+    /* CTA BUTTON MATRIX */
+    .cta-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .cta-card {
+      background: var(--theme-surface);
+      border: 1px solid var(--theme-border);
+      border-radius: 18px;
+      padding: 2rem 1.6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: var(--theme-card-shadow);
+      transition: all 0.2s var(--ease-spring);
+    }
+
+    .cta-preview-stage {
+      min-height: 96px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      z-index: 1000;
-      padding: 1.5rem;
-    }
-    .sh-cmd-overlay.open { display: flex; }
-
-    .sh-cmd-modal {
+      margin-bottom: 1.25rem;
       width: 100%;
-      max-width: 660px;
-      background: #1B1938;
-      border-radius: 20px;
-      border: 1px solid rgba(246, 170, 221, 0.35);
-      box-shadow: var(--sh-shadow-modal);
-      overflow: hidden;
-      animation: popModal 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    @keyframes popModal {
-      from { transform: scale(0.96) translateY(-8px); opacity: 0; }
-      to { transform: scale(1) translateY(0); opacity: 1; }
+    /* Tier Label Header Row - Precision 1-Line Typography */
+    .tier-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      width: 100%;
+    }
+    .tier-label {
+      font-family: var(--font-family-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      color: var(--theme-text-muted);
+    }
+    .tier-label.active-berry {
+      color: #9D174D;
+    }
+    [data-theme="dark"] .tier-label.active-berry {
+      color: #F472B6;
+    }
+    .tier-badge {
+      font-family: var(--font-family-mono);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--theme-text-muted);
+    }
+    [data-theme="dark"] .tier-badge {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--theme-text-muted);
+    }
+    .tier-badge.badge-berry {
+      background: rgba(157, 23, 77, 0.12);
+      color: #9D174D;
+    }
+    [data-theme="dark"] .tier-badge.badge-berry {
+      background: rgba(157, 23, 77, 0.25);
+      color: #F472B6;
+    }
+    .tier-badge.badge-hairline {
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--theme-text-display);
+    }
+    [data-theme="dark"] .tier-badge.badge-hairline {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    /* 00. LOCKED PRODUCTION STANDARD: Solid Matte Berry CTA */
+    .btn-matte-berry {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 9999px;
+      background: #9D174D;
+      color: #FFFFFF;
+      font-family: var(--font-family-sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 10px 28px -4px rgba(157, 23, 77, 0.4), 0 0 20px rgba(157, 23, 77, 0.25);
+      overflow: hidden;
+      white-space: nowrap;
+      user-select: none;
+      transition: all 0.25s var(--ease-spring);
+    }
+    .btn-matte-berry:hover {
+      background: #831843;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 38px -4px rgba(157, 23, 77, 0.55), 0 0 28px rgba(157, 23, 77, 0.35);
+    }
+    .btn-matte-berry:active {
+      background: #660F34;
+      transform: translateY(0);
+    }
+
+    /* Tier 2: Clean Paper Hairline Secondary Button (1px Precision Border) */
+    .btn-secondary-hairline {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 9999px;
+      background: var(--theme-surface);
+      color: var(--theme-text-display);
+      font-family: var(--font-family-sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid var(--theme-border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      white-space: nowrap;
+      user-select: none;
+      transition: all 0.2s var(--ease-spring);
+    }
+    .btn-secondary-hairline:hover {
+      border-color: rgba(157, 23, 77, 0.45);
+      background: var(--theme-surface);
+      color: #9D174D;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(157, 23, 77, 0.12);
+    }
+    .btn-secondary-hairline:active {
+      transform: translateY(0);
+    }
+
+    /* Tier 3: Ghost Velocity Button (Zero Border, Transparent) */
+    .btn-ghost-velocity {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.75rem 1.6rem;
+      border-radius: 9999px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--theme-text-muted);
+      font-family: var(--font-family-sans);
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+    .btn-ghost-velocity:hover {
+      background: rgba(0, 0, 0, 0.04);
+      color: var(--theme-text-display);
+      transform: translateY(-1px);
+    }
+    [data-theme="dark"] .btn-ghost-velocity:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    /* Universal Compact / In-App Button Modifier */
+    .btn-sm {
+      font-size: 0.82rem !important;
+      padding: 0.55rem 1.25rem !important;
+      font-weight: 700 !important;
+    }
+
+    /* Keycap on Berry background */
+    .keycap-on-berry {
+      background: rgba(255, 255, 255, 0.2) !important;
+      border: 1px solid rgba(255, 255, 255, 0.35) !important;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5) !important;
+      color: #FFFFFF !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important;
     }
 
     .toast-pill {
       position: fixed;
       bottom: 2rem;
       right: 2rem;
-      background: #1B1938;
-      border: 1px solid rgba(246, 170, 221, 0.4);
+      background: var(--brand-gradient);
       color: #fff;
       padding: 0.85rem 1.4rem;
       border-radius: 12px;
       font-family: var(--font-family-mono);
       font-size: 0.85rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
       transform: translateY(100px);
       opacity: 0;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: all 0.25s var(--ease-spring);
       z-index: 2000;
     }
     .toast-pill.active {
@@ -540,37 +854,35 @@
 </head>
 <body>
   <div class="bg-speedlines"></div>
+  <div class="ambient-glow"></div>
 
   <!-- Header -->
   <header class="sh-header">
     <div class="nav-inner">
-      <a href="#section-overview" class="brand-group">
-        <div class="sh-logo-badge">
-          <!-- Wisible W Prism Mark -->
-          <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
-            <path d="M20 30L38 75L50 48L62 75L80 30" stroke="#F6AADD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M50 20L40 45H60L50 20Z" fill="#792D4B"/>
+      <a href="#" class="brand-group">
+        <div class="sh-logo-badge" style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);">
+          <svg width="20" height="20" viewBox="0 0 100 100" fill="none">
+            <path d="M72.6 83.718v-.152h.051V52.639a2.446 2.446 0 1 1 4.891 0v31.079A13.759 13.759 0 0 0 88.8 97.247V83.566h.044V54.773a13.758 13.758 0 1 0-27.517 0v42.474A13.759 13.759 0 0 0 72.6 83.718" transform="translate(-24.775 -16.49)" fill="#FFFFFF"/>
+            <path d="M34.47 40.123v43.221A13.759 13.759 0 0 0 45.784 96.9V40.123z" transform="translate(-14.141 -16.131)" fill="#FFFFFF"/>
+            <path d="M126.326 40.123h-11.314v56.765a13.759 13.759 0 0 0 11.314-13.549v-.3z" transform="translate(-46.027 -16.131)" fill="#FFFFFF"/>
           </svg>
         </div>
         <div class="sh-brand-title">
+          <span>WISIBLE</span>
+          <span style="opacity: 0.4;">×</span>
           <span>UP</span>
           <span style="opacity: 0.4;">×</span>
           <span>GENIUS GOAT</span>
-          <span class="endorsement-badge">by Wisible</span>
         </div>
-        <span class="sh-brand-pill">Superhuman CI</span>
       </a>
 
-      <div class="header-actions">
-        <button class="btn-header" onclick="openCmdPalette()">
-          <span>Command Palette</span>
-          <span class="keycap">⌘K</span>
-        </button>
-        <button class="btn-header" onclick="window.print()" style="background: transparent;">
-          <span>🖨️ Export PDF</span>
-        </button>
-        <button class="btn-header" id="themeToggle" onclick="toggleTheme()" style="background: transparent; padding: 0.5rem 0.85rem;">
-          <span id="themeIcon">☀️</span>
+      <div style="display: flex; gap: 0.85rem; align-items: center;">
+        <a href="mockups-preview.html" class="btn-header" style="background: #9D174D; border: 1px solid rgba(255,255,255,0.2);">
+          <span>Live Ecosystem UI</span>
+          <span class="keycap" style="background: rgba(255,255,255,0.2); border: none; color:#fff;">Live ↗</span>
+        </a>
+        <button class="btn-header" id="themeToggle" onclick="toggleTheme()" style="background: var(--theme-surface); border: 1px solid var(--theme-border); color: var(--theme-text-display);">
+          <span id="themeIcon">🌙</span>
         </button>
       </div>
     </div>
@@ -579,453 +891,672 @@
   <div class="layout-wrapper">
     <!-- Sidebar Navigation -->
     <aside class="sidebar-toc">
-      <div class="toc-title">Brand Manual & System</div>
+      <div class="toc-title">Brand CI Manual</div>
       <ul class="toc-menu">
-        <li class="toc-item active"><a href="#section-overview"><span>01 / Brand Essence</span> <span class="toc-num">01</span></a></li>
-        <li class="toc-item"><a href="#section-logos"><span>02 / Logos & Lockups</span> <span class="toc-num">02</span></a></li>
-        <li class="toc-item"><a href="#section-colors"><span>03 / Superhuman Colors</span> <span class="toc-num">03</span></a></li>
-        <li class="toc-item"><a href="#section-typography"><span>04 / Typography Engine</span> <span class="toc-num">04</span></a></li>
-        <li class="toc-item"><a href="#section-components"><span>05 / UI & Command HUD</span> <span class="toc-num">05</span></a></li>
-        <li class="toc-item"><a href="#section-voice"><span>06 / Brand Voice & Copy</span> <span class="toc-num">06</span></a></li>
-        <li class="toc-item"><a href="#section-rules"><span>07 / Brand Governance</span> <span class="toc-num">07</span></a></li>
+        <li class="toc-item active"><a href="#section-overview"><span>01 / Brand Ethos</span> <span class="keycap">01</span></a></li>
+        <li class="toc-item"><a href="#section-blueprint"><span>02 / Logo & Wordmark Lab</span> <span class="keycap">02</span></a></li>
+        <li class="toc-item"><a href="#section-colors"><span>03 / Master Color Engine</span> <span class="keycap">03</span></a></li>
+        <li class="toc-item"><a href="#section-cta"><span>04 / CTA Button Matrix</span> <span class="keycap">04</span></a></li>
+        <li class="toc-item"><a href="#section-typography"><span>05 / Typography Engine</span> <span class="keycap">05</span></a></li>
+        <li class="toc-item"><a href="#section-keycaps"><span>06 / Keycap Physics</span> <span class="keycap">06</span></a></li>
+        <li class="toc-item"><a href="#section-governance"><span>07 / Brand Governance</span> <span class="keycap">07</span></a></li>
       </ul>
 
-      <div class="toc-title">Extracted Resources</div>
+      <div class="toc-title">Download Master Assets</div>
       <ul class="toc-menu">
-        <li class="toc-item"><a href="LOGO_DESIGN_SYSTEM.md" target="_blank"><span>LOGO_DESIGN_SYSTEM.md</span> <span>↗</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('wisible_full_lockup')"><span>Wisible Lockup (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('up_full_lockup')"><span>UP Lockup (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('up_logo_monogram')"><span>UP Monogram (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('genius_goat')"><span>Genius Goat (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/wisible_logo_MasterTemplate.ai" download="wisible_logo_MasterTemplate.ai"><span>Master Template (.AI)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="mockups-preview.html" target="_blank"><span>mockups-preview.html</span> <span>↗</span></a></li>
         <li class="toc-item"><a href="unified-tokens.css" target="_blank"><span>unified-tokens.css</span> <span>↗</span></a></li>
       </ul>
     </aside>
 
-    <!-- Main Content Body -->
+    <!-- Main Content -->
     <main class="main-body">
       
-      <!-- 01. Overview -->
+      <!-- 01. Brand Ethos -->
       <section class="brand-section" id="section-overview">
-        <div class="sh-hero-cover">
-          <div class="section-eyebrow">
-            <span>⚡</span> 01 / Luxury Software Architecture
-          </div>
-          <h1 class="section-headline">
-            The Luxury of <em>Extreme Velocity.</em>
-          </h1>
-          <p class="section-subtext">
-            <strong>UP</strong> and <strong>Genius Goat</strong>, endorsed by <strong>Wisible</strong>, are built directly upon Superhuman's iconic visual identity: warm obsidian depths, vibrant mulberry jewel sparks, and high-fashion editorial typography.
-          </p>
+        <div class="section-eyebrow">01 / Unified Brand Architecture &amp; Philosophy</div>
+        <h1 class="section-headline">
+          The Luxury of <em>Autonomous Velocity.</em>
+        </h1>
+        <p class="section-subtext">
+          <strong>Wisible</strong> (Thai &amp; Regional Revenue Ops) and <strong>UP</strong> (Global Enterprise AI OS) share the <strong>EXACT SAME single Master Brand CI, color tokens, typography, and button standards</strong>. There are no separate color palettes between Wisible and UP.
+        </p>
 
-          <div class="hero-meta-grid">
+        <!-- Unified Color Declaration Callout -->
+        <div class="sh-card" style="margin-bottom: 1.5rem; background: rgba(157, 23, 77, 0.04); border: 1.5px solid rgba(157, 23, 77, 0.3);">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+            <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: #9D174D;"></span>
+            <span style="font-family: var(--font-family-mono); font-size: 0.8rem; font-weight: 700; color: #9D174D; letter-spacing: 0.1em; text-transform: uppercase;">
+              ✦ 100% UNIFIED COLOR SPECIFICATION (WISIBLE = UP)
+            </span>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--theme-text-display); line-height: 1.5;">
+            <strong>Wisible and UP use the exact same color for everything:</strong> Single Primary Solid CTA (<strong>Matte Berry <code>#9D174D</code></strong>), Single Master Jewel Spectrum (<strong><code>#8B5CF6 → #EC4899 → #F97316</code></strong>), 300gsm Paper Wash (<strong><code>#F7F6F4</code></strong>), and Obsidian Dark Void (<strong><code>#141413</code></strong>).
+          </p>
+        </div>
+
+        <div class="sh-card">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
             <div>
-              <div class="meta-lbl">Parent Endorser</div>
-              <div class="meta-val" style="color: var(--mulberry-20);">Wisible</div>
+              <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: var(--theme-text-muted); text-transform: uppercase;">Axiom 01</div>
+              <div style="font-weight: 700; font-size: 1.1rem; margin-top: 0.3rem;">Sub-100ms Flow</div>
+              <p style="font-size: 0.85rem; color: var(--theme-text-body); margin-top: 0.3rem;">Zero drag. Interface responds faster than human thought.</p>
             </div>
             <div>
-              <div class="meta-lbl">Product Engines</div>
-              <div class="meta-val">UP ↑ & Genius Goat 🐐</div>
+              <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: var(--theme-text-muted); text-transform: uppercase;">Axiom 02</div>
+              <div style="font-weight: 700; font-size: 1.1rem; margin-top: 0.3rem;">Paper & Ink Luxury</div>
+              <p style="font-size: 0.85rem; color: var(--theme-text-body); margin-top: 0.3rem;">Heavy 300gsm cotton stationery wash (#F7F6F4) + Obsidian (#26292C).</p>
             </div>
             <div>
-              <div class="meta-lbl">Master Keystroke</div>
-              <div class="meta-val"><span class="keycap">⌘K</span> Command HUD</div>
-            </div>
-            <div>
-              <div class="meta-lbl">Brand Color</div>
-              <div class="meta-val" style="color: #F6AADD;">Mulberry #792D4B</div>
+              <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: var(--theme-text-muted); text-transform: uppercase;">Axiom 03</div>
+              <div style="font-weight: 700; font-size: 1.1rem; margin-top: 0.3rem;">Keyboard Mastery</div>
+              <p style="font-size: 0.85rem; color: var(--theme-text-body); margin-top: 0.3rem;">Every global action executed in 2 physical keystrokes.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 02. Logo & Architecture Lab -->
-      <section class="brand-section" id="section-logos">
-        <div class="section-eyebrow">02 / Logo System & Endorsement Architecture</div>
-        <h2 class="section-headline">The Vector Marks & Lockups</h2>
+      <!-- 02. Vector Blueprint Lab -->
+      <section class="brand-section" id="section-blueprint">
+        <div class="section-eyebrow">02 / Official Logo &amp; Wordmark Lab</div>
+        <h2 class="section-headline">Unified Master Vector Identity (Wisible ✦ × UP ↑)</h2>
         <p class="section-subtext">
-          Precision geometric marks engineered with Superhuman's monoline vector aesthetics, 45° cuts, and refined "by Wisible" endorsement lockups.
+          Authentic geometric vector systems for both <strong>Wisible ✦</strong> and <strong>UP ↑</strong>. Built on precision mathematical SVG coordinate grids, both brands strictly share the identical 3-Stop Jewel Gradient (<code>#8B5CF6 → #EC4899 → #F97316</code>), Solid Ink (<code>#26292C</code>), and Dark Void Obsidian (<code>#141413</code>).
         </p>
 
-        <div class="logo-lab-grid">
-          <!-- 1. Wisible Parent Mark -->
-          <div class="logo-card">
-            <div class="logo-tag">MASTER PARENT BRAND</div>
-            <div class="logo-display-box">
-              <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                <rect width="100" height="100" rx="22" fill="#1B1938" stroke="rgba(246, 170, 221, 0.35)" stroke-width="1.5"/>
-                <!-- W Optical Prism -->
-                <path d="M22 34L40 76L50 52L60 76L78 34" stroke="url(#wGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                <circle cx="50" cy="24" r="5" fill="#F6AADD" filter="drop-shadow(0 0 8px #F6AADD)"/>
+        <!-- Brand Showcase Switcher Tabs -->
+        <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="brand-tab-bar">
+            <button class="brand-tab-btn active" id="tabWisibleShowcase" onclick="switchBrandShowcase('WISIBLE')">Wisible ✦ Master Identity</button>
+            <button class="brand-tab-btn" id="tabUPShowcase" onclick="switchBrandShowcase('UP')">UP ↑ Master Identity</button>
+          </div>
+          <div style="font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--theme-text-muted);">
+            Shared Master Tokens • 3-Stop Jewel + Ink Hierarchy
+          </div>
+        </div>
+
+        <!-- Master 3-Variant Grid Display: WISIBLE -->
+        <div id="showcaseWisible" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          
+          <!-- Variant 1: Primary Jewel (Light) -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #FFFFFF; border: 1px solid #E6E4E0;">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
+              <circle cx="94" cy="90" r="84" fill="url(#gridGrad1)" />
+              <g transform="translate(-261, -394)">
+                <path fill="#FFFFFF" d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                <path fill="#FFFFFF" d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                <path fill="#FFFFFF" d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+              </g>
+              <g transform="translate(-242, -390)" fill="#26292C">
+                <path d="M 563.637 440.938 L 563.637 506.188 C 563.637 512.785 558.234 518.188 551.637 518.188 C 545.035 518.188 539.637 512.785 539.637 506.188 L 539.637 440.938 L 518.637 440.938 L 518.637 506.188 C 518.637 512.785 513.234 518.188 506.637 518.188 C 500.035 518.188 494.637 512.785 494.637 506.188 L 494.637 440.938 L 470.82 440.938 L 470.82 504.332 C 470.82 522.688 485.84 537.707 504.195 537.707 C 514.402 537.707 523.562 533.059 529.695 525.781 C 535.832 533.059 544.992 537.707 555.195 537.707 C 573.555 537.707 588.57 522.688 588.57 504.332 L 588.57 440.938 Z" />
+                <path d="M 605.914 440.949 L 629.242 440.949 L 629.242 534.82 L 605.914 534.82 Z" />
+                <path d="M 629.387 422.02 C 629.387 428.508 624.125 433.77 617.637 433.77 C 611.145 433.77 605.887 428.508 605.887 422.02 C 605.887 415.531 611.145 410.27 617.637 410.27 C 624.125 410.27 629.387 415.531 629.387 422.02 Z" />
+                <path d="M 700.414 466.586 C 698.359 463.891 695.535 461.551 691.945 459.562 C 688.352 457.57 684.438 456.578 680.207 456.578 C 676.48 456.578 673.086 457.348 670.004 458.887 C 666.926 460.426 665.387 462.992 665.387 466.586 C 665.387 470.176 667.086 472.715 670.484 474.188 C 673.883 475.664 678.859 477.172 685.402 478.711 C 688.863 479.48 692.359 480.508 695.891 481.789 C 699.418 483.07 702.629 484.77 705.512 486.887 C 708.398 489.004 710.738 491.637 712.535 494.777 C 714.332 497.926 715.23 501.742 715.23 506.23 C 715.23 511.879 714.176 516.656 712.059 520.566 C 709.938 524.48 707.113 527.66 703.59 530.094 C 700.059 532.531 695.953 534.297 691.27 535.391 C 686.586 536.477 681.746 537.023 676.742 537.023 C 669.555 537.023 662.562 535.707 655.762 533.078 C 648.961 530.449 643.316 526.695 638.828 521.82 L 654.031 507.578 C 656.598 510.918 659.93 513.672 664.039 515.852 C 668.145 518.035 672.699 519.121 677.703 519.121 C 679.367 519.121 681.07 518.934 682.805 518.547 C 684.535 518.164 686.141 517.555 687.613 516.719 C 689.09 515.887 690.273 514.766 691.176 513.352 C 692.07 511.941 692.52 510.211 692.52 508.156 C 692.52 504.305 690.758 501.547 687.23 499.879 C 683.699 498.211 678.406 496.543 671.352 494.875 C 667.887 494.105 664.52 493.113 661.246 491.891 C 657.977 490.672 655.059 489.07 652.492 487.082 C 649.926 485.094 647.871 482.625 646.332 479.672 C 644.793 476.723 644.023 473.062 644.023 468.703 C 644.023 463.57 645.082 459.145 647.199 455.422 C 649.316 451.699 652.105 448.656 655.57 446.277 C 659.035 443.91 662.945 442.141 667.309 440.988 C 671.672 439.836 676.164 439.254 680.781 439.254 C 687.453 439.254 693.965 440.41 700.316 442.719 C 706.668 445.027 711.699 448.562 715.426 453.305 Z" />
+                <path d="M 725.125 440.949 L 748.449 440.949 L 748.449 534.82 L 725.125 534.82 Z" />
+                <path d="M 748.625 422.02 C 748.625 428.508 743.363 433.77 736.875 433.77 C 730.387 433.77 725.125 428.508 725.125 422.02 C 725.125 415.531 730.387 410.27 736.875 410.27 C 743.363 410.27 748.625 415.531 748.625 422.02 Z" />
+                <path d="M 814.391 516.891 C 799.133 516.891 786.762 504.523 786.762 489.262 C 786.762 474.004 799.133 461.637 814.391 461.637 C 829.648 461.637 842.02 474.004 842.02 489.262 C 842.02 504.523 829.648 516.891 814.391 516.891 M 852.609 457.914 C 852.582 457.879 852.559 457.844 852.531 457.809 C 852.301 457.523 852.07 457.242 851.836 456.961 C 851.168 456.117 850.508 455.27 849.785 454.473 C 845.836 450.145 841.125 446.738 835.652 444.254 C 835.02 443.969 834.352 443.754 833.703 443.5 C 833.281 443.316 832.84 443.168 832.41 442.996 C 832.02 442.859 831.637 442.699 831.246 442.57 C 825.984 440.641 820.324 439.531 814.391 439.531 C 804.445 439.531 795.227 442.543 787.5 447.641 L 787.5 403.27 L 787.352 403.27 L 766.133 411.344 L 766.133 534.867 L 785.238 534.867 L 785.238 534.574 L 787.5 534.574 L 787.5 529.387 C 795.223 534.492 804.438 537.52 814.391 537.52 C 814.805 537.52 815.207 537.469 815.621 537.457 C 816.125 537.473 816.617 537.539 817.129 537.539 C 824.129 537.539 830.402 536.234 835.938 533.625 C 841.477 531.02 846.184 527.512 850.07 523.125 C 852.645 520.211 854.789 516.93 856.578 513.348 C 860.875 506.062 863.383 497.598 863.383 488.527 C 863.383 476.938 859.336 466.301 852.609 457.914 Z" />
+                <path d="M 873.016 412.148 L 873.016 534.82 L 896.34 534.82 L 896.34 403.27 Z" />
+                <path d="M 955.527 459.098 C 967.598 459.098 977.91 466.609 982.059 477.215 L 928.996 477.215 C 933.141 466.609 943.453 459.098 955.527 459.098 M 1004.38 494.031 C 1004.65 491.922 1004.8 489.773 1004.8 487.586 C 1004.8 460.367 982.742 438.305 955.527 438.305 C 928.309 438.305 906.246 460.367 906.246 487.586 C 906.246 514.805 928.309 536.867 955.527 536.867 C 976.98 536.867 995.227 523.148 1001.99 504.012 L 978.793 504.012 C 973.637 511.305 965.141 516.074 955.527 516.074 C 942 516.074 930.684 506.645 927.773 494 L 983.281 494 C 983.277 494.012 983.277 494.023 983.273 494.031 Z" />
+              </g>
+              <defs>
+                <linearGradient id="gridGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8B5CF6" />
+                  <stop offset="50%" stop-color="#EC4899" />
+                  <stop offset="100%" stop-color="#F97316" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #8A9098; margin-top: 1rem; text-align: center;">
+              <strong>03. DARK VOID INVERTED</strong><br>Obsidian Surface • 3-Stop Jewel + White Wordmark
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Master 3-Variant Grid Display: UP -->
+        <div id="showcaseUP" style="display: none; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          
+          <!-- Variant 1: Primary Jewel (Light) -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #FFFFFF; border: 1px solid #E6E4E0;">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
+              <defs>
+                <linearGradient id="upGridGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8B5CF6" />
+                  <stop offset="50%" stop-color="#EC4899" />
+                  <stop offset="100%" stop-color="#F97316" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(10, 6)">
+                <circle cx="84" cy="84" r="84" fill="url(#upGridGrad1)" />
+                <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                  <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                </g>
+              </g>
+              <g fill="#26292C">
+                <path d="M 230 42 H 256 V 98 C 256 112 268 120 285 120 C 302 120 314 112 314 98 V 42 H 340 V 98 C 340 126 317 142 285 142 C 253 142 230 126 230 98 Z" />
+                <path d="M 370 42 H 430 C 455 42 472 56 472 77 C 472 98 455 112 430 112 H 396 V 142 H 370 Z M 396 64 V 90 H 428 C 441 90 446 84 446 77 C 446 70 441 64 428 64 Z" />
+                <path d="M 510 58 L 526 42 L 542 58 L 533 58 L 533 118 L 519 118 L 519 58 Z" fill="url(#upGridGrad1)" />
+              </g>
+              <text x="232" y="164" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" letter-spacing="0.22em" fill="#8A9098">ENTERPRISE VELOCITY OS // BY WISIBLE</text>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #5A5F66; margin-top: 1rem; text-align: center;">
+              <strong>01. PRIMARY JEWEL LOCKUP</strong><br>Light Surface • 3-Stop Jewel + Ink Display
+            </div>
+          </div>
+
+          <!-- Variant 2: Monochrome Solid -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #FFFFFF; border: 1px solid #E6E4E0;">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
+              <g transform="translate(10, 6)">
+                <circle cx="84" cy="84" r="84" fill="#26292C" />
+                <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                  <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                </g>
+              </g>
+              <g fill="#26292C">
+                <path d="M 230 42 H 256 V 98 C 256 112 268 120 285 120 C 302 120 314 112 314 98 V 42 H 340 V 98 C 340 126 317 142 285 142 C 253 142 230 126 230 98 Z" />
+                <path d="M 370 42 H 430 C 455 42 472 56 472 77 C 472 98 455 112 430 112 H 396 V 142 H 370 Z M 396 64 V 90 H 428 C 441 90 446 84 446 77 C 446 70 441 64 428 64 Z" />
+                <path d="M 510 58 L 526 42 L 542 58 L 533 58 L 533 118 L 519 118 L 519 58 Z" fill="#26292C" />
+              </g>
+              <text x="232" y="164" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" letter-spacing="0.22em" fill="#5A5F66">ENTERPRISE VELOCITY OS // BY WISIBLE</text>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #5A5F66; margin-top: 1rem; text-align: center;">
+              <strong>02. MONOCHROME SOLID</strong><br>White Paper • Solid Obsidian (#26292C) Lockup
+            </div>
+          </div>
+
+          <!-- Variant 3: Dark Mode Inverted -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #141413; border: 1px solid rgba(255,255,255,0.1);">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
+              <defs>
+                <linearGradient id="upGridGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8B5CF6" />
+                  <stop offset="50%" stop-color="#EC4899" />
+                  <stop offset="100%" stop-color="#F97316" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(10, 6)">
+                <circle cx="84" cy="84" r="84" fill="url(#upGridGrad3)" />
+                <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                  <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                </g>
+              </g>
+              <g fill="#FFFFFF">
+                <path d="M 230 42 H 256 V 98 C 256 112 268 120 285 120 C 302 120 314 112 314 98 V 42 H 340 V 98 C 340 126 317 142 285 142 C 253 142 230 126 230 98 Z" />
+                <path d="M 370 42 H 430 C 455 42 472 56 472 77 C 472 98 455 112 430 112 H 396 V 142 H 370 Z M 396 64 V 90 H 428 C 441 90 446 84 446 77 C 446 70 441 64 428 64 Z" />
+                <path d="M 510 58 L 526 42 L 542 58 L 533 58 L 533 118 L 519 118 L 519 58 Z" fill="url(#upGridGrad3)" />
+              </g>
+              <text x="232" y="164" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" letter-spacing="0.22em" fill="#8A9098">ENTERPRISE VELOCITY OS // BY WISIBLE</text>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #8A9098; margin-top: 1rem; text-align: center;">
+              <strong>03. DARK VOID INVERTED</strong><br>Obsidian Surface • 3-Stop Jewel + White Wordmark
+            </div>
+          </div>
+
+        </div>
+
+        <div class="logo-lab-container">
+          <div class="logo-controls-bar">
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="logo-btn-switch active" id="btnMarkWisibleLockup" onclick="switchBlueprintMark('WISIBLE_LOCKUP')">Wisible ✦ Lockup</button>
+              <button class="logo-btn-switch" id="btnMarkWisible" onclick="switchBlueprintMark('WISIBLE')">Wisible ✦ Glyph</button>
+              <button class="logo-btn-switch" id="btnMarkUPLockup" onclick="switchBlueprintMark('UP_LOCKUP')">UP ↑ Lockup</button>
+              <button class="logo-btn-switch" id="btnMarkUP" onclick="switchBlueprintMark('UP')">UP ↑ Monogram</button>
+              <button class="logo-btn-switch" id="btnMarkGoat" onclick="switchBlueprintMark('GOAT')">Genius Goat 🐐</button>
+            </div>
+
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <button class="logo-btn-switch" id="toggleGridBtn" onclick="toggleBlueprintGrid()">
+                <span>📐 Toggle 20px Grid</span>
+              </button>
+              <button class="logo-btn-switch" onclick="downloadCurrentSVG()">
+                <span>⬇ Export Clean SVG</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="blueprint-stage">
+            <div class="blueprint-grid-overlay" id="gridOverlay"></div>
+            
+            <!-- Wisible Full Lockup (Icon + Wordmark) -->
+            <div id="blueprintWisibleLockup" style="display: flex; flex-direction: column; align-items: center; gap: 1.25rem; width: 100%; max-width: 680px;">
+              <svg viewBox="0 0 760 180" width="100%" height="100%" fill="none" style="max-height: 140px;">
                 <defs>
-                  <linearGradient id="wGrad" x1="22" y1="24" x2="78" y2="76" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#F6AADD"/>
-                    <stop offset="1" stop-color="#792D4B"/>
+                  <linearGradient id="wisibleLogoGradLockup" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B5CF6" />
+                    <stop offset="50%" stop-color="#EC4899" />
+                    <stop offset="100%" stop-color="#F97316" />
+                  </linearGradient>
+                </defs>
+                <!-- Circle Base -->
+                <circle cx="94" cy="90" r="84" fill="url(#wisibleLogoGradLockup)" />
+                <!-- Icon Glyph (w) -->
+                <g transform="translate(-261, -394)">
+                  <path fill="#FFFFFF" d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                  <path fill="#FFFFFF" d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                  <path fill="#FFFFFF" d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                </g>
+                <!-- Wordmark \"wisible\" -->
+                <g transform="translate(-242, -390)" fill="var(--theme-text-display)">
+                  <path d="M 563.637 440.938 L 563.637 506.188 C 563.637 512.785 558.234 518.188 551.637 518.188 C 545.035 518.188 539.637 512.785 539.637 506.188 L 539.637 440.938 L 518.637 440.938 L 518.637 506.188 C 518.637 512.785 513.234 518.188 506.637 518.188 C 500.035 518.188 494.637 512.785 494.637 506.188 L 494.637 440.938 L 470.82 440.938 L 470.82 504.332 C 470.82 522.688 485.84 537.707 504.195 537.707 C 514.402 537.707 523.562 533.059 529.695 525.781 C 535.832 533.059 544.992 537.707 555.195 537.707 C 573.555 537.707 588.57 522.688 588.57 504.332 L 588.57 440.938 Z" />
+                  <path d="M 605.914 440.949 L 629.242 440.949 L 629.242 534.82 L 605.914 534.82 Z" />
+                  <path d="M 629.387 422.02 C 629.387 428.508 624.125 433.77 617.637 433.77 C 611.145 433.77 605.887 428.508 605.887 422.02 C 605.887 415.531 611.145 410.27 617.637 410.27 C 624.125 410.27 629.387 415.531 629.387 422.02 Z" />
+                  <path d="M 700.414 466.586 C 698.359 463.891 695.535 461.551 691.945 459.562 C 688.352 457.57 684.438 456.578 680.207 456.578 C 676.48 456.578 673.086 457.348 670.004 458.887 C 666.926 460.426 665.387 462.992 665.387 466.586 C 665.387 470.176 667.086 472.715 670.484 474.188 C 673.883 475.664 678.859 477.172 685.402 478.711 C 688.863 479.48 692.359 480.508 695.891 481.789 C 699.418 483.07 702.629 484.77 705.512 486.887 C 708.398 489.004 710.738 491.637 712.535 494.777 C 714.332 497.926 715.23 501.742 715.23 506.23 C 715.23 511.879 714.176 516.656 712.059 520.566 C 709.938 524.48 707.113 527.66 703.59 530.094 C 700.059 532.531 695.953 534.297 691.27 535.391 C 686.586 536.477 681.746 537.023 676.742 537.023 C 669.555 537.023 662.562 535.707 655.762 533.078 C 648.961 530.449 643.316 526.695 638.828 521.82 L 654.031 507.578 C 656.598 510.918 659.93 513.672 664.039 515.852 C 668.145 518.035 672.699 519.121 677.703 519.121 C 679.367 519.121 681.07 518.934 682.805 518.547 C 684.535 518.164 686.141 517.555 687.613 516.719 C 689.09 515.887 690.273 514.766 691.176 513.352 C 692.07 511.941 692.52 510.211 692.52 508.156 C 692.52 504.305 690.758 501.547 687.23 499.879 C 683.699 498.211 678.406 496.543 671.352 494.875 C 667.887 494.105 664.52 493.113 661.246 491.891 C 657.977 490.672 655.059 489.07 652.492 487.082 C 649.926 485.094 647.871 482.625 646.332 479.672 C 644.793 476.723 644.023 473.062 644.023 468.703 C 644.023 463.57 645.082 459.145 647.199 455.422 C 649.316 451.699 652.105 448.656 655.57 446.277 C 659.035 443.91 662.945 442.141 667.309 440.988 C 671.672 439.836 676.164 439.254 680.781 439.254 C 687.453 439.254 693.965 440.41 700.316 442.719 C 706.668 445.027 711.699 448.562 715.426 453.305 Z" />
+                  <path d="M 725.125 440.949 L 748.449 440.949 L 748.449 534.82 L 725.125 534.82 Z" />
+                  <path d="M 748.625 422.02 C 748.625 428.508 743.363 433.77 736.875 433.77 C 730.387 433.77 725.125 428.508 725.125 422.02 C 725.125 415.531 730.387 410.27 736.875 410.27 C 743.363 410.27 748.625 415.531 748.625 422.02 Z" />
+                  <path d="M 814.391 516.891 C 799.133 516.891 786.762 504.523 786.762 489.262 C 786.762 474.004 799.133 461.637 814.391 461.637 C 829.648 461.637 842.02 474.004 842.02 489.262 C 842.02 504.523 829.648 516.891 814.391 516.891 M 852.609 457.914 C 852.582 457.879 852.559 457.844 852.531 457.809 C 852.301 457.523 852.07 457.242 851.836 456.961 C 851.168 456.117 850.508 455.27 849.785 454.473 C 845.836 450.145 841.125 446.738 835.652 444.254 C 835.02 443.969 834.352 443.754 833.703 443.5 C 833.281 443.316 832.84 443.168 832.41 442.996 C 832.02 442.859 831.637 442.699 831.246 442.57 C 825.984 440.641 820.324 439.531 814.391 439.531 C 804.445 439.531 795.227 442.543 787.5 447.641 L 787.5 403.27 L 787.352 403.27 L 766.133 411.344 L 766.133 534.867 L 785.238 534.867 L 785.238 534.574 L 787.5 534.574 L 787.5 529.387 C 795.223 534.492 804.438 537.52 814.391 537.52 C 814.805 537.52 815.207 537.469 815.621 537.457 C 816.125 537.473 816.617 537.539 817.129 537.539 C 824.129 537.539 830.402 536.234 835.938 533.625 C 841.477 531.02 846.184 527.512 850.07 523.125 C 852.645 520.211 854.789 516.93 856.578 513.348 C 860.875 506.062 863.383 497.598 863.383 488.527 C 863.383 476.938 859.336 466.301 852.609 457.914 Z" />
+                  <path d="M 873.016 412.148 L 873.016 534.82 L 896.34 534.82 L 896.34 403.27 Z" />
+                  <path d="M 955.527 459.098 C 967.598 459.098 977.91 466.609 982.059 477.215 L 928.996 477.215 C 933.141 466.609 943.453 459.098 955.527 459.098 M 1004.38 494.031 C 1004.65 491.922 1004.8 489.773 1004.8 487.586 C 1004.8 460.367 982.742 438.305 955.527 438.305 C 928.309 438.305 906.246 460.367 906.246 487.586 C 906.246 514.805 928.309 536.867 955.527 536.867 C 976.98 536.867 995.227 523.148 1001.99 504.012 L 978.793 504.012 C 973.637 511.305 965.141 516.074 955.527 516.074 C 942 516.074 930.684 506.645 927.773 494 L 983.281 494 C 983.277 494.012 983.277 494.023 983.273 494.031 Z" />
+                </g>
+              </svg>
+              <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
+                WISIBLE ✦ // FULL LOCKUP (CIRCULAR GLYPH + OFFICIAL GEOMETRIC WORDMARK)
+              </div>
+            </div>
+
+            <!-- Wisible Icon Glyph Blueprint -->
+            <div id="blueprintWisible" style="display: none; flex-direction: column; align-items: center; gap: 1.25rem;">
+              <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="48" fill="url(#bpWisibleGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <!-- Exact Production Wisible Glyph Paths -->
+                <g transform="translate(18, 18) scale(0.64)">
+                  <path d="M72.6 83.718v-.152h.051V52.639a2.446 2.446 0 1 1 4.891 0v31.079A13.759 13.759 0 0 0 88.8 97.247V83.566h.044V54.773a13.758 13.758 0 1 0-27.517 0v42.474A13.759 13.759 0 0 0 72.6 83.718" transform="translate(-24.775 -16.49)" fill="#FFFFFF"/>
+                  <path d="M34.47 40.123v43.221A13.759 13.759 0 0 0 45.784 96.9V40.123z" transform="translate(-14.141 -16.131)" fill="#FFFFFF"/>
+                  <path d="M126.326 40.123h-11.314v56.765a13.759 13.759 0 0 0 11.314-13.549v-.3z" transform="translate(-46.027 -16.131)" fill="#FFFFFF"/>
+                </g>
+                <defs>
+                  <linearGradient id="bpWisibleGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8B5CF6"/>
+                    <stop offset="0.5" stop-color="#EC4899"/>
+                    <stop offset="1" stop-color="#F97316"/>
                   </linearGradient>
                 </defs>
               </svg>
-            </div>
-            <div class="logo-name">WISIBLE</div>
-            <div class="logo-desc">
-              The parent technology & venture studio. The optical prism represents foresight, clarity, and vision.
-            </div>
-          </div>
-
-          <!-- 2. UP by Wisible -->
-          <div class="logo-card">
-            <div class="logo-tag">VELOCITY PLATFORM</div>
-            <div class="logo-display-box">
-              <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
-                <svg width="90" height="90" viewBox="0 0 100 100" fill="none">
-                  <rect width="100" height="100" rx="22" fill="#1B1938" stroke="rgba(246, 170, 221, 0.35)" stroke-width="1.5"/>
-                  <!-- UP Vector Monogram -->
-                  <path d="M30 38V58C30 65 35 70 42 70C49 70 54 65 54 58V38" stroke="url(#upShGrad)" stroke-width="7" stroke-linecap="round"/>
-                  <path d="M54 38H68C75 38 80 43 80 50C80 57 75 62 68 62H54V70" stroke="url(#upShGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-                  <!-- Upward Vector Arrow -->
-                  <path d="M54 20L45 30H63L54 20Z" fill="#F6AADD" filter="drop-shadow(0 0 8px #F6AADD)"/>
-                  <defs>
-                    <linearGradient id="upShGrad" x1="30" y1="20" x2="80" y2="70" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#F6AADD"/>
-                      <stop offset="1" stop-color="#533192"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div style="font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--color-text-muted); letter-spacing: 0.15em;">
-                  UP <span style="opacity: 0.5;">•</span> BY WISIBLE
-                </div>
+              <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
+                WISIBLE ✦ // 3-STOP ELECTRIC SUNSET (#8B5CF6 → #EC4899 → #F97316) // OFFICIAL MASTER VECTOR
               </div>
             </div>
-            <div class="logo-name">UP by Wisible</div>
-            <div class="logo-desc">
-              The high-velocity operating platform. The upward vector arrow embodies continuous momentum and zero drag.
-            </div>
-          </div>
 
-          <!-- 3. Genius Goat by Wisible -->
-          <div class="logo-card">
-            <div class="logo-tag">COGNITIVE AI COPILOT</div>
-            <div class="logo-display-box">
-              <div style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
-                <svg width="90" height="90" viewBox="0 0 100 100" fill="none">
-                  <rect width="100" height="100" rx="22" fill="#1B1938" stroke="rgba(246, 170, 221, 0.35)" stroke-width="1.5"/>
-                  <!-- Goat Synaptic Horns -->
-                  <path d="M30 68L38 45L50 30L62 45L70 68L50 58L30 68Z" fill="url(#goatShGrad)"/>
-                  <path d="M50 30L50 58" stroke="#F6AADD" stroke-width="2.5" stroke-linecap="round"/>
-                  <path d="M38 45L22 32L32 26L44 38" stroke="#F6AADD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M62 45L78 32L68 26L56 38" stroke="#F6AADD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="22" cy="32" r="3.5" fill="#F6AADD" filter="drop-shadow(0 0 6px #F6AADD)"/>
-                  <circle cx="78" cy="32" r="3.5" fill="#F6AADD" filter="drop-shadow(0 0 6px #F6AADD)"/>
-                  <defs>
-                    <linearGradient id="goatShGrad" x1="50" y1="26" x2="50" y2="68" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#F6AADD"/>
-                      <stop offset="0.6" stop-color="#792D4B"/>
-                      <stop offset="1" stop-color="#281647"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div style="font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--color-text-muted); letter-spacing: 0.15em;">
-                  GENIUS GOAT <span style="opacity: 0.5;">•</span> BY WISIBLE
-                </div>
+            <!-- UP Full Lockup Blueprint -->
+            <div id="blueprintUPLockup" style="display: none; flex-direction: column; align-items: center; gap: 1.25rem; width: 100%; max-width: 680px;">
+              <svg viewBox="0 0 760 180" width="100%" height="100%" fill="none" style="max-height: 140px;">
+                <defs>
+                  <linearGradient id="upBpLockupGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B5CF6" />
+                    <stop offset="50%" stop-color="#EC4899" />
+                    <stop offset="100%" stop-color="#F97316" />
+                  </linearGradient>
+                </defs>
+                <g transform="translate(10, 6)">
+                  <circle cx="84" cy="84" r="84" fill="url(#upBpLockupGrad)" />
+                  <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                    <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                  </g>
+                </g>
+                <g fill="var(--theme-text-display)">
+                  <path d="M 230 42 H 256 V 98 C 256 112 268 120 285 120 C 302 120 314 112 314 98 V 42 H 340 V 98 C 340 126 317 142 285 142 C 253 142 230 126 230 98 Z" />
+                  <path d="M 370 42 H 430 C 455 42 472 56 472 77 C 472 98 455 112 430 112 H 396 V 142 H 370 Z M 396 64 V 90 H 428 C 441 90 446 84 446 77 C 446 70 441 64 428 64 Z" />
+                  <path d="M 510 58 L 526 42 L 542 58 L 533 58 L 533 118 L 519 118 L 519 58 Z" fill="url(#upBpLockupGrad)" />
+                </g>
+                <text x="232" y="164" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" letter-spacing="0.22em" fill="var(--theme-text-muted)">ENTERPRISE VELOCITY OS // BY WISIBLE</text>
+              </svg>
+              <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
+                UP ↑ // FULL LOCKUP (CIRCULAR JEWEL BADGE + GEOMETRIC UP + ASCENSION SPARK)
               </div>
             </div>
-            <div class="logo-name">Genius Goat by Wisible</div>
-            <div class="logo-desc">
-              The high-IQ cognitive copilot. The synaptic ram horns represent sub-100ms multi-modal reasoning.
-            </div>
-          </div>
-        </div>
 
-        <!-- Master Ecosystem Lockup -->
-        <div class="sh-card" style="margin-top: 2rem; text-align: center; padding: 3rem 2rem;">
-          <div style="font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--mulberry-20); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem;">
-            UNIFIED MASTER ECOSYSTEM LOCKUP
-          </div>
-          <div style="font-family: var(--font-family-sans); font-size: clamp(1.8rem, 3.5vw, 2.75rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.5rem;">
-            UP <span style="color: var(--mulberry-20);">×</span> GENIUS GOAT
-          </div>
-          <div style="font-family: var(--font-family-mono); font-size: 0.95rem; color: var(--color-text-muted); letter-spacing: 0.2em; text-transform: uppercase;">
-            BY WISIBLE
+            <!-- UP SVG Blueprint (Circular Monogram Glyph) -->
+            <div id="blueprintUP" style="display: none; flex-direction: column; align-items: center; gap: 1.25rem;">
+              <svg width="180" height="180" viewBox="0 0 168 168" fill="none">
+                <circle cx="84" cy="84" r="82" fill="url(#bpUpGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+                <g transform="translate(14, 14) scale(1.4)" stroke="#FFFFFF" fill="none">
+                  <path d="M 28 40 V 60 C 28 68 34 74 42 74 C 50 74 54 68 54 60 V 40" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 40 H 68 C 76 40 82 46 82 53 C 82 60 76 66 68 66 H 54 V 74" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M 54 18 L 41 31 H 67 Z" fill="#FFFFFF" stroke="none" />
+                </g>
+                <defs>
+                  <linearGradient id="bpUpGrad" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8B5CF6"/>
+                    <stop offset="0.5" stop-color="#EC4899"/>
+                    <stop offset="1" stop-color="#F97316"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
+                UP ↑ // 168×168 CIRCULAR GLYPH // 3-STOP JEWEL (#8B5CF6 → #EC4899 → #F97316)
+              </div>
+            </div>
+
+            <!-- Goat SVG Blueprint -->
+            <div id="blueprintGoat" style="display: none; flex-direction: column; align-items: center; gap: 1.25rem;">
+              <svg width="180" height="180" viewBox="0 0 100 100" fill="none">
+                <rect width="100" height="100" rx="22" fill="url(#bpGoatGrad)" stroke="rgba(255,255,255,0.4)" stroke-width="1.5"/>
+                <!-- Ram Synaptic Facet -->
+                <path d="M30 68L38 45L50 30L62 45L70 68L50 58L30 68Z" fill="#FFFFFF" fill-opacity="0.95"/>
+                <path d="M50 30L50 58" stroke="#8B5CF6" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M38 45L22 32L32 26L44 38" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M62 45L78 32L68 26L56 38" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="bpGoatGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#8B5CF6"/>
+                    <stop offset="0.5" stop-color="#EC4899"/>
+                    <stop offset="1" stop-color="#F97316"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
+                GENIUS GOAT 🐐 // SYNAPTIC NEURAL HORNS
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      <!-- 03. Color Architecture -->
+      <!-- 03. Master Color Engine -->
       <section class="brand-section" id="section-colors">
-        <div class="section-eyebrow">03 / Color Architecture & Production Tokens</div>
-        <h2 class="section-headline">The Superhuman Jewel Palette</h2>
+        <div class="section-eyebrow">03 / Unified Master Color Engine (Wisible × UP)</div>
+        <h2 class="section-headline">Single Master Color Architecture</h2>
         <p class="section-subtext">
-          Extracted directly from Superhuman production CSS. Click any color swatch below to copy the exact HEX code and token name.
+          <strong>Wisible and UP use the exact same colors for everything.</strong> Click any swatch below to copy CSS token values directly into your clipboard.
         </p>
 
         <div class="swatch-grid">
-          <!-- Obsidian Void -->
-          <div class="swatch-box" onclick="copyToken('#141413', '--neutral-100')">
-            <div class="swatch-color-fill" style="background: #141413;">
-              <span class="swatch-pill-tag">CANVAS BASE</span>
+          <!-- 01. Master 3-Stop Gradient (Unified Logo Jewel) -->
+          <div class="swatch-box" onclick="copyToken('linear-gradient(135deg, #8B5CF6, #EC4899, #F97316)', '--brand-gradient')">
+            <div class="swatch-color-fill" style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);">
+              <span class="swatch-pill-tag">UNIFIED LOGO JEWEL (WISIBLE × UP × GOAT)</span>
             </div>
             <div class="swatch-content">
-              <div class="swatch-heading">Obsidian Void</div>
-              <div class="swatch-subheading">Warm black canvas background</div>
+              <div class="swatch-heading">Master Electric Sunset</div>
+              <div class="swatch-subheading">Unified logo glyph, UP monogram, app icon & active spark</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">STOP 1</span><span class="val">#8B5CF6</span></div>
+                <div class="meta-code-item"><span class="lbl">STOP 2</span><span class="val">#EC4899</span></div>
+                <div class="meta-code-item"><span class="lbl">STOP 3</span><span class="val">#F97316</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--brand-gradient</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 02. Locked Primary Solid CTA: Matte Berry -->
+          <div class="swatch-box" style="border: 2px solid #9D174D;" onclick="copyToken('#9D174D', '--brand-cta-primary')">
+            <div class="swatch-color-fill" style="background: #9D174D;">
+              <span class="swatch-pill-tag" style="background:#fff; color:#9D174D; font-weight:800;">LOCKED SOLID CTA (WISIBLE = UP)</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Matte Berry (#9D174D)</div>
+              <div class="swatch-subheading">Universal Primary CTA across Wisible & UP (Web, App & Mobile)</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#9D174D</span></div>
+                <div class="meta-code-item"><span class="lbl">HOVER</span><span class="val">#831843</span></div>
+                <div class="meta-code-item"><span class="lbl">CONTRAST</span><span class="val">8.5:1 (AAA)</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--brand-cta-primary</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paper Wash -->
+          <div class="swatch-box" onclick="copyToken('#F7F6F4', '--paper-wash')">
+            <div class="swatch-color-fill" style="background: #F7F6F4; border-bottom: 1px solid #E6E4E0;">
+              <span class="swatch-pill-tag" style="background:#26292C; color:#fff;">PAGE WASH</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Paper Wash</div>
+              <div class="swatch-subheading">Heavy 300gsm cotton stationery wash</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#F7F6F4</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">247, 246, 244</span></div>
+                <div class="meta-code-item"><span class="lbl">ROLE</span><span class="val">Day Canvas</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--paper-wash</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ink Display -->
+          <div class="swatch-box" onclick="copyToken('#26292C', '--ink-display')">
+            <div class="swatch-color-fill" style="background: #26292C;">
+              <span class="swatch-pill-tag">INK DISPLAY</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Ink Slate</div>
+              <div class="swatch-subheading">Northstar metrics, headlines, high contrast</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#26292C</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">38, 41, 44</span></div>
+                <div class="meta-code-item"><span class="lbl">CONTRAST</span><span class="val">13.8:1 (AAA)</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--ink-display</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hairline -->
+          <div class="swatch-box" onclick="copyToken('#E6E4E0', '--paper-hairline')">
+            <div class="swatch-color-fill" style="background: #E6E4E0;">
+              <span class="swatch-pill-tag" style="background:#26292C; color:#fff;">HAIRLINE 1PX</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Hairline Divider</div>
+              <div class="swatch-subheading">Microscopic 1px card borders & tabs</div>
+              <div class="swatch-meta-codes">
+                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#E6E4E0</span></div>
+                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">230, 228, 224</span></div>
+                <div class="meta-code-item"><span class="lbl">ROLE</span><span class="val">Divider / Stroke</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--paper-hairline</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Obsidian Base (Dark Void Canvas) -->
+          <div class="swatch-box" onclick="copyToken('#141413', '--obsidian-base')">
+            <div class="swatch-color-fill" style="background: #141413; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <span class="swatch-pill-tag" style="background:rgba(255,255,255,0.15); color:#fff;">DARK VOID CANVAS</span>
+            </div>
+            <div class="swatch-content">
+              <div class="swatch-heading">Obsidian Base</div>
+              <div class="swatch-subheading">Warm OLED black canvas (zero eye glare)</div>
               <div class="swatch-meta-codes">
                 <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#141413</span></div>
                 <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">20, 20, 19</span></div>
-                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">Black 6C</span></div>
-                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--neutral-100</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Signature Mulberry -->
-          <div class="swatch-box" onclick="copyToken('#792D4B', '--mulberry-80')">
-            <div class="swatch-color-fill" style="background: #792D4B;">
-              <span class="swatch-pill-tag">PRIMARY BRAND</span>
-            </div>
-            <div class="swatch-content">
-              <div class="swatch-heading">Signature Mulberry</div>
-              <div class="swatch-subheading">Iconic Superhuman jewel tone</div>
-              <div class="swatch-meta-codes">
-                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#792D4B</span></div>
-                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">121, 45, 75</span></div>
-                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">222 C</span></div>
-                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--mulberry-80</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Electric Magenta -->
-          <div class="swatch-box" onclick="copyToken('#F6AADD', '--mulberry-20')">
-            <div class="swatch-color-fill" style="background: #F6AADD;">
-              <span class="swatch-pill-tag" style="color:#000; background:#fff;">TAG SPARK</span>
-            </div>
-            <div class="swatch-content">
-              <div class="swatch-heading">Electric Magenta</div>
-              <div class="swatch-subheading">Active pill highlights & text accents</div>
-              <div class="swatch-meta-codes">
-                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#F6AADD</span></div>
-                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">246, 170, 221</span></div>
-                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">2375 C</span></div>
-                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--mulberry-20</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Royal Purple -->
-          <div class="swatch-box" onclick="copyToken('#533192', '--purple-80')">
-            <div class="swatch-color-fill" style="background: #533192;">
-              <span class="swatch-pill-tag">ROYAL PURPLE</span>
-            </div>
-            <div class="swatch-content">
-              <div class="swatch-heading">Royal Violet</div>
-              <div class="swatch-subheading">Secondary depth & gradients</div>
-              <div class="swatch-meta-codes">
-                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#533192</span></div>
-                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">83, 49, 146</span></div>
-                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">2685 C</span></div>
-                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--purple-80</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Deep Navy Violet -->
-          <div class="swatch-box" onclick="copyToken('#1B1938', '--_button-default-bg')">
-            <div class="swatch-color-fill" style="background: #1B1938;">
-              <span class="swatch-pill-tag">CARD & BUTTON</span>
-            </div>
-            <div class="swatch-content">
-              <div class="swatch-heading">Deep Navy Violet</div>
-              <div class="swatch-subheading">Elevated button & card background</div>
-              <div class="swatch-meta-codes">
-                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#1B1938</span></div>
-                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">27, 25, 56</span></div>
-                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">2765 C</span></div>
-                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--_button-default-bg</span></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Ice Blue -->
-          <div class="swatch-box" onclick="copyToken('#BBDFF7', '--blue-20')">
-            <div class="swatch-color-fill" style="background: #BBDFF7;">
-              <span class="swatch-pill-tag" style="color:#000; background:#fff;">ICE CYAN</span>
-            </div>
-            <div class="swatch-content">
-              <div class="swatch-heading">Ice Blue</div>
-              <div class="swatch-subheading">Speed indicators & charts</div>
-              <div class="swatch-meta-codes">
-                <div class="meta-code-item"><span class="lbl">HEX</span><span class="val">#BBDFF7</span></div>
-                <div class="meta-code-item"><span class="lbl">RGB</span><span class="val">187, 223, 247</span></div>
-                <div class="meta-code-item"><span class="lbl">PANTONE</span><span class="val">2905 C</span></div>
-                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--blue-20</span></div>
+                <div class="meta-code-item"><span class="lbl">ROLE</span><span class="val">Night Canvas</span></div>
+                <div class="meta-code-item"><span class="lbl">TOKEN</span><span class="val">--obsidian-base</span></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 04. Typography -->
-      <section class="brand-section" id="section-typography">
-        <div class="section-eyebrow">04 / Typographic Engine</div>
-        <h2 class="section-headline">The Tripartite Font Hierarchy</h2>
+      <!-- 04. CTA Button Matrix -->
+      <section class="brand-section" id="section-cta">
+        <div class="section-eyebrow">04 / Locked 3-Tier CTA Button Hierarchy</div>
+        <h2 class="section-headline">Production Button Architecture</h2>
         <p class="section-subtext">
-          Superhuman’s visual soul lies in the tension between high-fashion editorial serif and ultra-precise engineering monospace.
+          Strictly locked across Wisible and UP. No gradients on primary button bodies. All primary actions execute with Solid Matte Berry (<code>#9D174D</code>).
         </p>
 
+        <div class="cta-matrix-grid">
+          
+          <!-- Tier 1: Primary Action (Solid Matte Berry) -->
+          <div class="cta-card" style="border: 2px solid #9D174D; box-shadow: 0 10px 30px rgba(157,23,77,0.15);">
+            <div class="tier-label-row">
+              <span class="tier-label active-berry">
+                TIER 1: PRIMARY ACTION
+              </span>
+              <span class="tier-badge badge-berry">SOLID BERRY • 8.5:1</span>
+            </div>
+            <div class="cta-preview-stage" style="flex-direction: column; gap: 0.85rem;">
+              <button class="btn-matte-berry" onclick="showToast('🍷 Primary Action: Get Started Activated')">
+                <span>เริ่มต้นทดลองใช้ฟรี</span>
+                <span class="keycap keycap-on-berry">↵ Enter</span>
+              </button>
+              <button class="btn-matte-berry btn-sm" onclick="showToast('🍷 Primary Action: + New Deal Activated')">
+                <span>+ New Deal</span>
+                <span class="keycap keycap-on-berry">N</span>
+              </button>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--theme-text-muted); line-height: 1.45;">
+              <strong>Solid Matte Berry (<code>#9D174D</code>)</strong>. Universal primary CTA on Web, CRM Web App, and Mobile. High-status luxury finish with zero eye fatigue.
+            </div>
+          </div>
+
+          <!-- Tier 2: Secondary Action (Clean 1px Hairline Border) -->
+          <div class="cta-card" style="border: 1px solid var(--theme-border);">
+            <div class="tier-label-row">
+              <span class="tier-label">
+                TIER 2: SECONDARY ACTION
+              </span>
+              <span class="tier-badge badge-hairline">1PX HAIRLINE</span>
+            </div>
+            <div class="cta-preview-stage" style="flex-direction: column; gap: 0.85rem;">
+              <button class="btn-secondary-hairline" onclick="showToast('📋 Secondary Action: Book VIP Demo Activated')">
+                <span>จองรอบ VIP Demo</span>
+                <span class="keycap">D</span>
+              </button>
+              <button class="btn-secondary-hairline btn-sm" onclick="showToast('📋 Secondary Action: Launch Command HUD Activated')">
+                <span>Command Palette</span>
+                <span class="keycap">⌘K</span>
+              </button>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--theme-text-muted); line-height: 1.45;">
+              Crisp 1px precision hairline border (<code>#E6E4E0</code>) on white paper surface. Hover state subtly highlights with Matte Berry tint (<code>rgba(157, 23, 77, 0.45)</code>).
+            </div>
+          </div>
+
+          <!-- Tier 3: Tertiary / Ghost Action (Zero Border) -->
+          <div class="cta-card" style="border: 1px dashed var(--theme-border);">
+            <div class="tier-label-row">
+              <span class="tier-label">
+                TIER 3: GHOST ACTION
+              </span>
+              <span class="tier-badge">ZERO BORDER</span>
+            </div>
+            <div class="cta-preview-stage" style="flex-direction: column; gap: 0.85rem;">
+              <button class="btn-ghost-velocity" onclick="showToast('Ghost action: Cancel')">
+                <span>ยกเลิก (Cancel)</span>
+                <span class="keycap">Esc</span>
+              </button>
+              <button class="btn-ghost-velocity btn-sm" onclick="showToast('Ghost action: Deal History')">
+                <span>View Deal History</span>
+                <span class="keycap">H</span>
+              </button>
+            </div>
+            <div style="font-size: 0.85rem; color: var(--theme-text-muted); line-height: 1.45;">
+              100% borderless transparent button with subtle hover wash. Reserved for cancel, dismiss, and low-priority auxiliary triggers.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 05. Typography Engine -->
+      <section class="brand-section" id="section-typography">
+        <div class="section-eyebrow">05 / Typographic Engine & Bilingual Pairing</div>
+        <h2 class="section-headline">The Tripartite Font Hierarchy</h2>
+        
         <div class="sh-card">
           <!-- Voice 1 -->
-          <div style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border-sub);">
+          <div style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--theme-border);">
             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--mulberry-20);">1. SUPER SERIF VF (EDITORIAL LUXURY VOICE)</span>
-              <span class="sh-brand-pill">Headlines & Quotes</span>
+              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: #9D174D; font-weight:700;">1. INSTRUMENT SERIF (EDITORIAL LUXURY)</span>
+              <span class="keycap">Display</span>
             </div>
-            <div style="font-family: var(--font-family-serif); font-size: clamp(2.3rem, 3.8vw, 3.6rem); line-height: 1.1; margin: 1rem 0;">
-              "Fly through your workflows twice as fast."
+            <div style="font-family: var(--font-family-serif); font-size: clamp(2.3rem, 4vw, 3.75rem); line-height: 1.08; margin: 1rem 0;">
+              "Fly through your workflows. <em>Twice as fast.</em>"
             </div>
-            <div style="font-size: 0.875rem; color: var(--color-text-muted);">
-              Used with tight letter-spacing (-0.02em) and expressive italic accents for high-fashion elegance.
+            <div style="font-size: 0.85rem; color: var(--theme-text-muted);">
+              Letter-spacing: -0.03em. Expressive italic emphasis for high-velocity claims.
             </div>
           </div>
 
           <!-- Voice 2 -->
-          <div style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border-sub);">
+          <div style="margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--theme-border);">
             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--neutral-20);">2. SUPER SANS VF (MODERN PRECISION VOICE)</span>
-              <span class="sh-brand-pill">UI Controls & Body</span>
+              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-display); font-weight:700;">2. PLUS JAKARTA SANS × ANUPHAN (PRECISION UI & THAI)</span>
+              <span class="keycap">Interface</span>
             </div>
             <div style="font-family: var(--font-family-sans); font-size: 1.2rem; font-weight: 600; line-height: 1.5; margin: 1rem 0;">
-              Get a more productive experience built for high-performance teams. Move faster, stay focused, and collaborate effortlessly.
+              Get a more productive experience built for high-performance teams. ประมวลผลและตัดสินใจได้เร็วกว่า 5 วินาที
             </div>
           </div>
 
           <!-- Voice 3 -->
           <div>
             <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--blue-20);">3. SUPER SANS MONO VF (VELOCITY TELEMETRY VOICE)</span>
-              <span class="sh-brand-pill">Keycaps & Timestamps</span>
+              <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: #9D174D; font-weight:700;">3. JETBRAINS MONO (VELOCITY TELEMETRY)</span>
+              <span class="keycap">Hardware</span>
             </div>
-            <div style="font-family: var(--font-family-mono); font-size: 0.95rem; color: var(--blue-20); line-height: 1.6; margin: 1rem 0;">
-              [ ⌘K ] COMMAND_PALETTE // LATENCY: 84ms // ZERO_DRAG // BY WISIBLE
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- 05. UI Components -->
-      <section class="brand-section" id="section-components">
-        <div class="section-eyebrow">05 / UI Components & Master Command HUD</div>
-        <h2 class="section-headline">Tactile Physical Keycaps & Palette</h2>
-        <p class="section-subtext">
-          Everything is keyboard-first. Press <kbd>⌘K</kbd> to launch the command palette or click below.
-        </p>
-
-        <div style="border: 1px solid var(--color-border-sub); border-radius: 18px; background: #141413; padding: 2.5rem; margin-bottom: 2.5rem;">
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-            <span style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--color-text-muted); text-transform: uppercase;">Interactive Keycap Dock</span>
-            <button class="btn-header" onclick="openCmdPalette()">
-              <span>Launch ⌘K Palette</span>
-              <span class="keycap">⌘K</span>
-            </button>
-          </div>
-
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-            <div style="background: #1B1938; border: 1px solid rgba(246, 170, 221, 0.25); border-radius: 16px; padding: 1.5rem;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                <span style="font-weight: 700;">Multi-Modal Synthesis</span>
-                <span class="keycap">Q</span>
-              </div>
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">
-                Genius Goat synthesizes multi-page materials into 3 decision nodes.
-              </p>
-              <span class="sh-brand-pill">11ms LATENCY</span>
-            </div>
-
-            <div style="background: #1B1938; border: 1px solid rgba(246, 170, 221, 0.25); border-radius: 16px; padding: 1.5rem;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                <span style="font-weight: 700;">Elevate Priority (+1 UP)</span>
-                <span class="keycap">↑</span>
-              </div>
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">
-                UP clears bottlenecks and promotes tasks to top executive focus.
-              </p>
-              <span class="sh-brand-pill">+340% VELOCITY</span>
-            </div>
-
-            <div style="background: #1B1938; border: 1px solid rgba(246, 170, 221, 0.25); border-radius: 16px; padding: 1.5rem;">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                <span style="font-weight: 700;">Auto-Resolve Conflict</span>
-                <span class="keycap">Tab</span>
-              </div>
-              <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">
-                Autonomous reasoning sub-agents resolve logic tree conflicts in milliseconds.
-              </p>
-              <span class="sh-brand-pill">BY WISIBLE</span>
+            <div style="font-family: var(--font-family-mono); font-size: 0.95rem; color: var(--theme-text-display); line-height: 1.6; margin: 1rem 0;">
+              [ ⌘K ] COMMAND_HUD // LATENCY: 11ms // ZERO_DRAG // STATUS: OPERATE
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 06. Brand Voice -->
-      <section class="brand-section" id="section-voice">
-        <div class="section-eyebrow">06 / Copywriting & Brand Voice</div>
-        <h2 class="section-headline">The Superhuman Voice & Tone</h2>
-        <p class="section-subtext">
-          Confident, punchy, velocity-obsessed, and elevated. Eliminate all fluff.
-        </p>
+      <!-- 06. Keycap Physics -->
+      <section class="brand-section" id="section-keycaps">
+        <div class="section-eyebrow">06 / Tactile Keycap Physics</div>
+        <h2 class="section-headline">Interactive Keyboard Dock</h2>
+        <p class="section-subtext">Click or press any keycap to test physical depression mechanics.</p>
 
-        <div class="sh-card">
-          <table style="width: 100%; border-collapse: collapse; text-align: left;">
-            <thead>
-              <tr style="border-bottom: 1px solid var(--color-border-sub);">
-                <th style="padding: 1rem; font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--color-text-muted);">MOMENT</th>
-                <th style="padding: 1rem; font-family: var(--font-family-mono); font-size: 0.8rem; color: #EF4444;">GENERIC SAAS VOICE</th>
-                <th style="padding: 1rem; font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--mulberry-20);">SUPERHUMAN VOICE</th>
-              </tr>
-            </thead>
-            <tbody style="font-size: 0.95rem;">
-              <tr style="border-bottom: 1px solid var(--color-border-sub);">
-                <td style="padding: 1.25rem 1rem; font-weight: 600;">Hero Headline</td>
-                <td style="padding: 1.25rem 1rem; color: var(--color-text-muted);">"Our software helps people be productive."</td>
-                <td style="padding: 1.25rem 1rem; color: #F6AADD; font-weight: 600;">"Fly through your workflows twice as fast."</td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--color-border-sub);">
-                <td style="padding: 1.25rem 1rem; font-weight: 600;">Search Action</td>
-                <td style="padding: 1.25rem 1rem; color: var(--color-text-muted);">"Search for documents in the search bar."</td>
-                <td style="padding: 1.25rem 1rem; color: #F6AADD; font-weight: 600;">"Hit <span class='keycap'>⌘K</span> to do anything instantly."</td>
-              </tr>
-              <tr style="border-bottom: 1px solid var(--color-border-sub);">
-                <td style="padding: 1.25rem 1rem; font-weight: 600;">Flow State</td>
-                <td style="padding: 1.25rem 1rem; color: var(--color-text-muted);">"All tasks complete."</td>
-                <td style="padding: 1.25rem 1rem; color: #F6AADD; font-weight: 600;">"Altitude reached. Enjoy your uninterrupted flow."</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="sh-card" style="text-align: center;">
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin: 1.5rem 0;">
+            <div class="keycap" style="padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="testKeycap('⌘K')">⌘K</div>
+            <div class="keycap" style="padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="testKeycap('Enter')">Enter</div>
+            <div class="keycap" style="padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="testKeycap('G')">G</div>
+            <div class="keycap" style="padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="testKeycap('Q')">Q</div>
+            <div class="keycap" style="padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="testKeycap('↑')">↑</div>
+            <div class="keycap" style="padding: 0.6rem 1.2rem; font-size: 1rem;" onclick="testKeycap('Tab')">Tab</div>
+          </div>
+          <div style="font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--theme-text-muted);">
+            Sub-100ms visual spring response with bevel depression.
+          </div>
         </div>
       </section>
 
-      <!-- 07. Do's and Don'ts -->
-      <section class="brand-section" id="section-rules">
+      <!-- 07. Governance -->
+      <section class="brand-section" id="section-governance">
         <div class="section-eyebrow">07 / Brand Governance</div>
-        <h2 class="section-headline">Design Do's and Don'ts</h2>
-        <p class="section-subtext">
-          Rules for preserving the authentic luxury and speed of the Superhuman design language.
-        </p>
+        <h2 class="section-headline">The Jewel Rule & Governance</h2>
 
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
-          <div style="border-radius: 16px; padding: 1.75rem; border: 1px solid rgba(16, 185, 129, 0.3); background: rgba(16, 185, 129, 0.03);">
-            <div style="color: #10B981; font-weight: 700; margin-bottom: 1rem; font-size: 1.05rem;">
+          <div style="border-radius: 16px; padding: 1.75rem; border: 1px solid rgba(31, 122, 76, 0.3); background: rgba(31, 122, 76, 0.04);">
+            <div style="color: #1F7A4C; font-weight: 700; margin-bottom: 0.75rem; font-size: 1.05rem;">
               <span>✓</span> ALWAYS DO
             </div>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.925rem; color: var(--color-text-muted);">
-              <li>• Always use warm Obsidian (<code style="color:#F6AADD">#141413</code>) as the canvas base.</li>
-              <li>• Always use Mulberry (<code style="color:#F6AADD">#792D4B</code>) & Electric Magenta (<code style="color:#F6AADD">#F6AADD</code>).</li>
-              <li>• Always include the "by Wisible" endorsement on master locks and footers.</li>
-              <li>• Always provide tactile keycaps (<span class="keycap">⌘K</span>, <span class="keycap">Q</span>, <span class="keycap">↑</span>) on all actions.</li>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem; color: var(--theme-text-body);">
+              <li>• <strong>100% Color Identity:</strong> Wisible and UP share the exact same color tokens across all platforms.</li>
+              <li>• Use <strong>Solid Matte Berry (<code>#9D174D</code>)</strong> as the universal primary CTA button on Web, App & Mobile.</li>
+              <li>• Apply the 3-stop Master Gradient (<code>#8B5CF6 → #EC4899 → #F97316</code>) strictly to Logo Glyphs & Active Sparks (≤5% area).</li>
+              <li>• Keep page wash on #F7F6F4 (Day) or #141413 (Obsidian Void).</li>
+              <li>• Render large financial and northstar metrics in pure Ink (#26292C).</li>
+              <li>• Pair all key actions with physical keycap hints (<span class="keycap">⌘K</span>, <span class="keycap">G</span>, <span class="keycap">Enter</span>).</li>
             </ul>
           </div>
 
-          <div style="border-radius: 16px; padding: 1.75rem; border: 1px solid rgba(239, 68, 68, 0.3); background: rgba(239, 68, 68, 0.03);">
-            <div style="color: #EF4444; font-weight: 700; margin-bottom: 1rem; font-size: 1.05rem;">
+          <div style="border-radius: 16px; padding: 1.75rem; border: 1px solid rgba(180, 35, 24, 0.3); background: rgba(180, 35, 24, 0.04);">
+            <div style="color: #B42318; font-weight: 700; margin-bottom: 0.75rem; font-size: 1.05rem;">
               <span>✕</span> NEVER DO
             </div>
-            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.925rem; color: var(--color-text-muted);">
-              <li>• Never use generic corporate blues or cold gray borders.</li>
-              <li>• Never alter the 2X clear space ratio around the vector marks.</li>
-              <li>• Never clutter the screen with cartoon illustrations or heavy drop shadows.</li>
-              <li>• Never use generic corporate buzzwords.</li>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.9rem; color: var(--theme-text-body);">
+              <li>• Never create separate or divergent color palettes between Wisible and UP.</li>
+              <li>• Never apply gradient fills to primary CTA button bodies (Solid #9D174D only).</li>
+              <li>• Never apply gradient fills to full cards, tables, or background panels.</li>
+              <li>• Never use generic corporate blue (#0066FF) or cold gray (#E2E8F0).</li>
+              <li>• Never distort the 45° angle cuts on vector monograms.</li>
+              <li>• Never compromise the 1X clear space perimeter around the vector marks.</li>
             </ul>
           </div>
         </div>
@@ -1034,80 +1565,22 @@
     </main>
   </div>
 
-  <!-- Command Palette Modal -->
-  <div class="sh-cmd-overlay" id="cmdOverlay">
-    <div class="sh-cmd-modal" id="cmdModal">
-      <div style="padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--color-border-sub); display: flex; align-items: center; gap: 1rem;">
-        <span style="font-size: 1.25rem; color: #F6AADD;">⚡</span>
-        <input type="text" id="cmdSearchInput" placeholder="Type a command or ask Genius Goat by Wisible..." style="flex: 1; background: transparent; border: none; outline: none; color: #fff; font-family: var(--font-family-sans); font-size: 1.15rem;" />
-        <span class="keycap" onclick="closeCmdPalette()" style="cursor: pointer;">ESC</span>
-      </div>
-
-      <div id="cmdItemList" style="max-height: 380px; overflow-y: auto; padding: 0.75rem;">
-        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; background: rgba(255,255,255,0.08);" onclick="executeCmd('Synthesize documents with Genius Goat')">
-          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
-            <span>🐐</span>
-            <span>Synthesize document into 3 key decisions (Genius Goat)</span>
-          </div>
-          <span class="keycap">Q</span>
-        </div>
-
-        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;" onclick="executeCmd('Move priority UP')">
-          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
-            <span>🚀</span>
-            <span>Move priority UP (+1 Altitude)</span>
-          </div>
-          <span class="keycap">↑</span>
-        </div>
-
-        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;" onclick="executeCmd('Auto-resolve logic conflict')">
-          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
-            <span>🐐</span>
-            <span>Auto-Resolve logic tree conflict</span>
-          </div>
-          <span class="keycap">Tab</span>
-        </div>
-
-        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;" onclick="executeCmd('Launch automated velocity pipeline')">
-          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
-            <span>🚀</span>
-            <span>Launch automated velocity pipeline (UP)</span>
-          </div>
-          <span class="keycap">Shift+Enter</span>
-        </div>
-
-        <div style="padding: 0.75rem 1rem; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; cursor: pointer;" onclick="executeCmd('Wisible Studio Global Diagnostics')">
-          <div style="display: flex; align-items: center; gap: 0.75rem; font-weight: 500;">
-            <span>⚡</span>
-            <span>Wisible Studio Global Telemetry Sync</span>
-          </div>
-          <span class="keycap">W</span>
-        </div>
-      </div>
-
-      <div style="padding: 0.75rem 1.5rem; background: rgba(0,0,0,0.3); border-top: 1px solid var(--color-border-sub); display: flex; justify-content: space-between; font-family: var(--font-family-mono); font-size: 0.75rem; color: var(--color-text-muted);">
-        <div>Navigate with <span class="keycap">↑</span> <span class="keycap">↓</span></div>
-        <div>Execute <span class="keycap">Enter</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Toast -->
-  <div class="toast-pill" id="toastPill">Copied token to clipboard!</div>
+  <div class="toast-pill" id="toastPill">Action triggered!</div>
 
   <script>
-    // Theme toggle
+    // Theme Toggle
     function toggleTheme() {
       const html = document.documentElement;
       const isDark = html.getAttribute('data-theme') === 'dark';
       html.setAttribute('data-theme', isDark ? 'light' : 'dark');
       document.getElementById('themeIcon').textContent = isDark ? '🌙' : '☀️';
+      showToast(`Switched to ${isDark ? 'LIGHT' : 'DARK'} Mode`);
     }
 
-    // Token copy
-    function copyToken(val, tokenName) {
+    // Token Copy
+    function copyToken(val, name) {
       navigator.clipboard.writeText(val).then(() => {
-        showToast(`Copied ${val} (${tokenName}) to clipboard!`);
+        showToast(`Copied ${val} (${name})`);
       });
     }
 
@@ -1118,38 +1591,141 @@
       setTimeout(() => toast.classList.remove('active'), 2500);
     }
 
-    // Command Palette Modal
-    const cmdOverlay = document.getElementById('cmdOverlay');
-    const cmdSearchInput = document.getElementById('cmdSearchInput');
-
-    function openCmdPalette() {
-      cmdOverlay.classList.add('open');
-      cmdSearchInput.value = '';
-      cmdSearchInput.focus();
+    // Brand Showcase Switcher (Wisible vs UP)
+    function switchBrandShowcase(brand) {
+      document.getElementById('tabWisibleShowcase').classList.toggle('active', brand === 'WISIBLE');
+      document.getElementById('tabUPShowcase').classList.toggle('active', brand === 'UP');
+      document.getElementById('showcaseWisible').style.display = brand === 'WISIBLE' ? 'grid' : 'none';
+      document.getElementById('showcaseUP').style.display = brand === 'UP' ? 'grid' : 'none';
     }
 
-    function closeCmdPalette() {
-      cmdOverlay.classList.remove('open');
+    // Blueprint Stage Switches
+    let currentMark = 'WISIBLE_LOCKUP';
+    function switchBlueprintMark(mark) {
+      currentMark = mark;
+      document.getElementById('btnMarkWisibleLockup').classList.toggle('active', mark === 'WISIBLE_LOCKUP');
+      document.getElementById('btnMarkWisible').classList.toggle('active', mark === 'WISIBLE');
+      document.getElementById('btnMarkUPLockup').classList.toggle('active', mark === 'UP_LOCKUP');
+      document.getElementById('btnMarkUP').classList.toggle('active', mark === 'UP');
+      document.getElementById('btnMarkGoat').classList.toggle('active', mark === 'GOAT');
+      
+      document.getElementById('blueprintWisibleLockup').style.display = mark === 'WISIBLE_LOCKUP' ? 'flex' : 'none';
+      document.getElementById('blueprintWisible').style.display = mark === 'WISIBLE' ? 'flex' : 'none';
+      document.getElementById('blueprintUPLockup').style.display = mark === 'UP_LOCKUP' ? 'flex' : 'none';
+      document.getElementById('blueprintUP').style.display = mark === 'UP' ? 'flex' : 'none';
+      document.getElementById('blueprintGoat').style.display = mark === 'GOAT' ? 'flex' : 'none';
     }
 
-    function executeCmd(title) {
-      showToast(`Executed: ${title}`);
-      closeCmdPalette();
+    function toggleBlueprintGrid() {
+      const grid = document.getElementById('gridOverlay');
+      const isShowing = grid.classList.toggle('show');
+      document.getElementById('toggleGridBtn').classList.toggle('active', isShowing);
+    }
+
+    function testKeycap(key) {
+      showToast(`⚡ Keycap Pressed: [ ${key} ] (11ms Response)`);
+    }
+
+    function downloadSVGElement(svgElement, filename) {
+      if (!svgElement) return;
+      const clone = svgElement.cloneNode(true);
+      clone.removeAttribute('style');
+      if (!clone.getAttribute('xmlns')) {
+        clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+      }
+      const serializer = new XMLSerializer();
+      let source = serializer.serializeToString(clone);
+      const blob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      showToast(`⬇ Master Vector SVG downloaded (${filename})`);
+    }
+
+    function downloadDirectSVG(key) {
+      const map = {
+        'wisible_full_lockup': { id: 'blueprintWisibleLockup', name: 'wisible_full_lockup.svg' },
+        'up_full_lockup': { id: 'blueprintUPLockup', name: 'up_full_lockup.svg' },
+        'up_logo_monogram': { id: 'blueprintUP', name: 'up_logo_monogram.svg' },
+        'genius_goat': { id: 'blueprintGoat', name: 'genius_goat.svg' }
+      };
+      const item = map[key];
+      if (item) {
+        const container = document.getElementById(item.id);
+        const svg = container ? container.querySelector('svg') : null;
+        if (svg) {
+          downloadSVGElement(svg, item.name);
+          return;
+        }
+      }
+      // Fallback
+      const a = document.createElement('a');
+      a.href = 'assets/logos/' + key + '.svg';
+      a.download = key + '.svg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast(`⬇ Master Vector SVG downloaded (${key}.svg)`);
+    }
+
+    function downloadCurrentSVG() {
+      const markElementMap = {
+        'WISIBLE_LOCKUP': { id: 'blueprintWisibleLockup', name: 'wisible_full_lockup.svg' },
+        'WISIBLE': { id: 'blueprintWisible', name: 'wisible_icon_glyph.svg' },
+        'UP_LOCKUP': { id: 'blueprintUPLockup', name: 'up_full_lockup.svg' },
+        'UP': { id: 'blueprintUP', name: 'up_logo_monogram.svg' },
+        'GOAT': { id: 'blueprintGoat', name: 'genius_goat.svg' }
+      };
+      const item = markElementMap[currentMark] || markElementMap['WISIBLE_LOCKUP'];
+      const container = document.getElementById(item.id);
+      const svg = container ? container.querySelector('svg') : null;
+      if (svg) {
+        downloadSVGElement(svg, item.name);
+      } else {
+        const a = document.createElement('a');
+        a.href = 'assets/logos/' + item.name;
+        a.download = item.name;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast(`⬇ Master Vector SVG downloaded (${item.name})`);
+      }
     }
 
     // Global Key Listener
     window.addEventListener('keydown', (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
-        openCmdPalette();
-      } else if (e.key === 'Escape') {
-        closeCmdPalette();
+        showToast('⚡ [⌘K] Master Command Palette');
+      } else if (e.key.toLowerCase() === 'g') {
+        showToast('⚡ [G] Jump to Get Started');
       }
     });
 
-    cmdOverlay.addEventListener('click', (e) => {
-      if (e.target === cmdOverlay) closeCmdPalette();
-    });
+    // Active TOC Scrollspy
+    const sections = document.querySelectorAll('.brand-section');
+    const navItems = document.querySelectorAll('.sidebar-toc .toc-item a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navItems.forEach(link => {
+            const parent = link.parentElement;
+            if (link.getAttribute('href') === `#${id}`) {
+              parent.classList.add('active');
+            } else if (link.getAttribute('href').startsWith('#')) {
+              parent.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
   </script>
 </body>
 </html>
