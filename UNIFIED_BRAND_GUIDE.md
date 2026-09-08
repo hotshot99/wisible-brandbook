@@ -50,16 +50,28 @@ The Wisible identity consists of two harmonized geometric elements: the **Circul
 1. **Primary Full Jewel Lockup (Web / App Header)**:
    - **Icon**: 3-Stop Jewel Gradient (`#8B5CF6 → #EC4899 → #F97316`)
    - **Wordmark**: Solid Ink Display (`#26292C`) on Light Wash (`#F7F6F4`), or White (`#FFFFFF`) on Dark Obsidian (`#141413`).
-2. **Monochrome / Solid Executive Lockup (Invoices / Stamps / High Contrast)**:
+2. **Standalone 'W' Monogram (Multi-Background System)**:
+   - **On Light Canvas (`#FFFFFF`, `#F7F6F4`)**: Standalone Jewel W, Solid Ink Slate `#26292C` (13.8:1 AAA), or Solid Matte Berry `#9D174D` (8.5:1 AAA).
+   - **On Dark Void (`#141413`, `#181622`)**: Solid Zenith White W `#FFFFFF` (16.2:1 AAA) or Jewel W with ambient back-glow.
+   - **On Vibrant Solid CTA (`#9D174D`) & Gradient**: Solid White Knockout W.
+   - **Badged Containers**: 168px Circular Jewel Badge, 168px Dark Obsidian Badge, and 180px Apple Squircle App Icon.
+3. **Monochrome / Solid Executive Lockup (Invoices / Stamps / High Contrast)**:
    - **Icon**: Solid Obsidian Circle (`#26292C` / `#141413`) with White 'w' cutout.
    - **Wordmark**: Solid Obsidian (`#26292C`).
-3. **App Icon / Favicon (Glyph Only)**:
-   - 3-Stop Gradient Circle with crisp white 'w' glyph at optical center.
+4. **App Icon / Favicon (Glyph Only)**:
+   - 3-Stop Gradient Circle or Apple Squircle with crisp white 'w' glyph at optical center.
 
 #### Master Vector Files:
 - Master Illustrator Source: [`assets/logos/wisible_logo_MasterTemplate.ai`](assets/logos/wisible_logo_MasterTemplate.ai)
 - Master Full Lockup Vector: [`assets/logos/wisible_full_lockup.svg`](assets/logos/wisible_full_lockup.svg)
-- Production Glyph Vector: [`assets/logos/wisible_logo_crm.svg`](assets/logos/wisible_logo_crm.svg)
+- Standalone 'W' Jewel Vector: [`assets/logos/wisible_w_gradient.svg`](assets/logos/wisible_w_gradient.svg)
+- Standalone 'W' Dark Slate Vector: [`assets/logos/wisible_w_dark.svg`](assets/logos/wisible_w_dark.svg)
+- Standalone 'W' Zenith White Vector: [`assets/logos/wisible_w_white.svg`](assets/logos/wisible_w_white.svg)
+- Standalone 'W' Matte Berry Vector: [`assets/logos/wisible_w_berry.svg`](assets/logos/wisible_w_berry.svg)
+- Standalone 'W' Jewel Circular Badge: [`assets/logos/wisible_w_badge_jewel.svg`](assets/logos/wisible_w_badge_jewel.svg)
+- Standalone 'W' Obsidian Circular Badge: [`assets/logos/wisible_w_badge_dark.svg`](assets/logos/wisible_w_badge_dark.svg)
+- Standalone 'W' Apple Squircle App Icon: [`assets/logos/wisible_w_app_icon.svg`](assets/logos/wisible_w_app_icon.svg)
+- Production CRM Glyph Vector: [`assets/logos/wisible_logo_crm.svg`](assets/logos/wisible_logo_crm.svg)
 
 ### B. UP Master Logo & Wordmark (`UP ↑`)
 

@@ -20,23 +20,48 @@
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
-│   [ (w) ]   w i s i b l e                                                │
-│   ───────   ─────────────                                                 │
-│    Icon     Continuous Geometric Wordmark                                 │
-│   (Jewel)   (Pure Ink #26292C / Pure White #FFFFFF)                       │
+│   [ (w) ]   w i s i b l e                    [ W ] (Standalone Monogram)  │
+│   ───────   ─────────────                    ───────────────────────────  │
+│    Icon     Continuous Geometric Wordmark    Sub-mark for Avatars, Docks, │
+│   (Jewel)   (Pure Ink #26292C / Pure White)  Favicons & Multi-Backgrounds │
 └───────────────────────────────────────────────────────────────────────────┘
 ```
 
 1. **Primary Jewel Lockup (Web & Product Navigation)**:
    - **Icon**: 3-Stop Gradient Circle (`#8B5CF6 → #EC4899 → #F97316`) with white triple-arch 'w' cutout.
    - **Wordmark**: Continuous geometric lowercase `wisible` in solid `#26292C` Ink (Light mode) or `#FFFFFF` (Dark mode).
-2. **Monochrome Solid Lockup (Official Documents, Stamps & Print)**:
+
+2. **Standalone 'W' Monogram (Avatars, App Icons, Favicons & Background Multi-Use)**:
+   - **Geometry**: The triple-arch continuous curvature monogram extracted from the master Wisible glyph (`width = 99.27px`, `height = 93.96px` centered in `120×120` canvas).
+   - **On Light Backgrounds (`#FFFFFF`, `#F7F6F4`)**:
+     - *Primary*: Standalone Jewel 'W' ([`wisible_w_gradient.svg`](assets/logos/wisible_w_gradient.svg)) — vibrant brand presence.
+     - *Editorial / Minimal*: Solid Ink Slate 'W' `#26292C` ([`wisible_w_dark.svg`](assets/logos/wisible_w_dark.svg), 13.8:1 AAA contrast).
+     - *Accent*: Solid Matte Berry 'W' `#9D174D` ([`wisible_w_berry.svg`](assets/logos/wisible_w_berry.svg), 8.5:1 AAA contrast).
+   - **On Dark / Obsidian Backgrounds (`#141413`, `#181622`)**:
+     - *Primary Contrast*: Solid Zenith White 'W' `#FFFFFF` ([`wisible_w_white.svg`](assets/logos/wisible_w_white.svg), 16.2:1 AAA contrast).
+     - *Vibrant Accent*: Standalone Jewel 'W' ([`wisible_w_gradient.svg`](assets/logos/wisible_w_gradient.svg)).
+   - **On Brand Gradient & Solid CTA Backgrounds (`#9D174D`)**:
+     - *Mandatory*: Solid Zenith White Knockout 'W' `#FFFFFF` ([`wisible_w_white.svg`](assets/logos/wisible_w_white.svg)).
+   - **Badged / App Icon Containers**:
+     - *Circular Jewel Badge*: 168px circle with 3-stop jewel gradient + White W ([`wisible_w_badge_jewel.svg`](assets/logos/wisible_w_badge_jewel.svg)).
+     - *Circular Obsidian Badge*: 168px Obsidian circle `#141413` with 1px hairline + Jewel W ([`wisible_w_badge_dark.svg`](assets/logos/wisible_w_badge_dark.svg)).
+     - *Mobile App Icon*: 180px Apple iOS 22% Squircle Container ([`wisible_w_app_icon.svg`](assets/logos/wisible_w_app_icon.svg)).
+
+3. **Monochrome Solid Lockup (Official Documents, Stamps & Print)**:
    - **Icon**: Solid Obsidian Circle (`#26292C` / `#141413`).
    - **Wordmark**: Solid Obsidian (`#26292C`).
-3. **Master Vector Assets**:
+
+4. **Master Vector Assets**:
    - Master Illustrator (`.ai`): [`assets/logos/wisible_logo_MasterTemplate.ai`](assets/logos/wisible_logo_MasterTemplate.ai)
    - Master Full Lockup (`.svg`): [`assets/logos/wisible_full_lockup.svg`](assets/logos/wisible_full_lockup.svg)
-   - Production App Glyph (`.svg`): [`assets/logos/wisible_logo_crm.svg`](assets/logos/wisible_logo_crm.svg)
+   - Standalone 'W' Jewel (`.svg`): [`assets/logos/wisible_w_gradient.svg`](assets/logos/wisible_w_gradient.svg)
+   - Standalone 'W' Solid Dark (`.svg`): [`assets/logos/wisible_w_dark.svg`](assets/logos/wisible_w_dark.svg)
+   - Standalone 'W' Solid White (`.svg`): [`assets/logos/wisible_w_white.svg`](assets/logos/wisible_w_white.svg)
+   - Standalone 'W' Solid Berry (`.svg`): [`assets/logos/wisible_w_berry.svg`](assets/logos/wisible_w_berry.svg)
+   - Circular Jewel Badge (`.svg`): [`assets/logos/wisible_w_badge_jewel.svg`](assets/logos/wisible_w_badge_jewel.svg)
+   - Circular Obsidian Badge (`.svg`): [`assets/logos/wisible_w_badge_dark.svg`](assets/logos/wisible_w_badge_dark.svg)
+   - Mobile iOS Squircle App Icon (`.svg`): [`assets/logos/wisible_w_app_icon.svg`](assets/logos/wisible_w_app_icon.svg)
+   - Production CRM Glyph (`.svg`): [`assets/logos/wisible_logo_crm.svg`](assets/logos/wisible_logo_crm.svg)
 
 ---
 

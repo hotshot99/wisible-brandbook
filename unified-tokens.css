@@ -33,6 +33,9 @@
   /* ==========================================================================
      LOCKED SOLID CTA SYSTEM (MATTE BERRY ARCHITECTURE)
      ========================================================================== */
+  --brand-cta-primary: #9D174D;        /* Universal Primary Solid CTA */
+  --brand-cta-hover: #831843;          /* CTA Hover State */
+  --brand-cta-active: #660F34;         /* CTA Active State */
   --cta-primary: #9D174D;              /* Matte Berry (Universal Solid CTA) */
   --cta-primary-hover: #831843;        /* Deeper Pressed Hover */
   --cta-primary-active: #660F34;       /* Tactile Active Press */

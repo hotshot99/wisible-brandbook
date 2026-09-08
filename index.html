@@ -58,6 +58,9 @@
   /* ==========================================================================
      LOCKED SOLID CTA SYSTEM (MATTE BERRY ARCHITECTURE)
      ========================================================================== */
+  --brand-cta-primary: #9D174D;        /* Universal Primary Solid CTA */
+  --brand-cta-hover: #831843;          /* CTA Hover State */
+  --brand-cta-active: #660F34;         /* CTA Active State */
   --cta-primary: #9D174D;              /* Matte Berry (Universal Solid CTA) */
   --cta-primary-hover: #831843;        /* Deeper Pressed Hover */
   --cta-primary-active: #660F34;       /* Tactile Active Press */
@@ -500,9 +503,10 @@
       color: var(--theme-text-display);
     }
     .brand-tab-btn.active {
-      background: var(--brand-cta-primary);
-      color: #FFFFFF;
-      box-shadow: 0 2px 8px rgba(157, 23, 77, 0.25);
+      background: var(--brand-cta-primary, #9D174D) !important;
+      color: #FFFFFF !important;
+      border-color: var(--brand-cta-primary, #9D174D) !important;
+      box-shadow: 0 2px 8px rgba(157, 23, 77, 0.3) !important;
     }
 
     .logo-controls-bar {
@@ -559,6 +563,155 @@
       display: none;
     }
     .blueprint-grid-overlay.show { display: block; }
+
+    /* Standalone W Background Testing Matrix */
+    .w-matrix-container {
+      background: var(--theme-surface);
+      border: 1px solid var(--theme-border);
+      border-radius: 24px;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--theme-card-shadow);
+    }
+    .w-matrix-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--theme-border);
+    }
+    .w-matrix-title {
+      font-family: var(--font-family-serif);
+      font-size: 1.85rem;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      color: var(--theme-text-display);
+      margin-bottom: 0.5rem;
+    }
+    .w-matrix-desc {
+      font-size: 0.92rem;
+      color: var(--theme-text-body);
+      max-width: 680px;
+      line-height: 1.6;
+    }
+    .w-matrix-filters {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .w-filter-btn {
+      background: var(--theme-elevated);
+      border: 1px solid var(--theme-border);
+      color: var(--theme-text-display);
+      padding: 0.42rem 0.88rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+    .w-filter-btn:hover {
+      border-color: var(--brand-cta-primary, #9D174D);
+      color: var(--theme-text-display);
+    }
+    .w-filter-btn.active {
+      background: var(--brand-cta-primary, #9D174D) !important;
+      color: #FFFFFF !important;
+      border-color: var(--brand-cta-primary, #9D174D) !important;
+      box-shadow: 0 2px 10px rgba(157, 23, 77, 0.35) !important;
+    }
+    .w-matrix-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+    .w-card {
+      background: var(--theme-surface);
+      border-radius: 18px;
+      border: 1px solid var(--theme-border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      transition: transform 0.2s var(--ease-spring), box-shadow 0.2s var(--ease-spring);
+    }
+    .w-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+    }
+    .w-card-stage {
+      height: 175px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 1.5rem;
+    }
+    .w-card-footer {
+      padding: 1.25rem 1.4rem;
+      background: var(--theme-surface);
+      border-top: 1px solid var(--theme-border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .w-card-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .w-card-name {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--theme-text-display);
+    }
+    .w-card-badge {
+      font-family: var(--font-family-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+    .w-card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-family-mono);
+      font-size: 0.72rem;
+      color: var(--theme-text-muted);
+    }
+    .w-card-actions {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    .w-action-btn {
+      flex: 1;
+      background: var(--theme-elevated);
+      border: 1px solid var(--theme-border);
+      color: var(--theme-text-display);
+      padding: 0.45rem 0.6rem;
+      border-radius: 6px;
+      font-family: var(--font-family-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+    }
+    .w-action-btn:hover {
+      background: var(--brand-cta-primary);
+      color: #fff;
+      border-color: var(--brand-cta-primary);
+    }
+
 
     /* Swatches */
     .swatch-grid {
@@ -906,6 +1059,7 @@
       <ul class="toc-menu">
         <li class="toc-item active"><a href="#section-overview"><span>01 / Brand Ethos</span> <span class="keycap">01</span></a></li>
         <li class="toc-item"><a href="#section-blueprint"><span>02 / Logo & Wordmark Lab</span> <span class="keycap">02</span></a></li>
+        <li class="toc-item"><a href="#w-monogram-matrix"><span>✦ Standalone 'W' Lab</span> <span class="keycap">W</span></a></li>
         <li class="toc-item"><a href="#section-colors"><span>03 / Master Color Engine</span> <span class="keycap">03</span></a></li>
         <li class="toc-item"><a href="#section-cta"><span>04 / CTA Button Matrix</span> <span class="keycap">04</span></a></li>
         <li class="toc-item"><a href="#section-typography"><span>05 / Typography Engine</span> <span class="keycap">05</span></a></li>
@@ -915,6 +1069,10 @@
 
       <div class="toc-title">Download Master Assets</div>
       <ul class="toc-menu">
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('wisible_w_gradient')"><span>Wisible W Jewel (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('wisible_w_dark')"><span>Wisible W Dark (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('wisible_w_white')"><span>Wisible W White (.SVG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('wisible_w_app_icon')"><span>Wisible App Icon (.SVG)</span> <span>⬇</span></a></li>
         <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('wisible_full_lockup')"><span>Wisible Lockup (.SVG)</span> <span>⬇</span></a></li>
         <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('up_full_lockup')"><span>UP Lockup (.SVG)</span> <span>⬇</span></a></li>
         <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('up_logo_monogram')"><span>UP Monogram (.SVG)</span> <span>⬇</span></a></li>
@@ -997,11 +1155,20 @@
           <!-- Variant 1: Primary Jewel (Light) -->
           <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #FFFFFF; border: 1px solid #E6E4E0;">
             <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
-              <circle cx="94" cy="90" r="84" fill="url(#gridGrad1)" />
-              <g transform="translate(-261, -394)">
-                <path fill="#FFFFFF" d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
-                <path fill="#FFFFFF" d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
-                <path fill="#FFFFFF" d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+              <defs>
+                <linearGradient id="wisShowcaseGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#8B5CF6" />
+                  <stop offset="50%" stop-color="#EC4899" />
+                  <stop offset="100%" stop-color="#F97316" />
+                </linearGradient>
+              </defs>
+              <g transform="translate(10, 6)">
+                <circle cx="84" cy="84" r="84" fill="url(#wisShowcaseGrad1)" />
+                <g transform="translate(-271, -400)" fill="#FFFFFF">
+                  <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                  <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                  <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                </g>
               </g>
               <g transform="translate(-242, -390)" fill="#26292C">
                 <path d="M 563.637 440.938 L 563.637 506.188 C 563.637 512.785 558.234 518.188 551.637 518.188 C 545.035 518.188 539.637 512.785 539.637 506.188 L 539.637 440.938 L 518.637 440.938 L 518.637 506.188 C 518.637 512.785 513.234 518.188 506.637 518.188 C 500.035 518.188 494.637 512.785 494.637 506.188 L 494.637 440.938 L 470.82 440.938 L 470.82 504.332 C 470.82 522.688 485.84 537.707 504.195 537.707 C 514.402 537.707 523.562 533.059 529.695 525.781 C 535.832 533.059 544.992 537.707 555.195 537.707 C 573.555 537.707 588.57 522.688 588.57 504.332 L 588.57 440.938 Z" />
@@ -1014,13 +1181,69 @@
                 <path d="M 873.016 412.148 L 873.016 534.82 L 896.34 534.82 L 896.34 403.27 Z" />
                 <path d="M 955.527 459.098 C 967.598 459.098 977.91 466.609 982.059 477.215 L 928.996 477.215 C 933.141 466.609 943.453 459.098 955.527 459.098 M 1004.38 494.031 C 1004.65 491.922 1004.8 489.773 1004.8 487.586 C 1004.8 460.367 982.742 438.305 955.527 438.305 C 928.309 438.305 906.246 460.367 906.246 487.586 C 906.246 514.805 928.309 536.867 955.527 536.867 C 976.98 536.867 995.227 523.148 1001.99 504.012 L 978.793 504.012 C 973.637 511.305 965.141 516.074 955.527 516.074 C 942 516.074 930.684 506.645 927.773 494 L 983.281 494 C 983.277 494.012 983.277 494.023 983.273 494.031 Z" />
               </g>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #5A5F66; margin-top: 1rem; text-align: center;">
+              <strong>01. PRIMARY JEWEL LOCKUP</strong><br>Light Surface • 3-Stop Jewel + Ink Display
+            </div>
+          </div>
+
+          <!-- Variant 2: Monochrome Solid -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #FFFFFF; border: 1px solid #E6E4E0;">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
+              <g transform="translate(10, 6)">
+                <circle cx="84" cy="84" r="84" fill="#26292C" />
+                <g transform="translate(-271, -400)" fill="#FFFFFF">
+                  <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                  <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                  <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                </g>
+              </g>
+              <g transform="translate(-242, -390)" fill="#26292C">
+                <path d="M 563.637 440.938 L 563.637 506.188 C 563.637 512.785 558.234 518.188 551.637 518.188 C 545.035 518.188 539.637 512.785 539.637 506.188 L 539.637 440.938 L 518.637 440.938 L 518.637 506.188 C 518.637 512.785 513.234 518.188 506.637 518.188 C 500.035 518.188 494.637 512.785 494.637 506.188 L 494.637 440.938 L 470.82 440.938 L 470.82 504.332 C 470.82 522.688 485.84 537.707 504.195 537.707 C 514.402 537.707 523.562 533.059 529.695 525.781 C 535.832 533.059 544.992 537.707 555.195 537.707 C 573.555 537.707 588.57 522.688 588.57 504.332 L 588.57 440.938 Z" />
+                <path d="M 605.914 440.949 L 629.242 440.949 L 629.242 534.82 L 605.914 534.82 Z" />
+                <path d="M 629.387 422.02 C 629.387 428.508 624.125 433.77 617.637 433.77 C 611.145 433.77 605.887 428.508 605.887 422.02 C 605.887 415.531 611.145 410.27 617.637 410.27 C 624.125 410.27 629.387 415.531 629.387 422.02 Z" />
+                <path d="M 700.414 466.586 C 698.359 463.891 695.535 461.551 691.945 459.562 C 688.352 457.57 684.438 456.578 680.207 456.578 C 676.48 456.578 673.086 457.348 670.004 458.887 C 666.926 460.426 665.387 462.992 665.387 466.586 C 665.387 470.176 667.086 472.715 670.484 474.188 C 673.883 475.664 678.859 477.172 685.402 478.711 C 688.863 479.48 692.359 480.508 695.891 481.789 C 699.418 483.07 702.629 484.77 705.512 486.887 C 708.398 489.004 710.738 491.637 712.535 494.777 C 714.332 497.926 715.23 501.742 715.23 506.23 C 715.23 511.879 714.176 516.656 712.059 520.566 C 709.938 524.48 707.113 527.66 703.59 530.094 C 700.059 532.531 695.953 534.297 691.27 535.391 C 686.586 536.477 681.746 537.023 676.742 537.023 C 669.555 537.023 662.562 535.707 655.762 533.078 C 648.961 530.449 643.316 526.695 638.828 521.82 L 654.031 507.578 C 656.598 510.918 659.93 513.672 664.039 515.852 C 668.145 518.035 672.699 519.121 677.703 519.121 C 679.367 519.121 681.07 518.934 682.805 518.547 C 684.535 518.164 686.141 517.555 687.613 516.719 C 689.09 515.887 690.273 514.766 691.176 513.352 C 692.07 511.941 692.52 510.211 692.52 508.156 C 692.52 504.305 690.758 501.547 687.23 499.879 C 683.699 498.211 678.406 496.543 671.352 494.875 C 667.887 494.105 664.52 493.113 661.246 491.891 C 657.977 490.672 655.059 489.07 652.492 487.082 C 649.926 485.094 647.871 482.625 646.332 479.672 C 644.793 476.723 644.023 473.062 644.023 468.703 C 644.023 463.57 645.082 459.145 647.199 455.422 C 649.316 451.699 652.105 448.656 655.57 446.277 C 659.035 443.91 662.945 442.141 667.309 440.988 C 671.672 439.836 676.164 439.254 680.781 439.254 C 687.453 439.254 693.965 440.41 700.316 442.719 C 706.668 445.027 711.699 448.562 715.426 453.305 Z" />
+                <path d="M 725.125 440.949 L 748.449 440.949 L 748.449 534.82 L 725.125 534.82 Z" />
+                <path d="M 748.625 422.02 C 748.625 428.508 743.363 433.77 736.875 433.77 C 730.387 433.77 725.125 428.508 725.125 422.02 C 725.125 415.531 730.387 410.27 736.875 410.27 C 743.363 410.27 748.625 415.531 748.625 422.02 Z" />
+                <path d="M 814.391 516.891 C 799.133 516.891 786.762 504.523 786.762 489.262 C 786.762 474.004 799.133 461.637 814.391 461.637 C 829.648 461.637 842.02 474.004 842.02 489.262 C 842.02 504.523 829.648 516.891 814.391 516.891 M 852.609 457.914 C 852.582 457.879 852.559 457.844 852.531 457.809 C 852.301 457.523 852.07 457.242 851.836 456.961 C 851.168 456.117 850.508 455.27 849.785 454.473 C 845.836 450.145 841.125 446.738 835.652 444.254 C 835.02 443.969 834.352 443.754 833.703 443.5 C 833.281 443.316 832.84 443.168 832.41 442.996 C 832.02 442.859 831.637 442.699 831.246 442.57 C 825.984 440.641 820.324 439.531 814.391 439.531 C 804.445 439.531 795.227 442.543 787.5 447.641 L 787.5 403.27 L 787.352 403.27 L 766.133 411.344 L 766.133 534.867 L 785.238 534.867 L 785.238 534.574 L 787.5 534.574 L 787.5 529.387 C 795.223 534.492 804.438 537.52 814.391 537.52 C 814.805 537.52 815.207 537.469 815.621 537.457 C 816.125 537.473 816.617 537.539 817.129 537.539 C 824.129 537.539 830.402 536.234 835.938 533.625 C 841.477 531.02 846.184 527.512 850.07 523.125 C 852.645 520.211 854.789 516.93 856.578 513.348 C 860.875 506.062 863.383 497.598 863.383 488.527 C 863.383 476.938 859.336 466.301 852.609 457.914 Z" />
+                <path d="M 873.016 412.148 L 873.016 534.82 L 896.34 534.82 L 896.34 403.27 Z" />
+                <path d="M 955.527 459.098 C 967.598 459.098 977.91 466.609 982.059 477.215 L 928.996 477.215 C 933.141 466.609 943.453 459.098 955.527 459.098 M 1004.38 494.031 C 1004.65 491.922 1004.8 489.773 1004.8 487.586 C 1004.8 460.367 982.742 438.305 955.527 438.305 C 928.309 438.305 906.246 460.367 906.246 487.586 C 906.246 514.805 928.309 536.867 955.527 536.867 C 976.98 536.867 995.227 523.148 1001.99 504.012 L 978.793 504.012 C 973.637 511.305 965.141 516.074 955.527 516.074 C 942 516.074 930.684 506.645 927.773 494 L 983.281 494 C 983.277 494.012 983.277 494.023 983.273 494.031 Z" />
+              </g>
+            </svg>
+            <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #5A5F66; margin-top: 1rem; text-align: center;">
+              <strong>02. MONOCHROME SOLID</strong><br>White Paper • Solid Obsidian (#26292C) Lockup
+            </div>
+          </div>
+
+          <!-- Variant 3: Dark Mode Inverted -->
+          <div class="sh-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem 1.5rem; background: #141413; border: 1px solid rgba(255,255,255,0.1);">
+            <svg viewBox="0 0 760 180" width="100%" height="70" fill="none">
               <defs>
-                <linearGradient id="gridGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="wisShowcaseGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stop-color="#8B5CF6" />
                   <stop offset="50%" stop-color="#EC4899" />
                   <stop offset="100%" stop-color="#F97316" />
                 </linearGradient>
               </defs>
+              <g transform="translate(10, 6)">
+                <circle cx="84" cy="84" r="84" fill="url(#wisShowcaseGrad3)" />
+                <g transform="translate(-271, -400)" fill="#FFFFFF">
+                  <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                  <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                  <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                </g>
+              </g>
+              <g transform="translate(-242, -390)" fill="#FFFFFF">
+                <path d="M 563.637 440.938 L 563.637 506.188 C 563.637 512.785 558.234 518.188 551.637 518.188 C 545.035 518.188 539.637 512.785 539.637 506.188 L 539.637 440.938 L 518.637 440.938 L 518.637 506.188 C 518.637 512.785 513.234 518.188 506.637 518.188 C 500.035 518.188 494.637 512.785 494.637 506.188 L 494.637 440.938 L 470.82 440.938 L 470.82 504.332 C 470.82 522.688 485.84 537.707 504.195 537.707 C 514.402 537.707 523.562 533.059 529.695 525.781 C 535.832 533.059 544.992 537.707 555.195 537.707 C 573.555 537.707 588.57 522.688 588.57 504.332 L 588.57 440.938 Z" />
+                <path d="M 605.914 440.949 L 629.242 440.949 L 629.242 534.82 L 605.914 534.82 Z" />
+                <path d="M 629.387 422.02 C 629.387 428.508 624.125 433.77 617.637 433.77 C 611.145 433.77 605.887 428.508 605.887 422.02 C 605.887 415.531 611.145 410.27 617.637 410.27 C 624.125 410.27 629.387 415.531 629.387 422.02 Z" />
+                <path d="M 700.414 466.586 C 698.359 463.891 695.535 461.551 691.945 459.562 C 688.352 457.57 684.438 456.578 680.207 456.578 C 676.48 456.578 673.086 457.348 670.004 458.887 C 666.926 460.426 665.387 462.992 665.387 466.586 C 665.387 470.176 667.086 472.715 670.484 474.188 C 673.883 475.664 678.859 477.172 685.402 478.711 C 688.863 479.48 692.359 480.508 695.891 481.789 C 699.418 483.07 702.629 484.77 705.512 486.887 C 708.398 489.004 710.738 491.637 712.535 494.777 C 714.332 497.926 715.23 501.742 715.23 506.23 C 715.23 511.879 714.176 516.656 712.059 520.566 C 709.938 524.48 707.113 527.66 703.59 530.094 C 700.059 532.531 695.953 534.297 691.27 535.391 C 686.586 536.477 681.746 537.023 676.742 537.023 C 669.555 537.023 662.562 535.707 655.762 533.078 C 648.961 530.449 643.316 526.695 638.828 521.82 L 654.031 507.578 C 656.598 510.918 659.93 513.672 664.039 515.852 C 668.145 518.035 672.699 519.121 677.703 519.121 C 679.367 519.121 681.07 518.934 682.805 518.547 C 684.535 518.164 686.141 517.555 687.613 516.719 C 689.09 515.887 690.273 514.766 691.176 513.352 C 692.07 511.941 692.52 510.211 692.52 508.156 C 692.52 504.305 690.758 501.547 687.23 499.879 C 683.699 498.211 678.406 496.543 671.352 494.875 C 667.887 494.105 664.52 493.113 661.246 491.891 C 657.977 490.672 655.059 489.07 652.492 487.082 C 649.926 485.094 647.871 482.625 646.332 479.672 C 644.793 476.723 644.023 473.062 644.023 468.703 C 644.023 463.57 645.082 459.145 647.199 455.422 C 649.316 451.699 652.105 448.656 655.57 446.277 C 659.035 443.91 662.945 442.141 667.309 440.988 C 671.672 439.836 676.164 439.254 680.781 439.254 C 687.453 439.254 693.965 440.41 700.316 442.719 C 706.668 445.027 711.699 448.562 715.426 453.305 Z" />
+                <path d="M 725.125 440.949 L 748.449 440.949 L 748.449 534.82 L 725.125 534.82 Z" />
+                <path d="M 748.625 422.02 C 748.625 428.508 743.363 433.77 736.875 433.77 C 730.387 433.77 725.125 428.508 725.125 422.02 C 725.125 415.531 730.387 410.27 736.875 410.27 C 743.363 410.27 748.625 415.531 748.625 422.02 Z" />
+                <path d="M 814.391 516.891 C 799.133 516.891 786.762 504.523 786.762 489.262 C 786.762 474.004 799.133 461.637 814.391 461.637 C 829.648 461.637 842.02 474.004 842.02 489.262 C 842.02 504.523 829.648 516.891 814.391 516.891 M 852.609 457.914 C 852.582 457.879 852.559 457.844 852.531 457.809 C 852.301 457.523 852.07 457.242 851.836 456.961 C 851.168 456.117 850.508 455.27 849.785 454.473 C 845.836 450.145 841.125 446.738 835.652 444.254 C 835.02 443.969 834.352 443.754 833.703 443.5 C 833.281 443.316 832.84 443.168 832.41 442.996 C 832.02 442.859 831.637 442.699 831.246 442.57 C 825.984 440.641 820.324 439.531 814.391 439.531 C 804.445 439.531 795.227 442.543 787.5 447.641 L 787.5 403.27 L 787.352 403.27 L 766.133 411.344 L 766.133 534.867 L 785.238 534.867 L 785.238 534.574 L 787.5 534.574 L 787.5 529.387 C 795.223 534.492 804.438 537.52 814.391 537.52 C 814.805 537.52 815.207 537.469 815.621 537.457 C 816.125 537.473 816.617 537.539 817.129 537.539 C 824.129 537.539 830.402 536.234 835.938 533.625 C 841.477 531.02 846.184 527.512 850.07 523.125 C 852.645 520.211 854.789 516.93 856.578 513.348 C 860.875 506.062 863.383 497.598 863.383 488.527 C 863.383 476.938 859.336 466.301 852.609 457.914 Z" />
+                <path d="M 873.016 412.148 L 873.016 534.82 L 896.34 534.82 L 896.34 403.27 Z" />
+                <path d="M 955.527 459.098 C 967.598 459.098 977.91 466.609 982.059 477.215 L 928.996 477.215 C 933.141 466.609 943.453 459.098 955.527 459.098 M 1004.38 494.031 C 1004.65 491.922 1004.8 489.773 1004.8 487.586 C 1004.8 460.367 982.742 438.305 955.527 438.305 C 928.309 438.305 906.246 460.367 906.246 487.586 C 906.246 514.805 928.309 536.867 955.527 536.867 C 976.98 536.867 995.227 523.148 1001.99 504.012 L 978.793 504.012 C 973.637 511.305 965.141 516.074 955.527 516.074 C 942 516.074 930.684 506.645 927.773 494 L 983.281 494 C 983.277 494.012 983.277 494.023 983.273 494.031 Z" />
+              </g>
             </svg>
             <div style="font-family: var(--font-family-mono); font-size: 0.72rem; color: #8A9098; margin-top: 1rem; text-align: center;">
               <strong>03. DARK VOID INVERTED</strong><br>Obsidian Surface • 3-Stop Jewel + White Wordmark
@@ -1117,11 +1340,411 @@
 
         </div>
 
+        <!-- WISIBLE STANDALONE W MONOGRAM MULTI-BACKGROUND TESTING MATRIX -->
+        <div class="w-matrix-container" id="w-monogram-matrix">
+          <div class="w-matrix-header">
+            <div>
+              <div class="section-eyebrow" style="margin-bottom: 0.5rem;">Standalone Monogram Identity // เฉพาะตัว W ตัวเดียว</div>
+              <h3 class="w-matrix-title">Wisible ✦ Standalone 'W' Background Matrix</h3>
+              <p class="w-matrix-desc">
+                The authentic isolated geometric <strong>'W'</strong> monogram mark engineered for autonomous deal velocity. Tested across diverse lighting conditions and 12 background environments with precision AAA contrast compliance. Available in 3-Stop Jewel Gradient, Solid Ink Display, and Pure Zenith White.
+              </p>
+            </div>
+            <div class="w-matrix-filters">
+              <span style="font-family: var(--font-family-mono); font-size: 0.72rem; color: var(--theme-text-muted); text-transform: uppercase; margin-right: 0.25rem;">Filter Context:</span>
+              <button class="w-filter-btn active" data-filter="all" onclick="filterWMatrix('all')">All Contexts (12)</button>
+              <button class="w-filter-btn" data-filter="light" onclick="filterWMatrix('light')">Light / Paper (4)</button>
+              <button class="w-filter-btn" data-filter="dark" onclick="filterWMatrix('dark')">Dark / Obsidian (3)</button>
+              <button class="w-filter-btn" data-filter="vibrant" onclick="filterWMatrix('vibrant')">Brand Vibrant (2)</button>
+              <button class="w-filter-btn" data-filter="badge" onclick="filterWMatrix('badge')">Badges &amp; Icons (3)</button>
+            </div>
+          </div>
+
+          <div class="w-matrix-grid">
+            <!-- 01. Jewel W on Pure White -->
+            <div class="w-card" data-category="light">
+              <div class="w-card-stage" style="background: #FFFFFF; border-bottom: 1px solid #E6E4E0;">
+                <svg id="svgWCard1" viewBox="0 0 120 120" width="84" height="84" fill="none">
+                  <defs>
+                    <linearGradient id="wGradCard1" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#8B5CF6" />
+                      <stop offset="50%" stop-color="#EC4899" />
+                      <stop offset="100%" stop-color="#F97316" />
+                    </linearGradient>
+                  </defs>
+                  <g transform="translate(-295.27, -427.72)" fill="url(#wGradCard1)">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">Jewel W on White</span>
+                  <span class="w-card-badge" style="background: linear-gradient(135deg, #8B5CF6, #EC4899); color: #fff;">JEWEL GRADIENT</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>BG: #FFFFFF</span>
+                  <span>Light Marketing UI</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_gradient')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard1')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 02. Solid Ink W on White -->
+            <div class="w-card" data-category="light">
+              <div class="w-card-stage" style="background: #FFFFFF; border-bottom: 1px solid #E6E4E0;">
+                <svg id="svgWCard2" viewBox="0 0 120 120" width="84" height="84" fill="none">
+                  <g transform="translate(-295.27, -427.72)" fill="#26292C">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">Solid Ink W on White</span>
+                  <span class="w-card-badge" style="background: #26292C; color: #fff;">13.8:1 AAA</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>BG: #FFFFFF</span>
+                  <span>Invoices, Contracts &amp; Print</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_dark')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard2')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 03. Jewel W on Paper Wash -->
+            <div class="w-card" data-category="light">
+              <div class="w-card-stage" style="background: #F7F6F4; border-bottom: 1px solid #E6E4E0;">
+                <svg id="svgWCard3" viewBox="0 0 120 120" width="84" height="84" fill="none">
+                  <defs>
+                    <linearGradient id="wGradCard3" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#8B5CF6" />
+                      <stop offset="50%" stop-color="#EC4899" />
+                      <stop offset="100%" stop-color="#F97316" />
+                    </linearGradient>
+                  </defs>
+                  <g transform="translate(-295.27, -427.72)" fill="url(#wGradCard3)">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">Jewel W on Paper Wash</span>
+                  <span class="w-card-badge" style="background: #E6E4E0; color: #26292C;">DAY CANVAS</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>BG: #F7F6F4</span>
+                  <span>Stationery Wash / Zero Glare</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_gradient')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard3')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 04. Matte Berry W on Paper Wash -->
+            <div class="w-card" data-category="light">
+              <div class="w-card-stage" style="background: #F7F6F4; border-bottom: 1px solid #E6E4E0;">
+                <svg id="svgWCard4" viewBox="0 0 120 120" width="84" height="84" fill="none">
+                  <g transform="translate(-295.27, -427.72)" fill="#9D174D">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">Matte Berry W on Paper</span>
+                  <span class="w-card-badge" style="background: #9D174D; color: #fff;">8.5:1 AAA</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>BG: #F7F6F4</span>
+                  <span>Universal Primary CTA Berry</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_berry')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard4')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 05. Pure White W on Warm Obsidian -->
+            <div class="w-card" data-category="dark">
+              <div class="w-card-stage" style="background: #141413; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <svg id="svgWCard5" viewBox="0 0 120 120" width="84" height="84" fill="none">
+                  <g transform="translate(-295.27, -427.72)" fill="#FFFFFF">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">White W on Obsidian</span>
+                  <span class="w-card-badge" style="background: #FFFFFF; color: #141413;">16.2:1 AAA</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>BG: #141413</span>
+                  <span>Executive Dark Mode UI</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_white')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard5')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 06. Jewel W on Warm Obsidian with Aura -->
+            <div class="w-card" data-category="dark">
+              <div class="w-card-stage" style="background: #141413; border-bottom: 1px solid rgba(255,255,255,0.1); background-image: radial-gradient(circle at center, rgba(236,72,153,0.2) 0%, transparent 65%);">
+                <svg id="svgWCard6" viewBox="0 0 120 120" width="84" height="84" fill="none" style="filter: drop-shadow(0 0 18px rgba(236,72,153,0.4));">
+                  <defs>
+                    <linearGradient id="wGradCard6" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#8B5CF6" />
+                      <stop offset="50%" stop-color="#EC4899" />
+                      <stop offset="100%" stop-color="#F97316" />
+                    </linearGradient>
+                  </defs>
+                  <g transform="translate(-295.27, -427.72)" fill="url(#wGradCard6)">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">Jewel W with Aura</span>
+                  <span class="w-card-badge" style="background: linear-gradient(135deg, #8B5CF6, #EC4899); color: #fff;">GLOW AURA</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>BG: #141413</span>
+                  <span>Splash, Loading &amp; Hero Stages</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_gradient')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard6')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 07. Jewel W on Deep Navy-Violet -->
+            <div class="w-card" data-category="dark">
+              <div class="w-card-stage" style="background: #181622; border-bottom: 1px solid rgba(139,92,246,0.2);">
+                <svg id="svgWCard7" viewBox="0 0 120 120" width="84" height="84" fill="none">
+                  <defs>
+                    <linearGradient id="wGradCard7" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#8B5CF6" />
+                      <stop offset="50%" stop-color="#EC4899" />
+                      <stop offset="100%" stop-color="#F97316" />
+                    </linearGradient>
+                  </defs>
+                  <g transform="translate(-295.27, -427.72)" fill="url(#wGradCard7)">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">Jewel W on Navy-Violet</span>
+                  <span class="w-card-badge" style="background: #252236; color: #E9D5FF;">DARK SURFACE</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>BG: #181622</span>
+                  <span>Deep Obsidian Card Surface</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_gradient')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard7')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 08. White Knockout W on Brand Gradient -->
+            <div class="w-card" data-category="vibrant">
+              <div class="w-card-stage" style="background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #F97316 100%);">
+                <svg id="svgWCard8" viewBox="0 0 120 120" width="84" height="84" fill="none">
+                  <g transform="translate(-295.27, -427.72)" fill="#FFFFFF">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">White W on Gradient</span>
+                  <span class="w-card-badge" style="background: rgba(255,255,255,0.25); color: #fff;">KNOCKOUT</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>BG: Master 3-Stop</span>
+                  <span>Brand Banners &amp; Social Avatars</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_white')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard8')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 09. White Knockout W on Matte Berry -->
+            <div class="w-card" data-category="vibrant">
+              <div class="w-card-stage" style="background: #9D174D;">
+                <svg id="svgWCard9" viewBox="0 0 120 120" width="84" height="84" fill="none">
+                  <g transform="translate(-295.27, -427.72)" fill="#FFFFFF">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">White W on Matte Berry</span>
+                  <span class="w-card-badge" style="background: #831843; color: #fff;">8.5:1 AAA</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>BG: #9D174D</span>
+                  <span>CTA Buttons &amp; Hardware Accent</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_white')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard9')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 10. Circular Jewel Badge -->
+            <div class="w-card" data-category="badge">
+              <div class="w-card-stage" style="background: #F7F6F4; border-bottom: 1px solid #E6E4E0;">
+                <svg id="svgWCard10" viewBox="0 0 168 168" width="84" height="84" fill="none">
+                  <defs>
+                    <linearGradient id="wGradCard10" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#8B5CF6" />
+                      <stop offset="50%" stop-color="#EC4899" />
+                      <stop offset="100%" stop-color="#F97316" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="84" cy="84" r="84" fill="url(#wGradCard10)" />
+                  <g transform="translate(-271.27, -400.89)" fill="#FFFFFF">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">Circular Jewel Badge</span>
+                  <span class="w-card-badge" style="background: linear-gradient(135deg, #8B5CF6, #EC4899); color: #fff;">OFFICIAL GLYPH</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>168×168 Badge</span>
+                  <span>Primary Product &amp; App Icon</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_badge_jewel')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard10')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 11. Dark Obsidian Disc Badge -->
+            <div class="w-card" data-category="badge">
+              <div class="w-card-stage" style="background: #141413; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <svg id="svgWCard11" viewBox="0 0 168 168" width="84" height="84" fill="none">
+                  <defs>
+                    <linearGradient id="wGradCard11" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#8B5CF6" />
+                      <stop offset="50%" stop-color="#EC4899" />
+                      <stop offset="100%" stop-color="#F97316" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="84" cy="84" r="83" fill="#141413" stroke="rgba(255,255,255,0.16)" stroke-width="2" />
+                  <g transform="translate(-271.27, -400.89)" fill="url(#wGradCard11)">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">Obsidian Disc Badge</span>
+                  <span class="w-card-badge" style="background: rgba(255,255,255,0.15); color: #fff;">DARK DOCK</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>168×168 Disc</span>
+                  <span>Dark Dashboard &amp; Sidebar Navigation</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_badge_dark')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard11')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 12. iOS/macOS Squircle App Icon -->
+            <div class="w-card" data-category="badge">
+              <div class="w-card-stage" style="background: linear-gradient(180deg, #1C1A2E 0%, #141413 100%); border-bottom: 1px solid rgba(255,255,255,0.1);">
+                <svg id="svgWCard12" viewBox="0 0 180 180" width="84" height="84" fill="none" style="filter: drop-shadow(0 8px 20px rgba(0,0,0,0.45));">
+                  <defs>
+                    <linearGradient id="wGradCard12" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#8B5CF6" />
+                      <stop offset="50%" stop-color="#EC4899" />
+                      <stop offset="100%" stop-color="#F97316" />
+                    </linearGradient>
+                  </defs>
+                  <rect x="4" y="4" width="172" height="172" rx="38" fill="url(#wGradCard12)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" />
+                  <g transform="translate(-265.27, -394.89)" fill="#FFFFFF">
+                    <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                    <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                    <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                  </g>
+                </svg>
+              </div>
+              <div class="w-card-footer">
+                <div class="w-card-info">
+                  <span class="w-card-name">Squircle App Icon</span>
+                  <span class="w-card-badge" style="background: #9D174D; color: #fff;">APP STORE</span>
+                </div>
+                <div class="w-card-meta">
+                  <span>180×180 / 512×512</span>
+                  <span>iOS, iPadOS, macOS &amp; Android</span>
+                </div>
+                <div class="w-card-actions">
+                  <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_app_icon')"><span>⬇</span> SVG</button>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard12')"><span>📋</span> Copy Code</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="logo-lab-container">
           <div class="logo-controls-bar">
             <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
               <button class="logo-btn-switch active" id="btnMarkWisibleLockup" onclick="switchBlueprintMark('WISIBLE_LOCKUP')">Wisible ✦ Lockup</button>
-              <button class="logo-btn-switch" id="btnMarkWisible" onclick="switchBlueprintMark('WISIBLE')">Wisible ✦ Glyph</button>
+              <button class="logo-btn-switch" id="btnMarkWisibleW" onclick="switchBlueprintMark('WISIBLE_W')">Wisible ✦ W Mark</button>
+              <button class="logo-btn-switch" id="btnMarkWisible" onclick="switchBlueprintMark('WISIBLE')">Wisible ✦ Badge</button>
               <button class="logo-btn-switch" id="btnMarkUPLockup" onclick="switchBlueprintMark('UP_LOCKUP')">UP ↑ Lockup</button>
               <button class="logo-btn-switch" id="btnMarkUP" onclick="switchBlueprintMark('UP')">UP ↑ Monogram</button>
               <button class="logo-btn-switch" id="btnMarkGoat" onclick="switchBlueprintMark('GOAT')">Genius Goat 🐐</button>
@@ -1173,6 +1796,28 @@
               </svg>
               <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em;">
                 WISIBLE ✦ // FULL LOCKUP (CIRCULAR GLYPH + OFFICIAL GEOMETRIC WORDMARK)
+              </div>
+            </div>
+
+            <!-- Wisible Standalone W Monogram Blueprint -->
+            <div id="blueprintWisibleW" style="display: none; flex-direction: column; align-items: center; gap: 1.25rem;">
+              <svg width="200" height="200" viewBox="0 0 120 120" fill="none" style="filter: drop-shadow(0 10px 28px rgba(236,72,153,0.3));">
+                <defs>
+                  <linearGradient id="bpWisibleWGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8B5CF6"/>
+                    <stop offset="50%" stop-color="#EC4899"/>
+                    <stop offset="100%" stop-color="#F97316"/>
+                  </linearGradient>
+                </defs>
+                <!-- Exact Production Standalone W Vector Paths -->
+                <g transform="translate(-295.27, -427.72)" fill="url(#bpWisibleWGrad)">
+                  <path d="M 351.148 512.305 C 351.148 512.219 351.137 512.137 351.137 512.051 L 351.223 512.051 L 351.223 460.859 C 351.223 458.633 353.043 456.812 355.27 456.812 C 357.496 456.812 359.32 458.633 359.32 460.859 L 359.32 512.051 L 359.332 512.051 C 359.328 512.137 359.32 512.219 359.32 512.305 C 359.32 523.473 367.359 532.758 377.969 534.699 L 377.969 512.051 L 378.043 512.051 L 378.043 464.402 C 378.043 451.879 367.797 441.629 355.27 441.629 C 342.746 441.629 332.496 451.879 332.496 464.402 L 332.496 534.699 C 343.105 532.758 351.148 523.473 351.148 512.305 Z" />
+                  <path d="M 305.637 440.738 L 305.637 511.785 L 305.66 511.785 C 305.656 511.953 305.637 512.121 305.637 512.289 C 305.637 523.484 313.715 532.789 324.363 534.699 L 324.363 440.738 Z" />
+                  <path d="M 404.906 440.738 L 386.18 440.738 L 386.18 534.699 C 396.824 532.789 404.906 523.484 404.906 512.289 C 404.906 512.121 404.887 511.953 404.883 511.785 L 404.906 511.785 Z" />
+                </g>
+              </svg>
+              <div style="font-family: var(--font-family-mono); font-size: 0.8rem; color: var(--theme-text-muted); letter-spacing: 0.15em; text-align: center;">
+                WISIBLE ✦ // STANDALONE 'W' MONOGRAM // 3-STOP JEWEL GRADIENT // 99.27px × 93.96px // VECTOR BLUEPRINT
               </div>
             </div>
 
@@ -1610,17 +2255,56 @@
       document.getElementById('showcaseUP').style.display = brand === 'UP' ? 'grid' : 'none';
     }
 
+    // Standalone W Matrix Filter
+    function filterWMatrix(category) {
+      document.querySelectorAll('.w-filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === category);
+      });
+      document.querySelectorAll('.w-card').forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Standalone W Copy Code
+    function copyWCardSVG(btn, svgId) {
+      const svg = document.getElementById(svgId);
+      if (!svg) return;
+      const clone = svg.cloneNode(true);
+      clone.removeAttribute('style');
+      if (!clone.getAttribute('xmlns')) {
+        clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+      }
+      const serializer = new XMLSerializer();
+      let source = serializer.serializeToString(clone);
+      navigator.clipboard.writeText(source).then(() => {
+        showToast('📋 Standalone W SVG code copied to clipboard!');
+      }).catch(() => {
+        showToast('⬇ Downloading SVG file...');
+        downloadSVGElement(svg, svgId + '.svg');
+      });
+    }
+
     // Blueprint Stage Switches
     let currentMark = 'WISIBLE_LOCKUP';
     function switchBlueprintMark(mark) {
       currentMark = mark;
       document.getElementById('btnMarkWisibleLockup').classList.toggle('active', mark === 'WISIBLE_LOCKUP');
+      if (document.getElementById('btnMarkWisibleW')) {
+        document.getElementById('btnMarkWisibleW').classList.toggle('active', mark === 'WISIBLE_W');
+      }
       document.getElementById('btnMarkWisible').classList.toggle('active', mark === 'WISIBLE');
       document.getElementById('btnMarkUPLockup').classList.toggle('active', mark === 'UP_LOCKUP');
       document.getElementById('btnMarkUP').classList.toggle('active', mark === 'UP');
       document.getElementById('btnMarkGoat').classList.toggle('active', mark === 'GOAT');
       
       document.getElementById('blueprintWisibleLockup').style.display = mark === 'WISIBLE_LOCKUP' ? 'flex' : 'none';
+      if (document.getElementById('blueprintWisibleW')) {
+        document.getElementById('blueprintWisibleW').style.display = mark === 'WISIBLE_W' ? 'flex' : 'none';
+      }
       document.getElementById('blueprintWisible').style.display = mark === 'WISIBLE' ? 'flex' : 'none';
       document.getElementById('blueprintUPLockup').style.display = mark === 'UP_LOCKUP' ? 'flex' : 'none';
       document.getElementById('blueprintUP').style.display = mark === 'UP' ? 'flex' : 'none';
@@ -1661,14 +2345,22 @@
     function downloadDirectSVG(key) {
       const map = {
         'wisible_full_lockup': { id: 'blueprintWisibleLockup', name: 'wisible_full_lockup.svg' },
+        'wisible_w_gradient': { id: 'blueprintWisibleW', name: 'wisible_w_gradient.svg' },
+        'wisible_w_dark': { id: 'svgWCard2', name: 'wisible_w_dark.svg' },
+        'wisible_w_white': { id: 'svgWCard5', name: 'wisible_w_white.svg' },
+        'wisible_w_berry': { id: 'svgWCard4', name: 'wisible_w_berry.svg' },
+        'wisible_w_badge_jewel': { id: 'svgWCard10', name: 'wisible_w_badge_jewel.svg' },
+        'wisible_w_badge_dark': { id: 'svgWCard11', name: 'wisible_w_badge_dark.svg' },
+        'wisible_w_badge_white': { id: null, name: 'wisible_w_badge_white.svg' },
+        'wisible_w_app_icon': { id: 'svgWCard12', name: 'wisible_w_app_icon.svg' },
         'up_full_lockup': { id: 'blueprintUPLockup', name: 'up_full_lockup.svg' },
         'up_logo_monogram': { id: 'blueprintUP', name: 'up_logo_monogram.svg' },
         'genius_goat': { id: 'blueprintGoat', name: 'genius_goat.svg' }
       };
       const item = map[key];
-      if (item) {
+      if (item && item.id) {
         const container = document.getElementById(item.id);
-        const svg = container ? container.querySelector('svg') : null;
+        const svg = container ? (container.tagName && container.tagName.toLowerCase() === 'svg' ? container : container.querySelector('svg')) : null;
         if (svg) {
           downloadSVGElement(svg, item.name);
           return;
@@ -1676,25 +2368,26 @@
       }
       // Fallback
       const a = document.createElement('a');
-      a.href = 'assets/logos/' + key + '.svg';
-      a.download = key + '.svg';
+      a.href = 'assets/logos/' + (item ? item.name : key + '.svg');
+      a.download = item ? item.name : key + '.svg';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      showToast(`⬇ Master Vector SVG downloaded (${key}.svg)`);
+      showToast(`⬇ Master Vector SVG downloaded (${item ? item.name : key + '.svg'})`);
     }
 
     function downloadCurrentSVG() {
       const markElementMap = {
         'WISIBLE_LOCKUP': { id: 'blueprintWisibleLockup', name: 'wisible_full_lockup.svg' },
-        'WISIBLE': { id: 'blueprintWisible', name: 'wisible_icon_glyph.svg' },
+        'WISIBLE_W': { id: 'blueprintWisibleW', name: 'wisible_w_gradient.svg' },
+        'WISIBLE': { id: 'blueprintWisible', name: 'wisible_w_badge_jewel.svg' },
         'UP_LOCKUP': { id: 'blueprintUPLockup', name: 'up_full_lockup.svg' },
         'UP': { id: 'blueprintUP', name: 'up_logo_monogram.svg' },
         'GOAT': { id: 'blueprintGoat', name: 'genius_goat.svg' }
       };
       const item = markElementMap[currentMark] || markElementMap['WISIBLE_LOCKUP'];
       const container = document.getElementById(item.id);
-      const svg = container ? container.querySelector('svg') : null;
+      const svg = container ? (container.tagName && container.tagName.toLowerCase() === 'svg' ? container : container.querySelector('svg')) : null;
       if (svg) {
         downloadSVGElement(svg, item.name);
       } else {

@@ -54,16 +54,35 @@
 
 ## 4. Logo Color Variations & Contexts
 
-1. **Obsidian Dark (Primary)**:
-   - Glyph Fill / Stroke: Electric Magenta (`#F6AADD`) & Mulberry (`#792D4B`)
-   - Wordmark: Zenith Off-White (`#FCFAF7`)
-   - Endorsement (`by Wisible`): Muted Silver (`#8D8A86` / `#DEDBD5`)
-   - Background: Warm Obsidian (`#141413`) or Deep Navy Violet (`#1B1938`)
+1. **Obsidian Dark (Primary Dark Mode)**:
+   - Glyph Fill / Stroke: 3-Stop Jewel Gradient (`#8B5CF6 → #EC4899 → #F97316`)
+   - Wordmark: Zenith White (`#FFFFFF`)
+   - Background: Warm Obsidian (`#141413`) or Deep Obsidian Surface (`#181622`)
 
-2. **Monochrome Luxury (High-End Print & Hardware)**:
-   - Foil Stamped Gold or Metallic Silver on Matte Obsidian Cardstock.
+2. **Luxe Light (Day Mode)**:
+   - Glyph: 3-Stop Jewel Gradient or Solid Matte Berry (`#9D174D`)
+   - Wordmark: Ink Display (`#26292C`)
+   - Background: 300gsm Cotton Paper Wash (`#F7F6F4`) or Card Surface (`#FFFFFF`)
 
-3. **Luxe Light (Day Mode)**:
-   - Glyph: Signature Mulberry (`#792D4B`)
-   - Wordmark: Deep Obsidian (`#141413`)
-   - Background: Warm Off-White (`#FCFAF7`)
+3. **Monochrome Solid**:
+   - Glyph & Wordmark: Solid Ink Slate (`#26292C`) or Solid White (`#FFFFFF`)
+
+---
+
+## 5. Standalone 'W' Monogram System (Multi-Background Standards)
+
+When space is restricted or in avatars, mobile app icons, browser favicons, and notification chips, use the standalone **'W' Monogram**:
+
+| Background Type | Monogram Treatment | Contrast Ratio | File Reference |
+|---|---|---|---|
+| **Light Paper (`#FFFFFF` / `#F7F6F4`)** | 3-Stop Jewel Gradient | Vibrant | `assets/logos/wisible_w_gradient.svg` |
+| **Light Minimalist (`#FFFFFF`)** | Solid Ink Slate `#26292C` | 13.8:1 AAA | `assets/logos/wisible_w_dark.svg` |
+| **Light Executive (`#F7F6F4`)** | Solid Matte Berry `#9D174D` | 8.5:1 AAA | `assets/logos/wisible_w_berry.svg` |
+| **Dark Void (`#141413` / `#181622`)** | Solid Zenith White `#FFFFFF` | 16.2:1 AAA | `assets/logos/wisible_w_white.svg` |
+| **Dark Ambient Glow (`#141413`)** | 3-Stop Jewel Gradient + Glow | High | `assets/logos/wisible_w_gradient.svg` |
+| **Solid Primary CTA (`#9D174D`)** | Solid White Knockout `#FFFFFF` | 8.5:1 AAA | `assets/logos/wisible_w_white.svg` |
+| **Jewel Gradient Background** | Solid White Knockout `#FFFFFF` | >7:1 AAA | `assets/logos/wisible_w_white.svg` |
+| **Circular App Badge (Jewel)** | Jewel Circle + White W Cutout | High | `assets/logos/wisible_w_badge_jewel.svg` |
+| **Circular App Badge (Obsidian)** | Obsidian Circle + Jewel W | High | `assets/logos/wisible_w_badge_dark.svg` |
+| **iOS / macOS App Container** | 180px Squircle + Jewel W | Apple Human Interface Guidelines | `assets/logos/wisible_w_app_icon.svg` |
+
