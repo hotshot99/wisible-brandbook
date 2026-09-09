@@ -73,16 +73,16 @@
 
 When space is restricted or in avatars, mobile app icons, browser favicons, and notification chips, use the standalone **'W' Monogram**:
 
-| Background Type | Monogram Treatment | Contrast Ratio | File Reference |
-|---|---|---|---|
-| **Light Paper (`#FFFFFF` / `#F7F6F4`)** | 3-Stop Jewel Gradient | Vibrant | `assets/logos/wisible_w_gradient.svg` |
-| **Light Minimalist (`#FFFFFF`)** | Solid Ink Slate `#26292C` | 13.8:1 AAA | `assets/logos/wisible_w_dark.svg` |
-| **Light Executive (`#F7F6F4`)** | Solid Matte Berry `#9D174D` | 8.5:1 AAA | `assets/logos/wisible_w_berry.svg` |
-| **Dark Void (`#141413` / `#181622`)** | Solid Zenith White `#FFFFFF` | 16.2:1 AAA | `assets/logos/wisible_w_white.svg` |
-| **Dark Ambient Glow (`#141413`)** | 3-Stop Jewel Gradient + Glow | High | `assets/logos/wisible_w_gradient.svg` |
-| **Solid Primary CTA (`#9D174D`)** | Solid White Knockout `#FFFFFF` | 8.5:1 AAA | `assets/logos/wisible_w_white.svg` |
-| **Jewel Gradient Background** | Solid White Knockout `#FFFFFF` | >7:1 AAA | `assets/logos/wisible_w_white.svg` |
-| **Circular App Badge (Jewel)** | Jewel Circle + White W Cutout | High | `assets/logos/wisible_w_badge_jewel.svg` |
-| **Circular App Badge (Obsidian)** | Obsidian Circle + Jewel W | High | `assets/logos/wisible_w_badge_dark.svg` |
-| **iOS / macOS App Container** | 180px Squircle + Jewel W | Apple Human Interface Guidelines | `assets/logos/wisible_w_app_icon.svg` |
+| Background Type | Monogram Treatment | Contrast Ratio | Vector (.SVG) | Raster (.PNG / .JPG) |
+|---|---|---|---|---|
+| **Light Paper (`#FFFFFF` / `#F7F6F4`)** | 3-Stop Jewel Gradient | Vibrant | `wisible_w_gradient.svg` | `wisible_w_gradient.png` / `wisible_w_gradient.jpg` |
+| **Light Minimalist (`#FFFFFF`)** | Solid Ink Slate `#26292C` | 13.8:1 AAA | `wisible_w_dark.svg` | `wisible_w_dark.png` / `wisible_w_dark.jpg` |
+| **Light Executive (`#F7F6F4`)** | Solid Matte Berry `#9D174D` | 8.5:1 AAA | `wisible_w_berry.svg` | `wisible_w_berry.png` / `wisible_w_gradient.jpg` |
+| **Dark Void (`#141413` / `#181622`)** | Solid Zenith White `#FFFFFF` | 16.2:1 AAA | `wisible_w_white.svg` | `wisible_w_white.png` / `wisible_w_white.jpg` |
+| **Dark Ambient Glow (`#141413`)** | 3-Stop Jewel Gradient + Glow | High | `wisible_w_gradient.svg` | `wisible_w_gradient.png` / `wisible_w_gradient_dark.jpg` |
+| **Solid Primary CTA (`#9D174D`)** | Solid White Knockout `#FFFFFF` | 8.5:1 AAA | `wisible_w_white.svg` | `wisible_w_white.png` / `wisible_w_white.jpg` |
+| **Jewel Gradient Background** | Solid White Knockout `#FFFFFF` | >7:1 AAA | `wisible_w_white.svg` | `wisible_w_white.png` / `wisible_w_badge_jewel.jpg` |
+| **Circular App Badge (Jewel)** | Jewel Circle + White W Cutout | High | `wisible_w_badge_jewel.svg` | `wisible_w_badge_jewel.png` / `wisible_w_badge_jewel.jpg` |
+| **Circular App Badge (Obsidian)** | Obsidian Circle + Jewel W | High | `wisible_w_badge_dark.svg` | `wisible_w_badge_dark.png` / `wisible_w_app_icon.jpg` |
+| **iOS / macOS App Container** | 180px Squircle + Jewel W | Apple HIG | `wisible_w_app_icon.svg` | `wisible_w_app_icon.png` / `wisible_w_app_icon.jpg` |
 

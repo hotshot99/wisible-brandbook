@@ -61,7 +61,7 @@ The Wisible identity consists of two harmonized geometric elements: the **Circul
 4. **App Icon / Favicon (Glyph Only)**:
    - 3-Stop Gradient Circle or Apple Squircle with crisp white 'w' glyph at optical center.
 
-#### Master Vector Files:
+#### Master Vector Files (.SVG & .AI):
 - Master Illustrator Source: [`assets/logos/wisible_logo_MasterTemplate.ai`](assets/logos/wisible_logo_MasterTemplate.ai)
 - Master Full Lockup Vector: [`assets/logos/wisible_full_lockup.svg`](assets/logos/wisible_full_lockup.svg)
 - Standalone 'W' Jewel Vector: [`assets/logos/wisible_w_gradient.svg`](assets/logos/wisible_w_gradient.svg)
@@ -72,6 +72,20 @@ The Wisible identity consists of two harmonized geometric elements: the **Circul
 - Standalone 'W' Obsidian Circular Badge: [`assets/logos/wisible_w_badge_dark.svg`](assets/logos/wisible_w_badge_dark.svg)
 - Standalone 'W' Apple Squircle App Icon: [`assets/logos/wisible_w_app_icon.svg`](assets/logos/wisible_w_app_icon.svg)
 - Production CRM Glyph Vector: [`assets/logos/wisible_logo_crm.svg`](assets/logos/wisible_logo_crm.svg)
+
+#### Master Raster Files (.PNG & .JPG for platforms without SVG support):
+- Standalone Jewel 'W' (Transparent PNG): [`assets/logos/wisible_w_gradient.png`](assets/logos/wisible_w_gradient.png)
+- Standalone Jewel 'W' on White (Solid JPG): [`assets/logos/wisible_w_gradient.jpg`](assets/logos/wisible_w_gradient.jpg)
+- Standalone Jewel 'W' on Dark Obsidian (Solid JPG): [`assets/logos/wisible_w_gradient_dark.jpg`](assets/logos/wisible_w_gradient_dark.jpg)
+- Standalone Dark Slate 'W' (Transparent PNG): [`assets/logos/wisible_w_dark.png`](assets/logos/wisible_w_dark.png)
+- Standalone White 'W' (Transparent PNG): [`assets/logos/wisible_w_white.png`](assets/logos/wisible_w_white.png)
+- Mobile Squircle App Icon (Transparent PNG): [`assets/logos/wisible_w_app_icon.png`](assets/logos/wisible_w_app_icon.png)
+- Mobile Squircle App Icon on White (Solid JPG): [`assets/logos/wisible_w_app_icon.jpg`](assets/logos/wisible_w_app_icon.jpg)
+- Master Full Lockup (Transparent PNG): [`assets/logos/wisible_full_lockup.png`](assets/logos/wisible_full_lockup.png)
+- Master Full Lockup on White (Solid JPG): [`assets/logos/wisible_full_lockup.jpg`](assets/logos/wisible_full_lockup.jpg)
+- UP Full Lockup (Transparent PNG / JPG): [`assets/logos/up_full_lockup.png`](assets/logos/up_full_lockup.png)
+- UP Monogram (Transparent PNG / JPG): [`assets/logos/up_logo_monogram.png`](assets/logos/up_logo_monogram.png)
+- Genius Goat (Transparent PNG / JPG): [`assets/logos/genius_goat.png`](assets/logos/genius_goat.png)
 
 ### B. UP Master Logo & Wordmark (`UP ↑`)
 

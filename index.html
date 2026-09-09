@@ -685,31 +685,33 @@
       color: var(--theme-text-muted);
     }
     .w-card-actions {
-      display: flex;
-      gap: 0.5rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.35rem;
       margin-top: 0.25rem;
     }
     .w-action-btn {
-      flex: 1;
       background: var(--theme-elevated);
       border: 1px solid var(--theme-border);
       color: var(--theme-text-display);
-      padding: 0.45rem 0.6rem;
+      padding: 0.42rem 0.2rem;
       border-radius: 6px;
       font-family: var(--font-family-mono);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 600;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.35rem;
+      gap: 0.25rem;
+      text-decoration: none;
+      white-space: nowrap;
       transition: all 0.15s ease;
     }
     .w-action-btn:hover {
-      background: var(--brand-cta-primary);
+      background: var(--brand-cta-primary, #9D174D);
       color: #fff;
-      border-color: var(--brand-cta-primary);
+      border-color: var(--brand-cta-primary, #9D174D);
     }
 
 
@@ -1067,7 +1069,7 @@
         <li class="toc-item"><a href="#section-governance"><span>07 / Brand Governance</span> <span class="keycap">07</span></a></li>
       </ul>
 
-      <div class="toc-title">Download Master Assets</div>
+      <div class="toc-title">Vector Assets (.SVG)</div>
       <ul class="toc-menu">
         <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('wisible_w_gradient')"><span>Wisible W Jewel (.SVG)</span> <span>⬇</span></a></li>
         <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('wisible_w_dark')"><span>Wisible W Dark (.SVG)</span> <span>⬇</span></a></li>
@@ -1078,6 +1080,20 @@
         <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('up_logo_monogram')"><span>UP Monogram (.SVG)</span> <span>⬇</span></a></li>
         <li class="toc-item"><a href="javascript:void(0)" onclick="downloadDirectSVG('genius_goat')"><span>Genius Goat (.SVG)</span> <span>⬇</span></a></li>
         <li class="toc-item"><a href="assets/logos/wisible_logo_MasterTemplate.ai" download="wisible_logo_MasterTemplate.ai"><span>Master Template (.AI)</span> <span>⬇</span></a></li>
+      </ul>
+
+      <div class="toc-title">Raster Assets (PNG &amp; JPG)</div>
+      <ul class="toc-menu">
+        <li class="toc-item"><a href="assets/logos/wisible_w_gradient.png" download="wisible_w_gradient.png"><span>Wisible W Jewel (.PNG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/wisible_w_gradient.jpg" download="wisible_w_gradient.jpg"><span>Wisible W Jewel (.JPG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/wisible_w_dark.png" download="wisible_w_dark.png"><span>Wisible W Dark (.PNG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/wisible_w_white.png" download="wisible_w_white.png"><span>Wisible W White (.PNG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/wisible_w_app_icon.png" download="wisible_w_app_icon.png"><span>Wisible App Icon (.PNG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/wisible_w_app_icon.jpg" download="wisible_w_app_icon.jpg"><span>Wisible App Icon (.JPG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/wisible_full_lockup.png" download="wisible_full_lockup.png"><span>Wisible Lockup (.PNG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/wisible_full_lockup.jpg" download="wisible_full_lockup.jpg"><span>Wisible Lockup (.JPG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/up_full_lockup.png" download="up_full_lockup.png"><span>UP Lockup (.PNG)</span> <span>⬇</span></a></li>
+        <li class="toc-item"><a href="assets/logos/genius_goat.png" download="genius_goat.png"><span>Genius Goat (.PNG)</span> <span>⬇</span></a></li>
         <li class="toc-item"><a href="mockups-preview.html" target="_blank"><span>mockups-preview.html</span> <span>↗</span></a></li>
         <li class="toc-item"><a href="unified-tokens.css" target="_blank"><span>unified-tokens.css</span> <span>↗</span></a></li>
       </ul>
@@ -1390,7 +1406,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_gradient')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard1')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_gradient.png" download="wisible_w_gradient.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_gradient.jpg" download="wisible_w_gradient.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard1')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1417,7 +1435,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_dark')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard2')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_dark.png" download="wisible_w_dark.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_dark.jpg" download="wisible_w_dark.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard2')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1451,7 +1471,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_gradient')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard3')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_gradient.png" download="wisible_w_gradient.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_gradient.jpg" download="wisible_w_gradient.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard3')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1478,7 +1500,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_berry')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard4')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_berry.png" download="wisible_w_berry.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_gradient.jpg" download="wisible_w_gradient.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard4')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1505,7 +1529,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_white')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard5')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_white.png" download="wisible_w_white.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_white.jpg" download="wisible_w_white.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard5')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1539,7 +1565,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_gradient')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard6')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_gradient.png" download="wisible_w_gradient.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_gradient_dark.jpg" download="wisible_w_gradient_dark.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard6')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1573,7 +1601,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_gradient')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard7')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_gradient.png" download="wisible_w_gradient.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_gradient_dark.jpg" download="wisible_w_gradient_dark.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard7')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1600,7 +1630,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_white')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard8')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_white.png" download="wisible_w_white.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_badge_jewel.jpg" download="wisible_w_badge_jewel.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard8')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1627,7 +1659,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_white')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard9')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_white.png" download="wisible_w_white.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_white.jpg" download="wisible_w_white.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard9')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1662,7 +1696,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_badge_jewel')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard10')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_badge_jewel.png" download="wisible_w_badge_jewel.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_badge_jewel.jpg" download="wisible_w_badge_jewel.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard10')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1697,7 +1733,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_badge_dark')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard11')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_badge_dark.png" download="wisible_w_badge_dark.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_app_icon.jpg" download="wisible_w_app_icon.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard11')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1732,7 +1770,9 @@
                 </div>
                 <div class="w-card-actions">
                   <button class="w-action-btn" onclick="downloadDirectSVG('wisible_w_app_icon')"><span>⬇</span> SVG</button>
-                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard12')"><span>📋</span> Copy Code</button>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_app_icon.png" download="wisible_w_app_icon.png"><span>⬇</span> PNG</a>
+                  <a class="w-action-btn" href="assets/logos/wisible_w_app_icon.jpg" download="wisible_w_app_icon.jpg"><span>⬇</span> JPG</a>
+                  <button class="w-action-btn" onclick="copyWCardSVG(this, 'svgWCard12')" title="Copy SVG Code"><span>📋</span> Code</button>
                 </div>
               </div>
             </div>
@@ -1755,7 +1795,10 @@
                 <span>📐 Toggle 20px Grid</span>
               </button>
               <button class="logo-btn-switch" onclick="downloadCurrentSVG()">
-                <span>⬇ Export Clean SVG</span>
+                <span>⬇ Export SVG</span>
+              </button>
+              <button class="logo-btn-switch" onclick="downloadCurrentPNG()">
+                <span>⬇ Export PNG</span>
               </button>
             </div>
           </div>
@@ -2374,6 +2417,25 @@
       a.click();
       document.body.removeChild(a);
       showToast(`⬇ Master Vector SVG downloaded (${item ? item.name : key + '.svg'})`);
+    }
+
+    function downloadCurrentPNG() {
+      const map = {
+        'WISIBLE_LOCKUP': 'wisible_full_lockup.png',
+        'WISIBLE_W': 'wisible_w_gradient.png',
+        'WISIBLE': 'wisible_w_badge_jewel.png',
+        'UP_LOCKUP': 'up_full_lockup.png',
+        'UP': 'up_logo_monogram.png',
+        'GOAT': 'genius_goat.png'
+      };
+      const filename = map[currentMark] || 'wisible_w_gradient.png';
+      const a = document.createElement('a');
+      a.href = 'assets/logos/' + filename;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      showToast(`⬇ Master High-Res PNG downloaded (${filename})`);
     }
 
     function downloadCurrentSVG() {

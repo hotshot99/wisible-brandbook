@@ -51,7 +51,7 @@
    - **Icon**: Solid Obsidian Circle (`#26292C` / `#141413`).
    - **Wordmark**: Solid Obsidian (`#26292C`).
 
-4. **Master Vector Assets**:
+4. **Master Vector Assets (.SVG & .AI)**:
    - Master Illustrator (`.ai`): [`assets/logos/wisible_logo_MasterTemplate.ai`](assets/logos/wisible_logo_MasterTemplate.ai)
    - Master Full Lockup (`.svg`): [`assets/logos/wisible_full_lockup.svg`](assets/logos/wisible_full_lockup.svg)
    - Standalone 'W' Jewel (`.svg`): [`assets/logos/wisible_w_gradient.svg`](assets/logos/wisible_w_gradient.svg)
@@ -62,6 +62,25 @@
    - Circular Obsidian Badge (`.svg`): [`assets/logos/wisible_w_badge_dark.svg`](assets/logos/wisible_w_badge_dark.svg)
    - Mobile iOS Squircle App Icon (`.svg`): [`assets/logos/wisible_w_app_icon.svg`](assets/logos/wisible_w_app_icon.svg)
    - Production CRM Glyph (`.svg`): [`assets/logos/wisible_logo_crm.svg`](assets/logos/wisible_logo_crm.svg)
+
+5. **Master Raster Assets (.PNG & .JPG for platforms not supporting SVG)**:
+   - **High-Res Transparent PNGs (1024×1024 / 1520×360)**:
+     - Standalone Jewel 'W' PNG: [`assets/logos/wisible_w_gradient.png`](assets/logos/wisible_w_gradient.png)
+     - Standalone Dark Slate 'W' PNG: [`assets/logos/wisible_w_dark.png`](assets/logos/wisible_w_dark.png)
+     - Standalone White 'W' PNG: [`assets/logos/wisible_w_white.png`](assets/logos/wisible_w_white.png)
+     - Standalone Matte Berry 'W' PNG: [`assets/logos/wisible_w_berry.png`](assets/logos/wisible_w_berry.png)
+     - Circular Jewel Badge PNG: [`assets/logos/wisible_w_badge_jewel.png`](assets/logos/wisible_w_badge_jewel.png)
+     - Circular Obsidian Badge PNG: [`assets/logos/wisible_w_badge_dark.png`](assets/logos/wisible_w_badge_dark.png)
+     - Mobile Squircle App Icon PNG: [`assets/logos/wisible_w_app_icon.png`](assets/logos/wisible_w_app_icon.png)
+     - Master Full Lockup PNG: [`assets/logos/wisible_full_lockup.png`](assets/logos/wisible_full_lockup.png)
+   - **High-Res Solid JPEGs (1024×1024 / 1520×360)**:
+     - Standalone Jewel 'W' on White JPG: [`assets/logos/wisible_w_gradient.jpg`](assets/logos/wisible_w_gradient.jpg)
+     - Standalone Jewel 'W' on Dark Obsidian JPG: [`assets/logos/wisible_w_gradient_dark.jpg`](assets/logos/wisible_w_gradient_dark.jpg)
+     - Standalone Dark Slate 'W' on White JPG: [`assets/logos/wisible_w_dark.jpg`](assets/logos/wisible_w_dark.jpg)
+     - Standalone White 'W' on Obsidian JPG: [`assets/logos/wisible_w_white.jpg`](assets/logos/wisible_w_white.jpg)
+     - Circular Jewel Badge on White JPG: [`assets/logos/wisible_w_badge_jewel.jpg`](assets/logos/wisible_w_badge_jewel.jpg)
+     - Mobile App Icon on White JPG: [`assets/logos/wisible_w_app_icon.jpg`](assets/logos/wisible_w_app_icon.jpg)
+     - Master Full Lockup on White JPG: [`assets/logos/wisible_full_lockup.jpg`](assets/logos/wisible_full_lockup.jpg)
 
 ---
 
